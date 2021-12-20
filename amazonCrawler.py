@@ -6,7 +6,6 @@ from crawler import Crawler
 """
 상품 id 가져올 것
 상품 이미지 url 가져올 것
-클래스 만들 것
 뉴에그 크롤러 만들 것
 정규식 등등 사용해서 결과 거를 수 있는 방법 적용
 --> DRF setting
@@ -25,9 +24,26 @@ class AmazonCrawler(Crawler):
             total_pagination_num = int(list(self.driver.find_element(By.CLASS_NAME, 'a-pagination').text.split('\n'))[-2])
             for page in range(total_pagination_num):
                 next_btn = self.driver.find_element(By.CLASS_NAME, 'a-last')
-                data = self.driver.find_element(By.XPATH, '//*[@id="search"]/div[1]/div[1]/div').text
+                data = self.driver.find_element(By.XPATH, '//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]')
+                data_list = data.find_elements(By.TAG_NAME, 'div')
+                for item in data_list:
+                    data_asin = item.get_attribute('data-asin')
+                    class_name = item.get_attribute('class')
+                    print("--------------")
+                    print(data_asin)
+                    print(class_name)
+                    print()
+                    if data_asin != None and 'AdHolder' not in class_name:
+                        print(item.text)
+                        img = item.find_element(By.CLASS_NAME, 's-image').get_attribute('src')
+                        product_name = item.find_element(By.CLASS_NAME, 'a-size-medium a-color-base a-text-normal').text
+                        price = item.find_element(By.CLASS_NAME, 'a-offscreen').text
+                        print(img)
+                        print(product_name)
+                        print(price)
+                        
                 next_btn.click()
-                self.driverWait.until(presence_of_all_elements_located((By.XPATH, '//*[@id="search"]/div[1]/div[1]/div')))
+                self.driverWait.until(presence_of_all_elements_located((By.XPATH, '//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]')))
 
-crawler = AmazonCrawler("E:\Study\chromedriver.exe", ["RTX3080"])
+crawler = AmazonCrawler("E:\Study\chromedriver.exe", ["980pro"])
 crawler.save()
