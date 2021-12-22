@@ -11,9 +11,10 @@ class Crawler:
     def __init_crawler(self):
         service = Service(self.driver_path)
         options = webdriver.ChromeOptions()
-        ##options.add_argument('headless')
+        options.add_argument('headless')
+        options.add_argument('incognito')
         self.driver = webdriver.Chrome(service=service, options=options)
         self.driverWait = WebDriverWait(self.driver, 10)
         
     def __del__(self):
-        self.driver.quit()
+        self.driver.close()
