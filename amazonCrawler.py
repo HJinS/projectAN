@@ -28,13 +28,12 @@ class AmazonCrawler(Crawler):
             
         for page in range(total_pagination_num):    
             self.__get_page_data()
-            print("next_page")        
-            next_btn.click()
             self.driverWait.until(presence_of_all_elements_located((By.XPATH, '//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]')))
             try:
                 next_btn = self.driver.find_element(By.CLASS_NAME,'a-pagination').find_element(By.CLASS_NAME, 'a-last')
             except:
                 next_btn = self.driver.find_elements(By.CLASS_NAME, 's-pagination-item')[-1]
+            next_btn.click()
 
     def __get_item_data(self, item):
         class_name = item.get_attribute('class')
@@ -70,5 +69,5 @@ class AmazonCrawler(Crawler):
             self.__get_data(keyword=keyword)
             
 
-crawler = AmazonCrawler("E:\Study\chromedriver.exe", ["980pro"])
+crawler = AmazonCrawler("E:\Study\chromedriver.exe", ["12900k"])
 crawler.save()

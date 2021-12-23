@@ -58,5 +58,5 @@ class NeweggCrawler(Crawler):
             self.__get_data(keyword=keyword)
             
 
-crawler = NeweggCrawler("E:\Study\chromedriver.exe", ["980pro"])
+crawler = NeweggCrawler("E:\Study\chromedriver.exe", ["12900k"])
 crawler.save()
