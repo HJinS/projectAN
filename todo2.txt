@@ -1,0 +1,28 @@
+DB setting
+
+product_id,  product_name, date, price, img_src
+
+유저 추가?
+user_id, password, name
+
+유저의 관심 카테고리
+
+
+카테고리
+
+cpu   ->    intel(keyword - intel(대소문자 무시), processor(프로세서))   /   Amd(keyword - amd, processor/프로세서)
+
+vga   ->    NVDIA(NVDIA, 그래픽카드, GPU, garphic processing unit)   /   RADEON
+
+ram
+
+ssd   ->   nvme   /   sata
+
+cpu-cooler    ->    liquid cooler   /   cpu cooler
+
+
+
+
+카테고리 추출(정규식)
+결과 필터링
+db 저장
