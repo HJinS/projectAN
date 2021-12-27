@@ -1,18 +1,16 @@
-B08166SLDF https://m.media-amazon.com/images/I/61vGQNUEsGL._AC_UY218_.jpg US$290.74 cpu
-AMD 라이젠 5 5600X 6코어, 12스레드 언락 데스크탑 프로세서 레이스 스텔스 쿨러 포함
-B0815XFSGK https://m.media-amazon.com/images/I/61DYLoyNRWL._AC_UY218_.jpg US$393.99 cpu
-AMD 라이젠7 5800X 8 코어, 16 스레드 언락 데스크탑 프로세서
-B08164VTWH https://m.media-amazon.com/images/I/616VM20+AzL._AC_UY218_.jpg US$509.99 cpu
-AMD Ryzen 9 5900X 12코어, 24스레드 언락 데스크탑 프로세서
-B092L9GF5N https://m.media-amazon.com/images/I/51KHD9nx51S._AC_UY218_.jpg US$259.00 cpu
-AMD Ryzen 5 5600G 6코어 12스레드 언락 데스크탑 프로세서, 라데온 그래픽 포함
-B07SXMZLPK https://m.media-amazon.com/images/I/717Di3DGIbL._AC_UY218_.jpg US$389.99 cpu
-AMD 라이젠 7 3700X 8코어, 16스레드 언락 데스크톱 프로세서와 레이스 프리즘 LED 쿨러 포함.
-B0815Y8J9N https://m.media-amazon.com/images/I/616VM20+AzL._AC_UY218_.jpg US$724.49 cpu
-AMD Ryzen 9 5950X 16코어, 32스레드 언락 데스크탑 프로세서
-B07SXMZLP9 https://m.media-amazon.com/images/I/71S31CWSs3L._AC_UY218_.jpg US$539.00 cpu
-AMD 라이젠 9 3900X 12코어, 24스레드 언락 데스크탑 프로세서 레이스 프리즘 LED 쿨러
-B07SXMZLPJ https://m.media-amazon.com/images/I/51c5Htv8p1L._AC_UY218_.jpg US$337.95 cpu
-AMD 라이젠 7 3800X 8코어, 16스레드 언락 데스크톱 프로세서 레이스 프리즘 LED 쿨러 포함
-B07STGGQ18 https://m.media-amazon.com/images/I/71WPGXQLcLL._AC_UY218_.jpg US$307.95 cpu
-AMD Ryzen 5 3600 6코어, 12스레드 언락 데스크탑 프로세서, Wraith Stealth 쿨러 포함
+B09L42H2B5 https://m.media-amazon.com/images/I/61sA2GpCMZL._AC_UY218_.jpg US$909.99 gpu
+MAXSUN GeForce RTX 3060 iCraft OC Edtion 12G GDDR6 Vidoe 게이밍 그래픽 카드 PCI Express 4.0 x16 HDMI 2.1 GPU
+B08ZCHF59L https://m.media-amazon.com/images/I/61AeUY3Ih3L._AC_UY218_.jpg US$179.99 gpu
+MAXSUN GEFORCE GT 1030 4GB ITX 그래픽 카드 GPU GDDR4 미니 ITX 디자인, HDMI, DVI-D, 싱글 팬 냉각 시스템
+B07Z8PWC6R https://m.media-amazon.com/images/I/71AAVqtFfvL._AC_UY218_.jpg US$680.00 gpu
+ZOTAC 게이밍 지포스 GTX 1660 슈퍼 6GB GDDR6 192비트 게이밍 그래픽 카드, 슈퍼 컴팩트, ZT-T16620F-10L
+B08R133PYZ https://m.media-amazon.com/images/I/81s62kcdU7L._AC_UY218_.jpg US$3,499.99 gpu
+ASUS ROG STRIX NVIDIA GeForce RTX™ 3090 화이트 OC 에디션 게이밍 그래픽 카드 (PCIe 4.0, 24GB GDDR6X, HDMI 2.1, 디스플레이 포트 1.4a, 화이트 색상 구성, Axial-tech 팬 디자인, 2.9 슬롯, 슈퍼 합금 파워
+B07P6CDHS5 https://m.media-amazon.com/images/I/71HSDRlKNHS._AC_UY218_.jpg US$988.30 gpu
+PNY NVIDIA Quadro RTX 4000 - 세계 최초의 레이 트레이싱 GPU
+B08VHWFWSD https://m.media-amazon.com/images/I/61-PIBx43BL._AC_UY218_.jpg US$249.99 gpu
+MAXSUN AMD Radeon RX 550 4GB GDDR5 ITX 컴퓨터 PC 게이밍 비디오 그래픽 카드 GPU 128비트 DirectX 12 PCI Express X16 3.0 DVI-D 듀얼 링크, HDMI, 디스플레이 포트
+B07ZK69HDK https://m.media-amazon.com/images/I/71M4pG5B6zS._AC_UY218_.jpg US$763.98 gpu
+MSI Gaming GeForce GTX 1660 Super 192-bit HDMI/DP 6GB GDRR6 HDCP Support DirectX 12 Dual Fan VR Ready OC Graphics Card (GTX 1660 Super Gaming X)
+B096YQ6WVW https://m.media-amazon.com/images/I/91V+jq4ixES._AC_UY218_.jpg US$1,830.00 gpu
+ASUS ROG Strix NVIDIA 지포스 RTX 3070 Ti OC 에디션 게이밍 그래픽 카드 (PCIe 4.0, 8GB GDDR6X, HDMI 2.1, 디스플레이 포트 1.4a, Axial-tech 팬 디자인, 2.9슬롯, 슈퍼 합금 파워 II, GPU Tweak II)

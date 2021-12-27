@@ -1,2 +1,4 @@
-venv/
+venv
+result.txt
+
 projectAN/secrets.json
