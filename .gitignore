@@ -1,5 +1,13 @@
+# virtual environment
 venv
+
+# temporal txt file
 result.txt
+
+# python cache
 __pycache__
 
+# secrets file
 projectAN/secrets.json
+
+todo*.txt

@@ -22,7 +22,7 @@ class AmazonCrawler(Crawler):
     def __get_data(self, keyword):
         self.driver.get(self.site_loc)
         self.driver.implicitly_wait(5)
-        self.driver.find_element(By.XPATH, '//*[@id="twotabsearchtextbox"]').send_keys(keyword + Keys.RETURN)
+        self.driver.find_element(By.XPATH, '//descendant::input[@id="twotabsearchtextbox"]').send_keys(keyword + Keys.RETURN)
         self.driver.implicitly_wait(5)
         uiFlag = False
         try:
@@ -70,7 +70,7 @@ class AmazonCrawler(Crawler):
             
         return self.resultQueue
             
-keywords = ["gpu"]
+keywords = ["cpu", "gpu", "ram", "ssd", "cpu cooler"]
 crawler = AmazonCrawler("E:\Study\chromedriver.exe", keywords)
 test_q = crawler.save()
 filter = ResultFilter(test_q, keywords)
