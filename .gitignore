@@ -10,4 +10,5 @@ __pycache__
 # secrets file
 projectAN/secrets.json
 
+#todo
 todo*.txt

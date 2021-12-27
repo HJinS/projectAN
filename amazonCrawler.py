@@ -30,7 +30,7 @@ class AmazonCrawler(Crawler):
         except:
             total_pagination_num = int(self.driver.find_elements(By.CLASS_NAME, 's-pagination-item')[-2].text)
         print("total page = ", total_pagination_num)
-        for page in range(min(2,total_pagination_num)):
+        for page in range(total_pagination_num):
             print("page{page:3} ".format(page=page), "--------------------", end='')
             self.__get_page_data(keyword)
             self.driverWait.until(presence_of_all_elements_located((By.XPATH, '//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]')))
@@ -70,8 +70,9 @@ class AmazonCrawler(Crawler):
             
         return self.resultQueue
             
-keywords = ["cpu", "gpu", "ram", "ssd", "cpu cooler"]
+##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
+keywords = ["nvme ssd", "sata ssd"]
 crawler = AmazonCrawler("E:\Study\chromedriver.exe", keywords)
 test_q = crawler.save()
-filter = ResultFilter(test_q, keywords)
+filter = ResultFilter(test_q)
 filter.filtering()
