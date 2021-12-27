@@ -1,4 +1,5 @@
 venv
 result.txt
+__pycache__
 
 projectAN/secrets.json
