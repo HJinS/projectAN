@@ -4,15 +4,8 @@ from selenium.webdriver.support.expected_conditions import presence_of_all_eleme
 from crawler import Crawler
 from collections import deque
 from resultFilter import ResultFilter
+from loadEnvKey import get_env_key
 
-
-"""
-상품 id 가져올 것
-상품 이미지 url 가져올 것
-뉴에그 크롤러 만들 것
-정규식 등등 사용해서 결과 거를 수 있는 방법 적용
---> DRF setting
-"""
 class AmazonCrawler(Crawler):
     def __init__(self, driver_path: str, keywords: list):
         super().__init__("https://www.amazon.com/", driver_path)
@@ -29,7 +22,8 @@ class AmazonCrawler(Crawler):
             total_pagination_num = int(list(self.driver.find_element(By.CLASS_NAME,'a-pagination').text.split('\n'))[-2])
         except:
             total_pagination_num = int(self.driver.find_elements(By.CLASS_NAME, 's-pagination-item')[-2].text)
-        print("total page = ", total_pagination_num)
+        
+        print("amazon total crawl page = {page} keyword = {keyword}".format(page=total_pagination_num, keyword=keyword))
         for page in range(total_pagination_num):
             print("page{page:3} ".format(page=page), "--------------------", end='')
             self.__get_page_data(keyword)
@@ -71,8 +65,10 @@ class AmazonCrawler(Crawler):
         return self.resultQueue
             
 ##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
-keywords = ["nvme ssd", "sata ssd"]
-crawler = AmazonCrawler("E:\Study\chromedriver.exe", keywords)
+
+keywords = ["liquid cpu cooler", "air cpu cooler"]
+driver_path = get_env_key("driver_path")
+crawler = AmazonCrawler(driver_path, keywords)
 test_q = crawler.save()
 filter = ResultFilter(test_q)
 filter.filtering()

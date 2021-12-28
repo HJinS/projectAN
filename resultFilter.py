@@ -16,10 +16,10 @@ class ResultFilter:
             "nvidia gpu" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|라데온|[Rr][Aa][Dd][Ee][Oo][Nn]).*(지포스|[Gg][Ee][Ff][Oo][Rr][Cc][Ee]|[Nn][Vv][Ii][Dd][Ii][Aa]|[RrGg][Tt][Xx]).*([Gg][Pp][Uu]|[Gg][Rr][Aa][Pp][Hh][Ii][Cc][Ss]?\s?[Cc][Aa][Rr][Dd][Ss]?|[Vv][Ii][Dd][Ee][Oo]\s?[Cc][Aa][Rr][Dd][Ss]?|그래픽 카드)?.*?",
             "ddr4 ram" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]).*([Dd][Dd][Rr][4]).*([Rr][Aa][Mm]|메모리)?.*",
             "ddr5 ram" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]).*([Dd][Dd][Rr][5]).*([Rr][Aa][Mm]|메모리)?.*",
-            "nvme ssd" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Ss][Aa][Tt][Aa]).*([Nn][Vv][Mm][Ee]).*([Ss][Ss][Dd]|솔리드 스테이트 드라이브).*\2?",
-            "sata ssd" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Nn][Vv][Mm][Ee]).*([Ss][Aa][Tt][Aa]).*([Ss][Ss][Dd]|솔리드 스테이트 드라이브).*\2?",
-            "liquid cpu cooler" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Ll][Ii][Qq][Uu][Ii][Dd]|액체).*([Cc][Pp][Uu].*?([Cc][Oo][Oo][Ll][Ee][Rr]|쿨러)).*",
-            "air cpu cooler" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Aa][Ii][Rr]|에어).*([Cc][Pp][Uu].*?([Cc][Oo][Oo][Ll][Ee][Rr]|쿨러)).*",
+            "nvme ssd" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Ss][Aa][Tt][Aa]).*(?P<nvme>[Nn][Vv][Mm][Ee])?.*(?P<ssd>[Ss][Ss][Dd]|솔리드 스테이트 드라이브|[Ss][Oo][Ll][Ii][Dd]\b?[Ss][Tt][Aa][Tt][Ee]\b?[Dd][Rr][Ii][Vv][Ee])|(?P=ssd).*(?P=nvme)",
+            "sata ssd" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Nn][Vv][Mm][Ee]).*(?P<sata>[Ss][Aa][Tt][Aa])?.*(?P<ssd>[Ss][Ss][Dd]|솔리드 스테이트 드라이브|[Ss][Oo][Ll][Ii][Dd]\b?[Ss][Tt][Aa][Tt][Ee]\b?[Dd][Rr][Ii][Vv][Ee])|(?P=ssd).*(?P=sata)",
+            "liquid cpu cooler" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Pp][Cc]|[Pp][Cc]|[Aa][Ii][Rr]|에어).*((?P<cpu>[Cc][Pp][Uu]).*?(?P<cooler>[Cc][Oo][Oo][Ll][Ee][Rr]|쿨러)|(?P=cooler).*?(?P=cpu)).*",
+            "air cpu cooler" : "(?![Ss][Yy][Ss][Tt][Ee][Mm]|시스템|[Ll][Ii][Qq][Uu][Ii][Dd]|액체|[Ww][Aa][Tt][Ee][Rr]|워터).*((?P<cpu>[Cc][Pp][Uu]).*?(?P<cooler>[Cc][Oo][Oo][Ll][Ee][Rr]|쿨러)|(?P=cooler).*?(?P=cpu)).*",
         }
         
     def filtering(self):

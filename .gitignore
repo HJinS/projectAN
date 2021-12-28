@@ -12,3 +12,9 @@ projectAN/secrets.json
 
 #todo
 todo*.txt
+
+#local variable
+local_env.json
+loadEnvKey.py
+
+projectAN/AN/migrations

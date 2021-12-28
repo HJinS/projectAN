@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'AN.apps.AnConfig',
-    'rest-frameowrk',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -96,12 +96,6 @@ DATABASES = {
         'PORT': 27017,
     }
     
-    '''
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-    '''
 }
 
 
