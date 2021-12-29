@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'projectAN.urls'
+ROOT_URLCONF = 'projectANDjango.urls'
 
 TEMPLATES = [
     {
@@ -81,23 +81,34 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'projectAN.wsgi.application'
+WSGI_APPLICATION = 'projectANDjango.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    
     'default':{
         'ENGINE': 'djongo',
-        'NAME': 'productDB',
-        'HOST': '127.0.0.1',
-        'PORT': 27017,
+        'ENFORCE_SCHEMA': True,
+        'LOGGING': {
+            'version': 1,
+            'loggers': {
+                'djongo': {
+                    'level': 'DEBUG',
+                    'propogate': False,
+                }
+            },
+        },
+        'NAME': 'ANdb',
+        'CLIENT':{
+            'host': __get_secret("MongoConnectString"),
+            'port': 27017,
+            'authSource': 'admin',
+            'authMechanism': 'SCRAM-SHA-1',
+        }
     }
-    
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

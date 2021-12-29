@@ -1,4 +1,4 @@
-from django.db import models
+from djongo import models
 
 class product(models.Model):
     id = models.CharField(max_length=26, primary_key=True)
