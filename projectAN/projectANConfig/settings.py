@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'projectANDjango.urls'
+ROOT_URLCONF = 'projectANConfig.urls'
 
 TEMPLATES = [
     {
@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'projectANDjango.wsgi.application'
+WSGI_APPLICATION = 'projectANConfig.wsgi.application'
 
 
 # Database
