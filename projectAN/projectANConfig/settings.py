@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os, json
 from django.core.exceptions import ImproperlyConfigured
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Seoul'
+CELERY_ENABLE_UTC = False
+CELERYBEAT_SCHEDULE = {
+    'crawlAndSaveProductInfoAmazon' : {
+        "task" : "AN.tasks.CrawlAndSaveAmazon",
+        'schedule' : timedelta(seconds=30),
+        'args' : ()
+    }
+}
 
 # Application definition
 

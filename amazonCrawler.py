@@ -63,12 +63,3 @@ class AmazonCrawler(Crawler):
             self.__get_data(keyword=keyword)
             
         return self.resultQueue
-            
-##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
-
-keywords = ["liquid cpu cooler", "air cpu cooler"]
-driver_path = get_env_key("driver_path")
-crawler = AmazonCrawler(driver_path, keywords)
-test_q = crawler.save()
-filter = ResultFilter(test_q)
-filter.filtering()

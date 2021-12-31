@@ -23,20 +23,13 @@ class ResultFilter:
         }
         
     def filtering(self):
-        f = open("result.txt", 'w', encoding="UTF-8")
+        resultQ = deque()
         for result_item in self.result:
             id, image, name, price, keyword = result_item
             if self.beforeKeyword == None or self.beforeKeyword != keyword:
-                print("keyword = ", keyword)
                 self.re = re.compile(r""+self.expression[keyword])
             match_result = self.re.findall(name)
-            if len(match_result) == 0:
-                print(match_result)
-                print(name)
-                print("부적합\n")
-            else:
-                f.write(id + " "  + image + " " + price + " " + keyword + "\n")
-                f.write(name + "\n")
-                ##print(match_result.group(1))
+            if len(match_result) != 0:
+                resultQ.append([id, image, name, price, keyword])
             self.beforeKeyword = keyword
-        f.close()
+        return resultQ
