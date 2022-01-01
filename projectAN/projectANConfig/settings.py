@@ -46,6 +46,12 @@ CELERY_ENABLE_UTC = False
 CELERYBEAT_SCHEDULE = {
     'crawlAndSaveProductInfoAmazon' : {
         "task" : "AN.tasks.CrawlAndSaveAmazon",
+        ##리눅스 배포시 crontab사용 할 것
+        'schedule' : timedelta(seconds=30),
+        'args' : ()
+    },
+    'crawlAndSaveProductInfoNewegg':{
+        "task" : "AN.tasks.CrawlAndSaveNewegg",
         'schedule' : timedelta(seconds=30),
         'args' : ()
     }
