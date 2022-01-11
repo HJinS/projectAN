@@ -110,6 +110,7 @@ DATABASES = {
     'default':{
         'ENGINE': 'djongo',
         'ENFORCE_SCHEMA': True,
+        'NAME': 'ANdb',
         'LOGGING': {
             'version': 1,
             'loggers': {
@@ -119,11 +120,9 @@ DATABASES = {
                 }
             },
         },
-        'NAME': 'ANdb',
         'CLIENT':{
             'host': __get_secret("MongoConnectString"),
             'port': 27017,
-            'authSource': 'admin',
             'authMechanism': 'SCRAM-SHA-1',
         }
     }
