@@ -29,6 +29,8 @@ def __get_secret(key):
         raise ImproperlyConfigured(error_message)
 
 SECRET_KEY = __get_secret("SECRET_KEY")
+GOOGLE_OAUTH2_CLIENT_ID = __get_secret("GOOGLE_OAUTH2_CLIENT_ID")
+GOOGLE_OAUTH2_CLIENT_SECRET = __get_secret("GOOGLE_OAUTH2_CLIENT_SECRET")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
