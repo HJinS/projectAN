@@ -17,4 +17,4 @@ todo*.txt
 local_env.json
 loadEnvKey.py
 
-projectAN/AN/migrations
+projectAN/**/migrations

@@ -15,19 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
-from auth.apis import LoginApi, LogoutApi, username_duplicate_checkApi, email_duplicate_checkApi, RefreshJWTtoken
-from auth.googleapi import *
-
-login_patterns=[
-    path('refresh', RefreshJWTtoken.as_view()),
-    path('', LoginApi.as_view(), name='login'),
-    path('google', GoogleLoginApi.as_view(), name='google_login'),
-    path('google/callback', GoogleSigninCallBackApi.as_view(), name='google_login_callback'),
-]
-
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', include(login_patterns)),
+    path('social/', include('dj_rest_auth.urls')),
+    path('social/', include('allauth.urls')),
+    path('social/', include('socialUser.urls')),
 ]
