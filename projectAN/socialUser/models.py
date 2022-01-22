@@ -6,10 +6,7 @@ from .managers import CustomUserManager
 
 
 class User(AbstractUser):
-    def make_uuid():
-        return uuid.uuid4()
     
-    id = models.UUIDField(primary_key=True, default=make_uuid)
     username = None
     email = models.EmailField(_('email address'), unique=True)
 
