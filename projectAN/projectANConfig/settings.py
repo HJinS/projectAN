@@ -145,34 +145,14 @@ WSGI_APPLICATION = 'projectANConfig.wsgi.application'
 
 DATABASES = {
     'default':{
-        'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': True,
-        'NAME': 'ANdb',
-        'LOGGING': {
-            'version': 1,
-            'loggers': {
-                'djongo': {
-                    'level': 'DEBUG',
-                    'propogate': False,
-                }
-            },
-        },
-        'CLIENT':{
-            'host': __get_secret("MongoConnectString"),
-            'port': 27017,
-            'authMechanism': 'SCRAM-SHA-1',
-        }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'projectAN',
+        'USER': 'anuser@localhost',
+        'PASSWORD': __get_secret('DB_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-'''
 
 
 # Password validation
