@@ -1,5 +1,3 @@
-from enum import unique
-from re import VERBOSE
 from django.db.models.constraints import UniqueConstraint
 from djongo import models
 

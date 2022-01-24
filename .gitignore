@@ -13,6 +13,8 @@ projectAN/secrets.json
 #todo
 todo*.txt
 
+api.txt
+
 #local variable
 local_env.json
 loadEnvKey.py
