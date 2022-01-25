@@ -5,12 +5,14 @@ from crawler import Crawler
 from collections import deque
 from resultFilter import ResultFilter
 from loadEnvKey import get_env_key
+import time, random
 
 class NeweggCrawler(Crawler):
     def __init__(self, driver_path: str, keywords: list):
         super().__init__("https://www.newegg.com/", driver_path)
         self.keywords = keywords
         self.resultQueue = deque()
+        self.count = 0
 
     def __get_data(self, keyword):
         self.driver.get(self.site_loc)
@@ -19,7 +21,7 @@ class NeweggCrawler(Crawler):
         self.driver.implicitly_wait(5)
         total_pagination_num = int(list(self.driver.find_element(By.XPATH,'./descendant::div[@class="list-tool-pagination"]/span/strong').text.split('/'))[-1])
         print("newegg total crawl page = {page} keyword = {keyword}".format(page=total_pagination_num, keyword=keyword))
-        for page in range(min(4, total_pagination_num)):
+        for page in range(total_pagination_num):
             print("page{page:3} ".format(page=page), "--------------------", end='')
             self.__get_page_data(keyword)
             try:
@@ -28,7 +30,10 @@ class NeweggCrawler(Crawler):
                 next_btn.click()
             except:
                 return
+            time.sleep(random.randrange(60))
             print("complete")
+            if self.count > 100:
+                break
         
     def __get_item_data(self, item, keyword):
         product_id = item.get_attribute('id')
@@ -38,6 +43,7 @@ class NeweggCrawler(Crawler):
             price = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/descendant::div[@class="item-action"]/descendant::ul[@class="price"]/li[@class="price-current "]')
             price_str = list(price.text.split(' '))[0]
             self.resultQueue.append([product_id, img, product_name, price_str, keyword])
+            self.count += 1
         except:
             return
             

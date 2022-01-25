@@ -5,12 +5,14 @@ from crawler import Crawler
 from collections import deque
 from resultFilter import ResultFilter
 from loadEnvKey import get_env_key
+import time, random
 
 class AmazonCrawler(Crawler):
     def __init__(self, driver_path: str, keywords: list):
         super().__init__("https://www.amazon.com/", driver_path)
         self.keywords = keywords
         self.resultQueue = deque()
+        self.count = 0
 
     def __get_data(self, keyword):
         self.driver.get(self.site_loc)
@@ -33,7 +35,10 @@ class AmazonCrawler(Crawler):
             except:
                 next_btn = self.driver.find_elements(By.CLASS_NAME, 's-pagination-item')[-1]
             next_btn.click()
+            time.sleep(random.randrange(60))
             print("complete")
+            if self.count > 100:
+                break
 
     def __get_item_data(self, item, keyword):
         class_name = item.get_attribute('class')
@@ -51,6 +56,7 @@ class AmazonCrawler(Crawler):
         price_list_unit = list(str(price.text).split('\n'))
         price_str = price_list_unit[0] + '.' + price_list_unit[1]
         self.resultQueue.append([product_id, img, product_name, price_str, keyword])
+        self.count += 1
         
     def __get_page_data(self, keyword):
         data = self.driver.find_element(By.XPATH, '//*[@id="search"]/div[1]/div[1]/div/span[3]/div[2]')

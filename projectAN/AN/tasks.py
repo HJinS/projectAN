@@ -45,7 +45,3 @@ def __save_to_db(item: list, crawl_site: int):
     product.category = keyword
     product.site = crawl_site
     product.save()
-    
-    
-        
-        
