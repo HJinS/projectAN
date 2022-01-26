@@ -1,7 +1,5 @@
-from distutils.log import error
 import json, os, uuid, pymysql
 from datetime import datetime
-from unicodedata import category
 from pathlib import Path
 from loadEnvKey import get_env_key
 from amazonCrawler import AmazonCrawler
@@ -34,7 +32,6 @@ db = pymysql.connect(
 cursor = db.cursor()
 
 def CrawlAndSaveAmazon():
-    ## category까지 완료
     keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
     driver_path = get_env_key("driver_path")
     for keyword in keywords:
@@ -46,7 +43,7 @@ def CrawlAndSaveAmazon():
             product_id, image, name, price, keyword = item
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
-            sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ('{id}', '{product_id}', '{name}', '{price}', '{image}', '{keyword}', '0', '{today}');'''
+            sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "0", "{today}");'''
             cursor.execute(sql)
             db.commit()
              
@@ -63,9 +60,6 @@ def CrawlAndSaveNewegg():
             product_id, image, name, price, keyword = item
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
-            sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ('{id}', '{product_id}', '{name}', '{price}', '{image}', '{keyword}', '0', '{today}');'''
+            sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "0", "{today}");'''
             cursor.execute(sql)
             db.commit()
-CrawlAndSaveAmazon()
-CrawlAndSaveNewegg()
-db.close()

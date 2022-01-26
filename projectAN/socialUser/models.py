@@ -1,5 +1,4 @@
 from django.db import models
-import uuid
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 from .managers import CustomUserManager

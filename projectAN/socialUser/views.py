@@ -82,27 +82,28 @@ class GoogleCallbackView(APIView):
             return Response({'err_msg': 'failed to get email'}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
-            print("callback line 76")
             user = User.objects.get(email=email)
-            print("callback line 78")
             # 기존에 가입된 유저의 Provider가 google이 아니면 에러 발생, 맞으면 로그인
             # 다른 SNS로 가입된 유저
             social_user = SocialAccount.objects.get(user=user)
-            print("callback line 82")
             if social_user is None:
                 return Response({'err_msg': 'email exists but not social user'}, status=status.HTTP_400_BAD_REQUEST)
-            print("callback line 85")
             if social_user.provider != 'google':
                 return Response({'err_msg': 'no matching social type'}, status=status.HTTP_400_BAD_REQUEST)
-            print("callback line 88")
             # 기존에 Google로 가입된 유저
             accept_json, status_result = self.__signIn_or_signUp(access_token, code)
-            return Response(accept_json, status=status_result)
+            print(accept_json)
+            refresh = accept_json.pop('refresh_token')
+            response = Response(accept_json, status=status_result)
+            response.set_cookie('refresh_token', refresh)
+            return response
         except User.DoesNotExist:
-            print("line 96 no user exist try signup")
             accept_json, status_result = self.__signIn_or_signUp(access_token, code)
             print(accept_json)
-            return Response(accept_json, status=status_result)
+            refresh = accept_json.pop('refresh_token')
+            response = Response(accept_json, status=status_result)
+            response.set_cookie('refresh_token', refresh)
+            return response
     
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter

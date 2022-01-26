@@ -1,10 +1,10 @@
 from django.db.models.constraints import UniqueConstraint
-from djongo import models
+from django.db import models
 import uuid
 
 class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
-    product_id = models.CharField(max_length=26)
+    product_id = models.CharField(max_length=40)
     name = models.CharField(max_length=300)
     price = models.CharField(max_length=16)
     img_src = models.URLField(max_length=100)

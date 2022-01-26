@@ -1,5 +1,5 @@
 from tkinter import CASCADE
-from djongo import models
+from django.db import models
 from socialUser.models import User
 from AN.models import Product
 
