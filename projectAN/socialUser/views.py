@@ -46,6 +46,7 @@ class GoogleCallbackView(APIView):
         accept_json = accept.json()
         print("check")
         accept_json.pop('user', None)
+        print("accept_json", accept_json)
         return accept_json, accept_status
 
     def __get_access_token(self, code):
@@ -92,18 +93,24 @@ class GoogleCallbackView(APIView):
                 return Response({'err_msg': 'no matching social type'}, status=status.HTTP_400_BAD_REQUEST)
             # 기존에 Google로 가입된 유저
             accept_json, status_result = self.__signIn_or_signUp(access_token, code)
-            print(accept_json)
-            refresh = accept_json.pop('refresh_token')
-            response = Response(accept_json, status=status_result)
-            response.set_cookie('refresh_token', refresh)
-            return response
+            if status_result == 200:
+                print(accept_json)
+                refresh = accept_json.pop('refresh_token', None)
+                response = Response(accept_json, status=status_result)
+                response.set_cookie('refresh_token', refresh)
+                return response
+            else:
+                return accept_json
         except User.DoesNotExist:
             accept_json, status_result = self.__signIn_or_signUp(access_token, code)
             print(accept_json)
-            refresh = accept_json.pop('refresh_token')
-            response = Response(accept_json, status=status_result)
-            response.set_cookie('refresh_token', refresh)
-            return response
+            if status_result == 200:
+                refresh = accept_json.pop('refresh_token', None)
+                response = Response(accept_json, status=status_result)
+                response.set_cookie('refresh_token', refresh)
+                return response
+            else:
+                return accept_json
     
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter

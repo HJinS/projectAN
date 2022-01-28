@@ -43,8 +43,12 @@ def CrawlAndSaveAmazon():
             product_id, image, name, price, keyword = item
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
-            sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "0", "{today}");'''
-            cursor.execute(sql)
+            try:
+                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                cursor.execute(sql)
+            except:
+                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                cursor.execute(sql)
             db.commit()
              
 
@@ -60,6 +64,10 @@ def CrawlAndSaveNewegg():
             product_id, image, name, price, keyword = item
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
-            sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "0", "{today}");'''
-            cursor.execute(sql)
+            try:
+                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                cursor.execute(sql)
+            except:
+                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                cursor.execute(sql)
             db.commit()
