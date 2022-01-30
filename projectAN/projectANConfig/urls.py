@@ -22,4 +22,5 @@ urlpatterns = [
     path('social/', include('dj_rest_auth.urls')),
     path('social/', include('allauth.urls')),
     path('social/', include('socialUser.urls')),
+    path('product/', include('AN.urls')),
 ]

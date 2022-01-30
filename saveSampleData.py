@@ -65,9 +65,12 @@ def CrawlAndSaveNewegg():
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
             try:
-                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "1", "{today}");'''
                 cursor.execute(sql)
             except:
-                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "1", "{today}");'''
                 cursor.execute(sql)
             db.commit()
+            
+CrawlAndSaveNewegg()
+db.close()

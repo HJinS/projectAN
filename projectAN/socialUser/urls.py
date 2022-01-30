@@ -1,5 +1,5 @@
 from django.urls import path
-from socialUser import views
+from . import views
 
 urlpatterns = [
     path('google/login', views.GoogleLoginView.as_view(), name='google_login'),
