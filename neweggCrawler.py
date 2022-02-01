@@ -41,8 +41,15 @@ class NeweggCrawler(Crawler):
             img = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/a/img').get_attribute('src')
             product_name = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/descendant::div[@class="item-info"]/a').text
             price = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/descendant::div[@class="item-action"]/descendant::ul[@class="price"]/li[@class="price-current "]')
-            price_str = list(price.text.split(' '))[0]
-            self.resultQueue.append([product_id, img, product_name, price_str, keyword])
+            price_str = str(list(price.text.split(' '))[0])
+            price_str = price_str.split('$')[-1]
+            price_str_list = price_str.split(',')
+            if len(price_str_list) == 1:
+                price_str = price_str_list[0]
+            else:
+                price_str = price_str_list[0] + price_str_list[-1]
+            price_float = float(price_str)
+            self.resultQueue.append([product_id, img, product_name, price_float, keyword])
             self.count += 1
         except:
             return

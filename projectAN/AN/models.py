@@ -6,7 +6,7 @@ class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     product_id = models.CharField(max_length=40)
     name = models.CharField(max_length=300)
-    price = models.CharField(max_length=16)
+    price = models.FloatField()
     img_src = models.URLField(max_length=100)
     category = models.CharField(max_length=18)
     site = models.PositiveSmallIntegerField()

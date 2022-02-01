@@ -55,7 +55,14 @@ class AmazonCrawler(Crawler):
         
         price_list_unit = list(str(price.text).split('\n'))
         price_str = price_list_unit[0] + '.' + price_list_unit[1]
-        self.resultQueue.append([product_id, img, product_name, price_str, keyword])
+        price_str = price_str.split('US$')[-1]
+        price_str_list = price_str.split(',')
+        if len(price_str_list) == 1:
+            price_str = price_str_list[0]
+        else:
+            price_str = price_str_list[0] + price_str_list[-1]
+        price_float = float(price_str)
+        self.resultQueue.append([product_id, img, product_name, price_float, keyword])
         self.count += 1
         
     def __get_page_data(self, keyword):

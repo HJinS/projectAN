@@ -21,7 +21,7 @@ class MainAmazonView(APIView):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             querySet = Product.objects.filter(site=0).annotate(
-                like = Exists(subQuery)).order_by('updated_dt')[:10]
+                like = Exists(subQuery)).order_by('price')[:10]
         else:
             querySet = Product.objects.filter(site=0).order_by('updated_dt')[:10]
         serializer = productSerializer(querySet, many=True)
@@ -42,6 +42,22 @@ class MainNeweggView(APIView):
                 like = Exists(subQuery)).order_by('updated_dt')[:10]
         else:
             querySet = Product.objects.filter(site=1).order_by('updated_dt')[:10]
+        serializer = productSerializer(querySet, many=True)
+        response = Response(data=serializer.data, status=status.HTTP_200_OK)
+        return response
+    
+class MainLikeView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self, request):
+        q = Q()
+        q &= Q(product_id=OuterRef('id'))
+        q &= Q(user_id = request.user.id)
+        subQuery = LikeProduct.objects.filter(q)
+        querySet1 = Product.objects.filter(site=0).annotate(
+                like = Exists(subQuery)).order_by('updated_dt')[:5]
+        querySet2 = Product.objects.filter(site=1).annotate(
+                like = Exists(subQuery)).order_by('updated_dt')[:5]
+        querySet = querySet1.union(querySet2, all=True)
         serializer = productSerializer(querySet, many=True)
         response = Response(data=serializer.data, status=status.HTTP_200_OK)
         return response
