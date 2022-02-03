@@ -1,9 +1,21 @@
 from rest_framework import serializers
-from socialUser.serializer import UserSerializer
-from models import LikeProduct
-
+from .models import LikeProduct
 
 class LikeSerializer(serializers.ModelSerializer):
+    products = serializers.SerializerMethodField('get_product_prefetch_related')
+    
+    def get_product_prefetch_related(self, product):
+        data = {}
+        item = product.product
+        data['product_id'] = item.product_id
+        data['name'] = item.name
+        data['price'] = item.price
+        data['category'] = item.category
+        data['img_src'] = item.img_src
+        data['site'] = item.site
+        data['updated_dt'] = item.updated_dt
+        return data
+    
     class Meta:
         model = LikeProduct
-        fields = '__all__'
+        exclude = ['user_id', 'id', 'product_id']

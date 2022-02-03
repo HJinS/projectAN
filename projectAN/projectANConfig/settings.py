@@ -86,8 +86,8 @@ INSTALLED_APPS = [
     'corsheaders',
     
     'AN.apps.AnConfig',
-    'likeAN',
-    'socialUser',
+    'likeAN.apps.LikeanConfig',
+    'socialUser.apps.SocialuserConfig',
     
     'dj_rest_auth',
     'dj_rest_auth.registration',
