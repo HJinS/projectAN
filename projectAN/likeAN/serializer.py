@@ -14,8 +14,18 @@ class LikeSerializer(serializers.ModelSerializer):
         data['img_src'] = item.img_src
         data['site'] = item.site
         data['updated_dt'] = item.updated_dt
+        data['id'] = item.id
         return data
     
     class Meta:
         model = LikeProduct
         exclude = ['user_id', 'id', 'product_id']
+        
+class AddLikeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LikeProduct
+        fields = ('__all__')
+        
+    def create(self, validated_data):
+        return LikeProduct.objects.create(**validated_data)
+        

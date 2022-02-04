@@ -31,7 +31,7 @@ class NeweggCrawler(Crawler):
             except:
                 return
             time.sleep(random.randrange(60))
-            print("complete")
+            print("complete  count = ", self.count)
             if self.count > 100:
                 break
         

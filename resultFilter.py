@@ -30,6 +30,7 @@ class ResultFilter:
                 self.re = re.compile(r""+self.expression[keyword])
             match_result = self.re.findall(name)
             if len(match_result) != 0:
-                resultQ.append([id, image, name, price, keyword])
+                data = [id, image, name, price, keyword]
+                resultQ.append(data)
             self.beforeKeyword = keyword
         return resultQ

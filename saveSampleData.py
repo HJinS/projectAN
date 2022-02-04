@@ -32,7 +32,8 @@ db = pymysql.connect(
 cursor = db.cursor()
 
 def CrawlAndSaveAmazon():
-    keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
+    ##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
+    keywords = ["nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
     driver_path = get_env_key("driver_path")
     for keyword in keywords:
         crawler = AmazonCrawler(driver_path, [keyword])    
@@ -44,13 +45,19 @@ def CrawlAndSaveAmazon():
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
             try:
-                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "0", "{today}");'''
+                sql = f'''INSERT INTO `product` (id, name, img_src, category, site, updated_dt) VALUES ("{product_id}", "{name}", "{image}", "{keyword}", "0", "{today}");'''
+                cursor.execute(sql)
+                sql = f'''INSERT INTO `prices` (id, product_id_id, price, updated_dt) VALUES ("{id}", "{product_id}", "{price}", "{today}");'''
                 cursor.execute(sql)
             except:
-                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "0", "{today}");'''
-                cursor.execute(sql)
-            db.commit()
-             
+                try:
+                    sql = f'''INSERT INTO `product` (id, name, img_src, category, site, updated_dt) VALUES ("{product_id}", '{name}', "{image}", "{keyword}", "0", "{today}");'''
+                    cursor.execute(sql)
+                    sql = f'''INSERT INTO `prices` (id, product_id_id, price, updated_dt) VALUES ("{id}", "{product_id}", "{price}", "{today}");'''
+                    cursor.execute(sql)
+                except:
+                    continue
+                db.commit()
 
 def CrawlAndSaveNewegg():
     keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
@@ -65,12 +72,20 @@ def CrawlAndSaveNewegg():
             id = str(uuid.uuid4().hex)
             today = datetime.today().strftime("%Y-%m-%d")
             try:
-                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", '{name}', "{price}", "{image}", "{keyword}", "1", "{today}");'''
+                sql = f'''INSERT INTO `product` (id, name, img_src, category, site, updated_dt) VALUES ("{product_id}", '{name}', "{image}", "{keyword}", "1", "{today}");'''
+                cursor.execute(sql)
+                sql = f'''INSERT INTO `prices` (id, product_id_id, price, updated_dt) VALUES ("{id}", "{product_id}", "{price}", "{today}");'''
                 cursor.execute(sql)
             except:
-                sql = f'''INSERT INTO `an_product` (id, product_id, name, price, img_src, category, site, updated_dt) VALUES ("{id}", "{product_id}", "{name}", "{price}", "{image}", "{keyword}", "1", "{today}");'''
-                cursor.execute(sql)
-            db.commit()
+                try:
+                    sql = f'''INSERT INTO `product` (id, name, img_src, category, site, updated_dt) VALUES ("{product_id}", "{name}", "{image}", "{keyword}", "1", "{today}");'''
+                    cursor.execute(sql)
+                    sql = f'''INSERT INTO `prices` (id, product_id_id, price, updated_dt) VALUES ("{id}", "{product_id}", "{price}", "{today}");'''
+                    cursor.execute(sql)
+                except:
+                    continue
+                db.commit()
 
+CrawlAndSaveAmazon()
 CrawlAndSaveNewegg()
 db.close()

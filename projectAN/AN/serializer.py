@@ -11,9 +11,12 @@ class productSerializer(serializers.ModelSerializer):
 class idSerializer(serializers.Serializer):
     product_id = serializers.CharField()
     
-class detailSerializer(serializers.ModelSerializer):
-    priceInfo = serializers.ListField()
-    
+class priceInfoSerializer(serializers.ModelSerializer):    
     class Meta:
         model = Product
-        exclude = ('price', 'updated_dt', 'id')
+        fields = ['price', 'updated_dt']
+
+class detailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        exclude = ['price', 'updated_dt', 'id']

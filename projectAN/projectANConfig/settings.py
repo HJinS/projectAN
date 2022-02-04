@@ -85,9 +85,10 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     
-    'AN.apps.AnConfig',
-    'likeAN.apps.LikeanConfig',
-    'socialUser.apps.SocialuserConfig',
+    'AN',
+    'likeAN',
+    'socialUser',
+    'priceInfo',
     
     'dj_rest_auth',
     'dj_rest_auth.registration',

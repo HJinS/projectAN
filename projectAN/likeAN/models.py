@@ -6,3 +6,6 @@ from AN.models import Product
 class LikeProduct(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
+    
+    class Meta:
+        db_table = 'like'

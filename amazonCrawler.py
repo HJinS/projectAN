@@ -36,7 +36,7 @@ class AmazonCrawler(Crawler):
                 next_btn = self.driver.find_elements(By.CLASS_NAME, 's-pagination-item')[-1]
             next_btn.click()
             time.sleep(random.randrange(60))
-            print("complete")
+            print("complete  count = ", self.count)
             if self.count > 100:
                 break
 

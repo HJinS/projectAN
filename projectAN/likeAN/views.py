@@ -10,7 +10,7 @@ from projectAN.paginator import LikePaginator
 
 from AN.models import Product
 from .models import LikeProduct
-from .serializer import LikeSerializer
+from .serializer import LikeSerializer, AddLikeSerializer
 from AN.serializer import productSerializer
 
 class MainLikeView(APIView):
@@ -37,3 +37,19 @@ class ListLikeView(APIView, LikePaginator):
         serializer = LikeSerializer(paginated_queryset, many=True)        
         response = self.get_paginated_response(data=serializer.data)
         return response
+
+class LikeAddView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def post(self, request):
+        userId = request.user.id
+        data = request.data.copy()
+        data.update({'user_id': userId})
+        
+        serializer = AddLikeSerializer(data=data)
+        if not serializer.is_valid():
+            return Response({"msg": "invalid data. Please check your request"}, status=status.HTTP_400_BAD_REQUEST)
+        serializer.save()
+        return Response({"successfully saved"}, status=status.HTTP_201_CREATED)
+            
+            
+            
