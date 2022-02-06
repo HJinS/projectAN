@@ -149,7 +149,7 @@ DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'projectAN',
-        'USER': 'anuser@localhost',
+        'USER': __get_secret('DB_USER'),
         'PASSWORD': __get_secret('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '3306',

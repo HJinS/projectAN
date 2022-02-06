@@ -16,23 +16,20 @@ from AN.serializer import productSerializer
 class MainLikeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     def get(self, request):
-        q = Q()
-        q &= Q(product_id=OuterRef('id'))
-        q &= Q(user_id = request.user.id)
-        subQuery = LikeProduct.objects.filter(q)
-        querySet1 = Product.objects.filter(site=0).annotate(
-                like = Exists(subQuery)).order_by('updated_dt')[:5]
-        querySet2 = Product.objects.filter(site=1).annotate(
-                like = Exists(subQuery)).order_by('updated_dt')[:5]
-        querySet = querySet1.union(querySet2, all=True)
-        serializer = productSerializer(querySet, many=True)
-        response = Response(data=serializer.data, status=status.HTTP_200_OK)
+        queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
+            Prefetch('product_id', queryset=Product.objects.all().prefetch_related('price').order_by('-updated_dt')
+                     , to_attr='product'))[:10]
+        
+        serializer = LikeSerializer(queryset, many=True)
+        response = Response(serializer.data, status=status.HTTP_200_OK)
         return response
 
 class ListLikeView(APIView, LikePaginator):
     permission_classes = [permissions.IsAuthenticated]
     def get(self, request):
-        queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(Prefetch('product_id', queryset=Product.objects.all(), to_attr='product'))
+        queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
+            Prefetch('product_id', queryset=Product.objects.all().prefetch_related('price').order_by('-updated_dt')
+                     , to_attr='product'))
         paginated_queryset = self.paginate_queryset(queryset, request)
         serializer = LikeSerializer(paginated_queryset, many=True)        
         response = self.get_paginated_response(data=serializer.data)
@@ -50,6 +47,4 @@ class LikeAddView(APIView):
             return Response({"msg": "invalid data. Please check your request"}, status=status.HTTP_400_BAD_REQUEST)
         serializer.save()
         return Response({"successfully saved"}, status=status.HTTP_201_CREATED)
-            
-            
             

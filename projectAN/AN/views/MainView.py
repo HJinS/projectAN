@@ -22,7 +22,8 @@ class MainAmazonView(APIView):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             querySet = Product.objects.filter(site=0).annotate(
-                like = Exists(subQuery)).order_by('price')[:10]
+                like = Exists(subQuery)).order_by('price').prefetch_related(
+                    'price').order_by('-updated_dt')[:10]
         else:
             querySet = Product.objects.filter(site=0).order_by('updated_dt')[:10]
         serializer = productSerializer(querySet, many=True)
@@ -40,7 +41,8 @@ class MainNeweggView(APIView):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             querySet = Product.objects.filter(site=1).annotate(
-                like = Exists(subQuery)).order_by('updated_dt')[:10]
+                like = Exists(subQuery)).order_by('updated_dt').prefetch_related(
+                    'price').order_by('-updated_dt')[:10]
         else:
             querySet = Product.objects.filter(site=1).order_by('updated_dt')[:10]
         serializer = productSerializer(querySet, many=True)

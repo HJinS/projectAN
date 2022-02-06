@@ -32,8 +32,7 @@ db = pymysql.connect(
 cursor = db.cursor()
 
 def CrawlAndSaveAmazon():
-    ##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
-    keywords = ["nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
+    keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
     driver_path = get_env_key("driver_path")
     for keyword in keywords:
         crawler = AmazonCrawler(driver_path, [keyword])    

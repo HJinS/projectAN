@@ -12,9 +12,6 @@ from likeAN.models import LikeProduct
 from ..serializer import productSerializer
 from priceInfo.models import PriceInfo
 
-
-
-    
 class ListAmazonView(APIView, Paginator):
     permission_classes = [permissions.AllowAny]
     def get(self, request):
@@ -42,7 +39,8 @@ class ListNeweggView(APIView, Paginator):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             queryset = Product.objects.filter(site=1).annotate(
-                like = Exists(subQuery)).order_by('updated_dt')
+                like = Exists(subQuery)).order_by('updated_dt').prefetch_related(
+                    'price').order_by('-updated_dt')
         else:
             queryset = Product.objects.filter(site=1).order_by('updated_dt')
         paginated_queryset = self.paginate_queryset(queryset, request)
