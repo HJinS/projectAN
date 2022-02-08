@@ -1,0 +1,4 @@
+2022-02-07 16:16:22,286 [WARNING] django.request: Method Not Allowed: /social/google/login
+2022-02-07 16:21:58,616 [WARNING] django.request: Method Not Allowed: /social/google/login
+2022-02-07 16:22:17,368 [WARNING] django.request: Method Not Allowed: /social/google/login
+2022-02-07 17:02:42,602 [WARNING] django.request: Method Not Allowed: /social/google/login

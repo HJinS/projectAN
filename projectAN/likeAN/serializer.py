@@ -8,7 +8,6 @@ class LikeSerializer(serializers.ModelSerializer):
     def get_product_prefetch_related(self, product):
         data = {}
         item = product.product
-        print(item)
         data['product_id'] = item.id
         data['name'] = item.name
         data['category'] = item.category
