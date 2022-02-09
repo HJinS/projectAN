@@ -42,6 +42,10 @@ DEBUG = True
 AUTH_USER_MODEL = 'socialUser.User' 
 ALLOWED_HOSTS = []
 
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env")
+
+SILKY_PYTHON_PROFILER = True
+
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_SERIALIZER = 'json'
@@ -97,6 +101,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    
+    'silk',
 ]
 SITE_ID = 1
 
@@ -110,6 +116,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'silk.middleware.SilkyMiddleware',
 ]
 
 DRF_API_LOGGER_DATABASE = True

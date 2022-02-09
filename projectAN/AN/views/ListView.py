@@ -15,7 +15,7 @@ from priceInfo.models import PriceInfo
 class ListAmazonView(APIView, Paginator):
     permission_classes = [permissions.AllowAny]
     def get(self, request):
-        if request.auth is not None:
+        if str(request.user) != "AnonymousUser":
             q = Q()
             q &= Q(product_id=OuterRef('id'))
             q &= Q(user_id = request.user.id)
@@ -33,7 +33,7 @@ class ListAmazonView(APIView, Paginator):
 class ListNeweggView(APIView, Paginator):
     permission_classes = [permissions.AllowAny]
     def get(self, request):
-        if request.auth is not None:
+        if str(request.user) != "AnonymousUser":
             q = Q()
             q &= Q(product_id=OuterRef('id'))
             q &= Q(user_id = request.user.id)

@@ -8,5 +8,5 @@ class LikeProduct(models.Model):
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='likeRelate')
     
     class Meta:
-        db_table = 'like'
+        db_table = 'likeAN'
         constraints = [models.UniqueConstraint(fields=['user_id', 'product_id'], name='likeConstraints')]

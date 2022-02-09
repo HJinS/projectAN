@@ -20,3 +20,6 @@ local_env.json
 loadEnvKey.py
 
 projectAN/**/migrations
+
+static_in_env
+*.coverage

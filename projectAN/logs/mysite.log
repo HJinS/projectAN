@@ -2,3 +2,60 @@
 2022-02-07 16:21:58,616 [WARNING] django.request: Method Not Allowed: /social/google/login
 2022-02-07 16:22:17,368 [WARNING] django.request: Method Not Allowed: /social/google/login
 2022-02-07 17:02:42,602 [WARNING] django.request: Method Not Allowed: /social/google/login
+2022-02-09 15:34:54,244 [WARNING] django.request: Not Found: /8000proudct/main/newegg
+2022-02-09 15:35:59,420 [WARNING] django.request: Not Found: /8000product/main/newegg
+2022-02-09 15:36:48,397 [WARNING] django.request: Not Found: /productmain/newegg
+2022-02-09 18:01:53,035 [WARNING] django.request: Unauthorized: /product/main/amazon
+2022-02-09 21:09:08,583 [ERROR] django.request: Internal Server Error: /product/like/delete
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 60, in post
+    serializer.destroy()
+TypeError: destroy() missing 1 required positional argument: 'validated_data'
+2022-02-09 21:16:53,549 [ERROR] django.request: Internal Server Error: /product/like/delete
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 60, in post
+    serializer.destroy()
+AttributeError: 'AddLikeSerializer' object has no attribute 'destroy'
+2022-02-09 21:35:08,146 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:35:47,304 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:35:58,735 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:38:08,613 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:38:19,842 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:40:41,994 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:40:53,389 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:41:31,544 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:41:42,681 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:43:13,214 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-09 21:45:37,081 [WARNING] django.request: Bad Request: /product/like/delete

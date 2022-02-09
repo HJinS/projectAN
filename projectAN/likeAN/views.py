@@ -1,4 +1,5 @@
 from math import prod
+from os import stat
 from rest_framework.views import APIView
 from rest_framework import permissions
 from rest_framework.response import Response
@@ -19,7 +20,6 @@ class MainLikeView(APIView):
         queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
             Prefetch('product_id', queryset=Product.objects.all().prefetch_related('price').order_by('-updated_dt')
                      , to_attr='product'))[:10]
-        
         serializer = LikeSerializer(queryset, many=True)
         response = Response(serializer.data, status=status.HTTP_200_OK)
         return response
@@ -47,4 +47,17 @@ class LikeAddView(APIView):
             return Response({"msg": "invalid data. Please check your request"}, status=status.HTTP_400_BAD_REQUEST)
         serializer.save()
         return Response({"successfully saved"}, status=status.HTTP_201_CREATED)
+    
+class LikeDeleteView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def post(self, request):
+        data = request.data
+        
+        try:
+            like = LikeProduct.objects.get(user_id=request.user, product_id=data['product_id'])
+            like.delete()
+            return Response({"successfully deleted"}, status=status.HTTP_202_ACCEPTED)
+        except LikeProduct.DoesNotExist:
+            return Response({"no objects"}, status=status.HTTP_400_BAD_REQUEST)
+        
             

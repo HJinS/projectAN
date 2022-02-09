@@ -35,4 +35,3 @@ class AddLikeSerializer(serializers.ModelSerializer):
         
     def create(self, validated_data):
         return LikeProduct.objects.create(**validated_data)
-        

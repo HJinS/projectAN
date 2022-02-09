@@ -23,8 +23,6 @@ client_secret = getattr(settings, "GOOGLE_OAUTH2_CLIENT_SECRET")
 
 class GoogleLoginView(APIView):
     def get(self, request):
-        print("login first")
-        print("callback uri = ", GOOGLE_CALLBACK_URI)
         scope = "https://www.googleapis.com/auth/userinfo.email"
         response = redirect(f"https://accounts.google.com/o/oauth2/auth?client_id={client_id}&response_type=code&redirect_uri={GOOGLE_CALLBACK_URI}&scope={scope}")
         response['Access-Control-Allow-Origin'] = '*'
@@ -33,20 +31,13 @@ class GoogleLoginView(APIView):
 
 class GoogleCallbackView(APIView):
     def __signIn_or_signUp(self, access_token, code):
-        print("signup start")
         data = {'access_token': access_token, 'code': code }
         accept = requests.post(f"{BASE_URL}social/google/login/finish/", data=data)
-        print("check12")
         accept_status = accept.status_code
-        print("check123")
         if accept_status != 200:
-            print("failed status = ", accept_status)
             return accept, accept_status
-        print("first pass")
         accept_json = accept.json()
-        print("check")
         accept_json.pop('user', None)
-        print("accept_json", accept_json)
         return accept_json, accept_status
 
     def __get_access_token(self, code):
@@ -70,7 +61,6 @@ class GoogleCallbackView(APIView):
         return email
     
     def get(self, request):
-        print("callback")
         code = request.GET.get('code')
 
         try:
@@ -94,7 +84,6 @@ class GoogleCallbackView(APIView):
             # 기존에 Google로 가입된 유저
             accept_json, status_result = self.__signIn_or_signUp(access_token, code)
             if status_result == 200:
-                print(accept_json)
                 refresh = accept_json.pop('refresh_token', None)
                 response = Response(accept_json, status=status_result)
                 response.set_cookie('refresh_token', refresh)
@@ -103,7 +92,6 @@ class GoogleCallbackView(APIView):
                 return accept_json
         except User.DoesNotExist:
             accept_json, status_result = self.__signIn_or_signUp(access_token, code)
-            print(accept_json)
             if status_result == 200:
                 refresh = accept_json.pop('refresh_token', None)
                 response = Response(accept_json, status=status_result)

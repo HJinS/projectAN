@@ -12,7 +12,6 @@ from ..serializer import priceInfoSerializer, idSerializer, detailSerializer
 class DetailProductView(APIView, Paginator):
     permission_classes = [permissions.AllowAny]
     def post(self, request):
-        print(request.data)
         serializer = idSerializer(data=request.data)
         if not serializer.is_valid():
             return Response({"msg": "Invalid data please check your request again"}, status=status.HTTP_400_BAD_REQUEST)

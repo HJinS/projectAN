@@ -6,55 +6,54 @@ from socialUser.tests.userFactory import UserFactory
 from priceInfo.tests.priceFactory import PriceFactory
 
 
-class MainViewTest(APITestCase):
+class ListViewTest(APITestCase):
     
     @classmethod
     def setUpClass(cls):
-        super(MainViewTest, cls).setUpClass()
+        super(ListViewTest, cls).setUpClass()
         cls.client = APIClient()
         
-        
-    def test_main_amazon_with_login(self):
+    def test_list_amazon_with_login(self):
         for i in range(1000):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
         
         user = UserFactory.create()
         self.client.force_authenticate(user=user)
-        response = self.client.get('/product/main/amazon')
+        response = self.client.get('/product/list/amazon')
         self.assertEqual(response.status_code, 200)
         data = json.loads(response.content)
-        self.assertEqual(len(data), 10)
+        self.assertEqual(len(data['results']), 30)
         
-    def test_main_newegg_with_login(self):
+    def test_list_newegg_with_login(self):
         for i in range(1000):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
         
         user = UserFactory.create()
         self.client.force_authenticate(user=user)
-        response = self.client.get('/product/main/newegg')
+        response = self.client.get('/product/list/newegg')
         self.assertEqual(response.status_code, 200)
         data = json.loads(response.content)
-        self.assertEqual(len(data), 10)
+        self.assertEqual(len(data['results']), 30)
         
-    def test_main_amazon_without_login(self):
+    def test_list_amazon_without_login(self):
         for i in range(1000):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
 
-        response = self.client.get('/product/main/amazon')
+        response = self.client.get('/product/list/amazon')
         self.assertEqual(response.status_code, 200)
         data = json.loads(response.content)
-        self.assertEqual(len(data), 10)
+        self.assertEqual(len(data['results']), 30)
 
         
-    def test_main_newegg_without_login(self):
+    def test_list_newegg_without_login(self):
         for i in range(1000):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
         
-        response = self.client.get('/product/main/newegg')
+        response = self.client.get('/product/list/newegg')
         self.assertEqual(response.status_code, 200)
         data = json.loads(response.content)
-        self.assertEqual(len(data), 10)
+        self.assertEqual(len(data['results']), 30)

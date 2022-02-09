@@ -11,12 +11,17 @@ from ..models import Product
 from likeAN.models import LikeProduct
 from ..serializer import productSerializer
 
+from silk.profiling.profiler import silk_profile
+
 
 class MainAmazonView(APIView):
     permission_classes = [permissions.AllowAny]
+    
+    @silk_profile(name = "Main Amazon")
     def get(self, request):
         querySet = None
-        if request.auth is not None:
+        
+        if str(request.user) != "AnonymousUser":
             q = Q()
             q &= Q(product_id=OuterRef('id'))
             q &= Q(user_id = request.user.id)
@@ -33,9 +38,11 @@ class MainAmazonView(APIView):
             
 class MainNeweggView(APIView):
     permission_classes = [permissions.AllowAny]
+    
+    @silk_profile(name = "Main Newegg")
     def get(self, request):
         querySet = None
-        if request.auth is not None:
+        if str(request.user) != "AnonymousUser":
             q = Q()
             q &= Q(product_id=OuterRef('id'))
             q &= Q(user_id = request.user.id)
