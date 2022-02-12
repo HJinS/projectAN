@@ -54,9 +54,11 @@ def CrawlAndSaveAmazon():
                     cursor.execute(sql)
                     sql = f'''INSERT INTO `prices` (id, product_id_id, price, updated_dt) VALUES ("{id}", "{product_id}", "{price}", "{today}");'''
                     cursor.execute(sql)
-                except:
+                except Exception as e:
+                    with open('crawlLog.txt', 'a') as f:
+                        f.write(str(e)+'\n')
                     continue
-                db.commit()
+            db.commit()
 
 def CrawlAndSaveNewegg():
     keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
@@ -81,10 +83,11 @@ def CrawlAndSaveNewegg():
                     cursor.execute(sql)
                     sql = f'''INSERT INTO `prices` (id, product_id_id, price, updated_dt) VALUES ("{id}", "{product_id}", "{price}", "{today}");'''
                     cursor.execute(sql)
-                except:
+                except Exception as e:
+                    with open('crawlLog.txt', 'a') as f:
+                        f.write(str(e)+'\n')
                     continue
-                db.commit()
+            db.commit()
 
-CrawlAndSaveAmazon()
 CrawlAndSaveNewegg()
 db.close()

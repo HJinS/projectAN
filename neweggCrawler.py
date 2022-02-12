@@ -36,11 +36,11 @@ class NeweggCrawler(Crawler):
                 break
         
     def __get_item_data(self, item, keyword):
-        product_id = item.get_attribute('id')
         try:
+            product_id = item.get_attribute('id')
             img = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/a/img').get_attribute('src')
             product_name = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/descendant::div[@class="item-info"]/a').text
-            price = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/descendant::div[@class="item-action"]/descendant::ul[@class="price"]/li[@class="price-current "]')
+            price = item.find_element(By.XPATH, './descendant::div[@class="item-container"]/descendant::div[@class="item-action"]/descendant::ul[@class="price"]/li[@class="price-current"]')
             price_str = str(list(price.text.split(' '))[0])
             price_str = price_str.split('$')[-1]
             price_str_list = price_str.split(',')
@@ -51,7 +51,9 @@ class NeweggCrawler(Crawler):
             price_float = float(price_str)
             self.resultQueue.append([product_id, img, product_name, price_float, keyword])
             self.count += 1
-        except:
+        except Exception as e:
+            with open('crawlLog.txt', 'a') as f:
+                f.write(str(e))
             return
             
     def __get_page_data(self, keyword):

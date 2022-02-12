@@ -50,7 +50,9 @@ class AmazonCrawler(Crawler):
         product_name = item.find_element(By.XPATH, './descendant::div[@class="sg-row"]/descendant::h2/a/span').text
         try:
             price = item.find_element(By.XPATH, './descendant::div[@class="sg-row"]/descendant::span[@class="a-price"]')
-        except:
+        except Exception as e:
+            with open('crawlLog.txt', 'a') as f:
+                f.write(str(e))
             return
         
         price_list_unit = list(str(price.text).split('\n'))

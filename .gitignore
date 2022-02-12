@@ -23,3 +23,5 @@ projectAN/**/migrations
 
 static_in_env
 *.coverage
+
+crawlLog.txt
