@@ -5,7 +5,7 @@ from rest_framework import status
 
 from django.db.models import (Prefetch, Exists, OuterRef, Case, When, Q)
 
-from projectAN.paginator import Paginator
+from priceInfo.models import PriceInfo
 
 from ..models import Product
 from likeAN.models import LikeProduct
@@ -27,10 +27,10 @@ class MainAmazonView(APIView):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             querySet = Product.objects.filter(site=0).annotate(
-                like = Exists(subQuery)).order_by('price').prefetch_related(
-                    'price').order_by('-updated_dt')[:10]
+                like = Exists(subQuery)).order_by('-updated_dt').prefetch_related(
+                    Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))[:10]
         else:
-            querySet = Product.objects.filter(site=0).order_by('updated_dt')[:10]
+            querySet = Product.objects.filter(site=0).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))[:10]
         serializer = productSerializer(querySet, many=True)
         response = Response(data=serializer.data, status=status.HTTP_200_OK)
         return response
@@ -48,10 +48,10 @@ class MainNeweggView(APIView):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             querySet = Product.objects.filter(site=1).annotate(
-                like = Exists(subQuery)).order_by('updated_dt').prefetch_related(
-                    'price').order_by('-updated_dt')[:10]
+                like = Exists(subQuery)).order_by('-updated_dt').prefetch_related(
+                    Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))[:10]
         else:
-            querySet = Product.objects.filter(site=1).order_by('updated_dt')[:10]
+            querySet = Product.objects.filter(site=1).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))[:10]
         serializer = productSerializer(querySet, many=True)
         response = Response(data=serializer.data, status=status.HTTP_200_OK)
         return response

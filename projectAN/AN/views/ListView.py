@@ -21,10 +21,10 @@ class ListAmazonView(APIView, Paginator):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             queryset = Product.objects.filter(site=0).annotate(
-                like = Exists(subQuery)).order_by('updated_dt').prefetch_related(
-                    'price').order_by('-updated_dt')
+                like = Exists(subQuery)).order_by('-updated_dt').prefetch_related(
+                    Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))
         else:
-            queryset = Product.objects.filter(site=0).order_by('updated_dt')
+            queryset = Product.objects.filter(site=0).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))
         paginated_queryset = self.paginate_queryset(queryset, request)
         serializer = productSerializer(paginated_queryset, many=True)
         response = self.get_paginated_response(data=serializer.data)
@@ -39,10 +39,10 @@ class ListNeweggView(APIView, Paginator):
             q &= Q(user_id = request.user.id)
             subQuery = LikeProduct.objects.filter(q)
             queryset = Product.objects.filter(site=1).annotate(
-                like = Exists(subQuery)).order_by('updated_dt').prefetch_related(
-                    'price').order_by('-updated_dt')
+                like = Exists(subQuery)).order_by('-updated_dt').prefetch_related(
+                    Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))
         else:
-            queryset = Product.objects.filter(site=1).order_by('updated_dt')
+            queryset = Product.objects.filter(site=1).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))
         paginated_queryset = self.paginate_queryset(queryset, request)
         serializer = productSerializer(paginated_queryset, many=True)
         response = self.get_paginated_response(data=serializer.data)
