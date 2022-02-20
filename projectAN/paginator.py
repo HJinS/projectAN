@@ -4,7 +4,7 @@ from rest_framework.pagination import CursorPagination
 
 class Paginator(CursorPagination):
     page_size = 30
-    ordering = 'updated_dt'
+    ordering = 'id'
     
 class LikePaginator(CursorPagination):
     page_size = 30

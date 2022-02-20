@@ -18,7 +18,7 @@ class DetailProductView(APIView, Paginator):
         if not serializer.is_valid():
             return Response({"msg": "Invalid data please check your request again"}, status=status.HTTP_400_BAD_REQUEST)
         product_id = serializer.data['product_id']
-        
+        print(product_id)
         if str(request.user) != "Anonymoususer":
             q = Q()
             q &= Q(product_id=product_id)
@@ -26,9 +26,10 @@ class DetailProductView(APIView, Paginator):
             subQuery = LikeProduct.objects.filter(q)
             queryset = Product.objects.filter(id=product_id).annotate(
                 like = Exists(subQuery)).prefetch_related(
-                    Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))
+                    Prefetch('price_relation', PriceInfo.objects.all().order_by('updated_dt'), 'prices'))
         else:
-            queryset = Product.objects.filter(id=product_id).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), 'prices'))
+            queryset = Product.objects.filter(id=product_id).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('updated_dt'), 'prices'))
+        print(queryset)
         serializer = productSerializer(queryset[0], many=False)
         response = Response(serializer.data, status=status.HTTP_200_OK)
         return response
