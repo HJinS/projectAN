@@ -29,7 +29,7 @@ class LikeViewTest(APITestCase):
         user = UserFactory.create()
         for i in range(1000):
             product = ProductFactory.create()
-            PriceFactory.create_batch(4, product_id = product)
+            PriceFactory.create_batch(4, product_id=product)
             LikeFactory.create(user_id=user, product_id=product)
         
         self.client.force_authenticate(user=user)
@@ -75,6 +75,16 @@ class LikeViewTest(APITestCase):
         response = self.client.post('/product/like/add', data=req_data)
         self.assertEqual(response.status_code, 201)
         
+    def test_add_like_fail(self):
+        user = UserFactory.create()
+        for i in range(1000):
+            product = ProductFactory.create()
+            PriceFactory.create_batch(4, product_id=product)
+        req_data = {}
+        self.client.force_authenticate(user=user)
+        response = self.client.post('/product/like/add', data=req_data)
+        self.assertEqual(response.status_code, 400)
+        
     def test_delete_like(self):
         user = UserFactory.create()
         for i in range(1000):
@@ -94,9 +104,8 @@ class LikeViewTest(APITestCase):
         for i in range(1000):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
-            product_id = product.id
         req_data = {
-            'product_id': product_id,
+            'product_id': "id",
         }
         self.client.force_authenticate(user=user)
         response = self.client.post('/product/like/delete', data=req_data)

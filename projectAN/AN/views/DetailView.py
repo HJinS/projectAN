@@ -18,8 +18,7 @@ class DetailProductView(APIView, Paginator):
         if not serializer.is_valid():
             return Response({"msg": "Invalid data please check your request again"}, status=status.HTTP_400_BAD_REQUEST)
         product_id = serializer.data['product_id']
-        print(product_id)
-        if str(request.user) != "Anonymoususer":
+        if str(request.user) != "AnonymousUser":
             q = Q()
             q &= Q(product_id=product_id)
             q &= Q(user_id = request.user.id)
@@ -29,7 +28,9 @@ class DetailProductView(APIView, Paginator):
                     Prefetch('price_relation', PriceInfo.objects.all().order_by('updated_dt'), 'prices'))
         else:
             queryset = Product.objects.filter(id=product_id).prefetch_related(Prefetch('price_relation', PriceInfo.objects.all().order_by('updated_dt'), 'prices'))
-        print(queryset)
-        serializer = productSerializer(queryset[0], many=False)
+        try:
+            serializer = productSerializer(queryset[0], many=False)
+        except Exception as e:
+            return Response("No such data", status=status.HTTP_400_BAD_REQUEST)
         response = Response(serializer.data, status=status.HTTP_200_OK)
         return response

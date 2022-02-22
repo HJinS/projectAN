@@ -18,8 +18,8 @@ class LikeSerializer(serializers.ModelSerializer):
     
     def get_price_prefetch(self, product):
         data_list = []
-        prices = product.product.price.all()
-        for price_item in prices:
+        priceList = product.product.prices
+        for price_item in priceList:
             data = {'price': price_item.price, 'date': price_item.updated_dt}    
             data_list.append(data)
         return data_list

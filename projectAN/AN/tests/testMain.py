@@ -1,5 +1,4 @@
 from rest_framework.test import APIClient, APITestCase
-from unittest.mock import patch, MagicMock
 import json
 from AN.tests.productFactory import ProductFactory
 from socialUser.tests.userFactory import UserFactory

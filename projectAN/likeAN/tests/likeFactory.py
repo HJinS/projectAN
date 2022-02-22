@@ -1,7 +1,5 @@
-from rest_framework.test import APIClient, APITestCase
-import factory, pytz, uuid
+import factory
 
-from datetime import datetime
 from pytz import timezone
 from AN.tests.productFactory import ProductFactory
 from socialUser.tests.userFactory import UserFactory

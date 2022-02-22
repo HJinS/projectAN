@@ -1624,3 +1624,2177 @@ Traceback (most recent call last):
   File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 322, in __getitem__
     return qs._result_cache[0]
 IndexError: list index out of range
+2022-02-21 15:32:12,213 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 15:36:38,465 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_up_success.<locals>.MockedResponse'>`
+2022-02-21 15:40:57,053 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'dict'>`
+2022-02-21 15:41:26,822 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 15:44:46,273 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 15:45:55,547 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 15:51:59,979 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_up_success.<locals>.MockedResponse'>`
+2022-02-21 15:52:23,333 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'method'>`
+2022-02-21 15:56:20,306 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 15:56:26,751 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:20:57,106 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:44:31,081 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:44:37,728 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:46:40,052 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:46:55,106 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:56:49,959 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 16:57:40,714 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 21:42:47,234 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-21 21:45:55,539 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:23:24,273 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:23:43,247 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:38:20,673 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:42:13,837 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:42:45,981 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:43:07,452 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:43:26,902 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:43:54,112 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'dict'>`
+2022-02-22 15:44:22,041 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'dict'>`
+2022-02-22 15:45:23,098 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 15:48:40,852 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 75, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'Response' object has no attribute 'json'
+2022-02-22 15:51:53,748 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'JsonResponse' object has no attribute 'json'
+2022-02-22 15:52:29,066 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'Response' object has no attribute 'json'
+2022-02-22 15:53:03,101 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'Response' object has no attribute 'json'
+2022-02-22 15:55:02,195 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'Response' object has no attribute 'json'
+2022-02-22 15:55:27,648 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 51, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'Response' object has no attribute 'json'
+2022-02-22 16:08:07,392 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+AttributeError: 'HttpResponse' object has no attribute 'json'
+2022-02-22 16:15:11,689 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 50, in __get_access_token
+    token_req_json = token_req.json()
+  File "D:\study\projectAN\venv\lib\site-packages\requests\models.py", line 901, in json
+    return complexjson.loads(
+  File "C:\anaconda\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\anaconda\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\anaconda\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 79, in get
+    raise JSONDecodeError
+TypeError: __init__() missing 3 required positional arguments: 'msg', 'doc', and 'pos'
+2022-02-22 16:17:59,989 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 56, in __get_access_token
+    raise JSONDecodeError(error)
+TypeError: __init__() missing 2 required positional arguments: 'doc' and 'pos'
+2022-02-22 16:18:29,231 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 77, in get
+    access_token = self.__get_access_token(code)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 56, in __get_access_token
+    raise JSONDecodeError(error)
+TypeError: __init__() missing 2 required positional arguments: 'doc' and 'pos'
+2022-02-22 16:20:32,683 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 30, in get
+    response['Access-Control-Allow-Origin'] = '*'
+TypeError: 'Mock' object does not support item assignment
+2022-02-22 16:20:53,008 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 441, in finalize_response
+    patch_vary_headers(response, cc_delim_re.split(vary_headers))
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\cache.py", line 289, in patch_vary_headers
+    vary_headers = cc_delim_re.split(response.headers['Vary'])
+  File "C:\anaconda\lib\unittest\mock.py", line 637, in __getattr__
+    raise AttributeError("Mock object has no attribute %r" % name)
+AttributeError: Mock object has no attribute 'headers'
+2022-02-22 16:22:23,695 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 441, in finalize_response
+    patch_vary_headers(response, cc_delim_re.split(vary_headers))
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\cache.py", line 289, in patch_vary_headers
+    vary_headers = cc_delim_re.split(response.headers['Vary'])
+  File "C:\anaconda\lib\unittest\mock.py", line 637, in __getattr__
+    raise AttributeError("Mock object has no attribute %r" % name)
+AttributeError: Mock object has no attribute 'headers'
+2022-02-22 16:22:52,564 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 441, in finalize_response
+    patch_vary_headers(response, cc_delim_re.split(vary_headers))
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\cache.py", line 289, in patch_vary_headers
+    vary_headers = cc_delim_re.split(response.headers['Vary'])
+  File "C:\anaconda\lib\unittest\mock.py", line 637, in __getattr__
+    raise AttributeError("Mock object has no attribute %r" % name)
+AttributeError: Mock object has no attribute 'headers'
+2022-02-22 18:08:55,526 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 441, in finalize_response
+    patch_vary_headers(response, cc_delim_re.split(vary_headers))
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\cache.py", line 289, in patch_vary_headers
+    vary_headers = cc_delim_re.split(response.headers['Vary'])
+  File "C:\anaconda\lib\unittest\mock.py", line 637, in __getattr__
+    raise AttributeError("Mock object has no attribute %r" % name)
+AttributeError: Mock object has no attribute 'headers'
+2022-02-22 18:09:31,227 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 18:15:28,822 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 18:16:26,372 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 18:17:35,582 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 79, in get
+    email = self.__get_email_address(access_token)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 61, in __get_email_address
+    email_req_status = email_req.status_code
+AttributeError: 'MockedGet' object has no attribute 'status_code'
+2022-02-22 18:18:51,799 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 79, in get
+    email = self.__get_email_address(access_token)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 61, in __get_email_address
+    email_req_status = email_req.status_code
+AttributeError: 'MockedGet' object has no attribute 'status_code'
+2022-02-22 18:19:56,221 [ERROR] django.request: Internal Server Error: /social/google/callback
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 79, in get
+    email = self.__get_email_address(access_token)
+  File "D:\study\projectAN\projectAN\socialUser\views.py", line 61, in __get_email_address
+    email_req_status = email_req.status_code
+AttributeError: 'MockedGet' object has no attribute 'status_code'
+2022-02-22 18:22:40,411 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 18:22:54,502 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 18:23:11,031 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'unittest.mock.MagicMock'>`
+2022-02-22 18:26:32,374 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_in_success.<locals>.MockedRedirect'>`
+2022-02-22 18:29:47,905 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_in_success.<locals>.MockedRedirect'>`
+2022-02-22 18:30:30,207 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_in_success.<locals>.MockedRedirect'>`
+2022-02-22 18:30:45,281 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_in_success.<locals>.MockedRedirect'>`
+2022-02-22 18:31:43,941 [ERROR] django.request: Internal Server Error: /social/google/login
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'socialUser.tests.googleSignInTest.GoogleSignInTest.test_google_sign_in_success.<locals>.MockedRedirect'>`
+2022-02-22 18:36:45,417 [WARNING] django.request: Not Found: /o/oauth2/auth
+2022-02-22 18:38:37,578 [WARNING] django.request: Not Found: /socialgoogle/callback
+2022-02-22 19:03:37,864 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:03:49,258 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 33, in get
+    paginated_queryset = self.paginate_queryset(queryset, request)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\pagination.py", line 642, in paginate_queryset
+    results = list(queryset[offset:offset + self.page_size + 1])
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1356, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 841, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1743, in prefetch_related_objects
+    raise AttributeError("Cannot find '%s' on %s object, '%s' is an invalid "
+AttributeError: Cannot find 'price' on Product object, 'product__price' is an invalid parameter to prefetch_related()
+2022-02-22 19:04:11,765 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 24, in get
+    response = Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 280, in __iter__
+    self._fetch_all()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1356, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 841, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1743, in prefetch_related_objects
+    raise AttributeError("Cannot find '%s' on %s object, '%s' is an invalid "
+AttributeError: Cannot find 'price' on Product object, 'product__price' is an invalid parameter to prefetch_related()
+2022-02-22 19:11:47,751 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:11:59,208 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 35, in get
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAN\likeAN\serializer.py", line 21, in get_price_prefetch
+    prices = product.product.price.all()
+AttributeError: 'Product' object has no attribute 'price'
+2022-02-22 19:12:21,811 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 24, in get
+    response = Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAN\likeAN\serializer.py", line 21, in get_price_prefetch
+    prices = product.product.price.all()
+AttributeError: 'Product' object has no attribute 'price'
+2022-02-22 19:18:06,739 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:18:18,114 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:18:29,201 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:18:40,601 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:18:51,677 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:26:58,828 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:27:10,402 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:27:21,529 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:27:32,993 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:27:44,113 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:30:16,587 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:30:28,039 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:30:39,179 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:30:50,650 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:31:01,820 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('product_id', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:33:36,990 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:33:48,441 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:33:59,610 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:34:11,120 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:34:22,404 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:35:54,640 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:36:06,038 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:36:17,172 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 32, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:36:28,612 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:36:39,698 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:39:09,886 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:39:21,230 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 33, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:39:32,281 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 33, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:39:43,726 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:39:54,790 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:40:52,762 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:41:04,139 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 33, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:41:15,244 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 33, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:41:26,770 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:41:37,980 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt')
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:46:25,080 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:46:36,455 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 30, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:46:47,573 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 30, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:46:59,007 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 20, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))[:10]
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:47:10,120 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 20, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))[:10]
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:50:18,980 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:50:30,420 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 29, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:50:41,583 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 29, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:50:53,051 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 20, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))[:10]
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:51:04,174 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 20, in get
+    Prefetch('likeRelate', queryset=Product.objects.all().prefetch_related(Prefetch('price_relation'), PriceInfo.objects.all().order_by('-updated_dt'), 'prices').order_by('-updated_dt'), to_attr='product'))[:10]
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1110, in prefetch_related
+    lookup = lookup.split(LOOKUP_SEP, 1)[0]
+AttributeError: 'QuerySet' object has no attribute 'split'
+2022-02-22 19:52:00,899 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:52:12,304 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 30, in get
+    paginated_queryset = self.paginate_queryset(queryset, request)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\pagination.py", line 642, in paginate_queryset
+    results = list(queryset[offset:offset + self.page_size + 1])
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1356, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 841, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1743, in prefetch_related_objects
+    raise AttributeError("Cannot find '%s' on %s object, '%s' is an invalid "
+AttributeError: Cannot find 'likeRelate' on LikeProduct object, 'likeRelate' is an invalid parameter to prefetch_related()
+2022-02-22 19:52:34,870 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    response = Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 280, in __iter__
+    self._fetch_all()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1356, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 841, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1743, in prefetch_related_objects
+    raise AttributeError("Cannot find '%s' on %s object, '%s' is an invalid "
+AttributeError: Cannot find 'likeRelate' on LikeProduct object, 'likeRelate' is an invalid parameter to prefetch_related()
+2022-02-22 19:54:50,775 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:55:02,193 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 30, in get
+    paginated_queryset = self.paginate_queryset(queryset, request)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\pagination.py", line 642, in paginate_queryset
+    results = list(queryset[offset:offset + self.page_size + 1])
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1356, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 841, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1743, in prefetch_related_objects
+    raise AttributeError("Cannot find '%s' on %s object, '%s' is an invalid "
+AttributeError: Cannot find 'likeRelate' on LikeProduct object, 'likeRelate' is an invalid parameter to prefetch_related()
+2022-02-22 19:55:24,782 [ERROR] django.request: Internal Server Error: /product/main/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\likeAN\views.py", line 22, in get
+    response = Response(serializer.data, status=status.HTTP_200_OK)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 280, in __iter__
+    self._fetch_all()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1356, in _fetch_all
+    self._prefetch_related_objects()
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 841, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 1743, in prefetch_related_objects
+    raise AttributeError("Cannot find '%s' on %s object, '%s' is an invalid "
+AttributeError: Cannot find 'likeRelate' on LikeProduct object, 'likeRelate' is an invalid parameter to prefetch_related()
+2022-02-22 19:56:19,890 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 19:59:27,852 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 20:11:34,562 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 22:21:45,619 [WARNING] django.request: Bad Request: /product/like/add
+2022-02-22 22:22:07,938 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 22:26:48,667 [ERROR] django.request: Internal Server Error: /product/detail
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAN\AN\views\DetailView.py", line 33, in post
+    serializer = productSerializer(queryset[0], many=False)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 322, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+2022-02-22 22:28:40,952 [WARNING] django.request: Bad Request: /product/like/add
+2022-02-22 22:29:03,108 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 22:33:49,035 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:33:49,096 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:35:09,047 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:35:09,096 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:36:58,233 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:36:58,277 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:37:13,472 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:37:13,516 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:37:43,581 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:37:43,633 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:39:35,308 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:39:35,355 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:41:27,601 [WARNING] django.request: Bad Request: /product/like/add
+2022-02-22 22:41:50,558 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-22 22:45:34,416 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:45:34,464 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:52:00,111 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:52:00,156 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:52:47,137 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:52:47,186 [WARNING] django.request: Bad Request: /product/detail
+2022-02-22 22:54:52,308 [WARNING] django.request: Bad Request: /product/like/add
+2022-02-22 22:55:14,417 [WARNING] django.request: Bad Request: /product/like/delete

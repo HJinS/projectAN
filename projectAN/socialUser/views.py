@@ -25,8 +25,6 @@ class GoogleLoginView(APIView):
     def get(self, request):
         scope = "https://www.googleapis.com/auth/userinfo.email"
         response = redirect(f"https://accounts.google.com/o/oauth2/auth?client_id={client_id}&response_type=code&redirect_uri={GOOGLE_CALLBACK_URI}&scope={scope}")
-        response['Access-Control-Allow-Origin'] = '*'
-        response['Access-Control-Allow-Methods'] = 'GET, POST'
         return response
 
 class GoogleCallbackView(APIView):

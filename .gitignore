@@ -25,3 +25,5 @@ static_in_env
 *.coverage
 
 crawlLog.txt
+
+htmlcov

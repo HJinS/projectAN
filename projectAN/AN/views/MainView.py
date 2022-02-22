@@ -20,7 +20,6 @@ class MainAmazonView(APIView):
     @silk_profile(name = "Main Amazon")
     def get(self, request):
         querySet = None
-        
         if str(request.user) != "AnonymousUser":
             q = Q()
             q &= Q(product_id=OuterRef('id'))
