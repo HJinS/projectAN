@@ -1,4 +1,7 @@
+from ast import Return
 from rest_framework import serializers
+
+from AN.models import Product
 from .models import LikeProduct
 
 class LikeSerializer(serializers.ModelSerializer):
@@ -8,6 +11,8 @@ class LikeSerializer(serializers.ModelSerializer):
     def get_product_prefetch_related(self, product):
         data = {}
         item = product.product
+        if item == None:
+            return None
         data['product_id'] = item.id
         data['name'] = item.name
         data['category'] = item.category
@@ -18,6 +23,8 @@ class LikeSerializer(serializers.ModelSerializer):
     
     def get_price_prefetch(self, product):
         data_list = []
+        if product.product == None:
+            return None
         priceList = product.product.prices
         for price_item in priceList:
             data = {'price': price_item.price, 'date': price_item.updated_dt}    
@@ -35,3 +42,17 @@ class AddLikeSerializer(serializers.ModelSerializer):
         
     def create(self, validated_data):
         return LikeProduct.objects.create(**validated_data)
+
+class LikefilterSerializer(serializers.ModelSerializer):
+    price = serializers.SerializerMethodField('get_price_prefetch')
+    class Meta:
+        model = Product
+        fields = ('__all__')
+    
+    def get_price_prefetch(self, productObj):
+        data_list = []
+        prices = productObj.prices
+        for price_item in prices:
+            data = {'price': price_item.price, 'date': price_item.updated_dt}    
+            data_list.append(data)
+        return data_list

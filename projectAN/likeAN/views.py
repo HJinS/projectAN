@@ -10,7 +10,7 @@ from projectAN.paginator import Paginator
 from AN.models import Product
 from priceInfo.models import PriceInfo
 from .models import LikeProduct
-from .serializer import LikeSerializer, AddLikeSerializer
+from .serializer import LikeSerializer, AddLikeSerializer, LikefilterSerializer
 
 class MainLikeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -30,6 +30,20 @@ class ListLikeView(APIView, Paginator):
                 Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), to_attr='prices')), to_attr='product'))
         paginated_queryset = self.paginate_queryset(queryset, request)
         serializer = LikeSerializer(paginated_queryset, many=True)        
+        response = self.get_paginated_response(data=serializer.data)
+        return response
+    
+    def post(self, request):
+        filterData = request.data["filter"]
+        filter_q = Q()
+        for filterItem in filterData:
+            filter_q |= Q(category=filterItem)
+        filter_q &= Q(likeRelate__user_id = request.user)
+        queryset = Product.objects.filter(filter_q).prefetch_related(
+            Prefetch('price_relation', PriceInfo.objects.all().order_by('-updated_dt'), to_attr='prices'))
+        
+        paginated_queryset = self.paginate_queryset(queryset, request)
+        serializer = LikefilterSerializer(paginated_queryset, many=True)
         response = self.get_paginated_response(data=serializer.data)
         return response
 

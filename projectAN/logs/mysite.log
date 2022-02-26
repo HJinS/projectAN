@@ -3798,3 +3798,1471 @@ IndexError: list index out of range
 2022-02-22 22:52:47,186 [WARNING] django.request: Bad Request: /product/detail
 2022-02-22 22:54:52,308 [WARNING] django.request: Bad Request: /product/like/add
 2022-02-22 22:55:14,417 [WARNING] django.request: Bad Request: /product/like/delete
+2022-02-26 14:42:37,259 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:42:48,345 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:42:50,820 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:42:53,239 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:43:26,239 [ERROR] django.request: Internal Server Error: /product/list/newegg
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:43:37,295 [ERROR] django.request: Internal Server Error: /product/list/newegg
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:43:48,743 [ERROR] django.request: Internal Server Error: /product/list/newegg
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 14:44:00,158 [ERROR] django.request: Internal Server Error: /product/list/newegg
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 41, in post
+    q &= Q(product_id=OuterRef('id'))
+UnboundLocalError: local variable 'q' referenced before assignment
+2022-02-26 16:08:59,742 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\datastructures.py", line 83, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'filter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 35, in post
+    filterData = request.data["filter"]
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'filter'
+2022-02-26 16:23:05,826 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 54, in post
+    sprint(queryset)
+NameError: name 'sprint' is not defined
+2022-02-26 16:23:17,129 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 54, in post
+    sprint(queryset)
+NameError: name 'sprint' is not defined
+2022-02-26 16:23:19,711 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 54, in post
+    print(queryset)
+NameError: name 'sprint' is not defined
+2022-02-26 16:23:22,201 [ERROR] django.request: Internal Server Error: /product/list/amazon
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\AN\views\ListView.py", line 54, in post
+    print(queryset)
+NameError: name 'sprint' is not defined
+2022-02-26 16:27:28,059 [WARNING] django.request: Bad Request: /product/list/amazon
+2022-02-26 16:40:15,756 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 46, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAn\likeAN\serializer.py", line 11, in get_product_prefetch_related
+    data['product_id'] = item.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2022-02-26 16:40:27,307 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 46, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAn\likeAN\serializer.py", line 11, in get_product_prefetch_related
+    data['product_id'] = item.id
+AttributeError: 'NoneType' object has no attribute 'id'
+2022-02-26 16:43:12,815 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 46, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAn\likeAN\serializer.py", line 23, in get_price_prefetch
+    priceList = product.product.prices
+AttributeError: 'NoneType' object has no attribute 'prices'
+2022-02-26 16:43:24,317 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 46, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAn\likeAN\serializer.py", line 23, in get_price_prefetch
+    priceList = product.product.prices
+AttributeError: 'NoneType' object has no attribute 'prices'
+2022-02-26 16:44:32,343 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 46, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAn\likeAN\serializer.py", line 24, in get_price_prefetch
+    priceList = product.product.prices
+AttributeError: 'NoneType' object has no attribute 'prices'
+2022-02-26 16:44:43,862 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 46, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\fields.py", line 1886, in to_representation
+    return method(value)
+  File "D:\study\projectAN\projectAn\likeAN\serializer.py", line 24, in get_price_prefetch
+    priceList = product.product.prices
+AttributeError: 'NoneType' object has no attribute 'prices'
+2022-02-26 18:25:30,652 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: id, product_id, product_id_id, user_id, user_id_id
+2022-02-26 18:25:42,473 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: id, product_id, product_id_id, user_id, user_id_id
+2022-02-26 18:25:54,052 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: id, product_id, product_id_id, user_id, user_id_id
+2022-02-26 18:26:05,442 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'category' into field. Choices are: id, product_id, product_id_id, user_id, user_id_id
+2022-02-26 18:27:22,038 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 43, in post
+    Prefetch('product_id', queryset=Product.objects.filter(filter_q).order_by('-updated_dt').prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_category' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:27:33,749 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 43, in post
+    Prefetch('product_id', queryset=Product.objects.filter(filter_q).order_by('-updated_dt').prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_category' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:27:45,437 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 43, in post
+    Prefetch('product_id', queryset=Product.objects.filter(filter_q).order_by('-updated_dt').prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_category' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:27:56,930 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 43, in post
+    Prefetch('product_id', queryset=Product.objects.filter(filter_q).order_by('-updated_dt').prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'product_category' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:41:16,931 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:41:28,490 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:41:39,665 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:41:50,767 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:42:26,751 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:42:38,193 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:42:49,245 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:43:00,287 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:44:27,570 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'likeRelate_user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:44:39,116 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'likeRelate_user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:44:50,273 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'likeRelate_user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:45:01,395 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 42, in post
+    queryset = Product.objects.filter(filter_q).prefetch_related(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 974, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 992, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\query.py", line 999, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1375, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1252, in build_filter
+    return self._add_q(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1396, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1271, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1099, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "D:\study\projectAN\venv\lib\site-packages\django\db\models\sql\query.py", line 1522, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'likeRelate_user_id' into field. Choices are: category, id, img_src, likeRelate, name, price_relation, site, updated_dt
+2022-02-26 18:49:26,442 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 47, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1124, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the LikefilterSerializer serializer.",)
+2022-02-26 18:51:05,479 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 47, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1124, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the LikefilterSerializer serializer.",)
+2022-02-26 18:52:49,833 [ERROR] django.request: Internal Server Error: /product/list/like
+Traceback (most recent call last):
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\study\projectAN\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\study\projectAN\projectAn\likeAN\views.py", line 47, in post
+    response = self.get_paginated_response(data=serializer.data)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 686, in <listcomp>
+    return [
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "D:\study\projectAN\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1124, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the LikefilterSerializer serializer.",)
