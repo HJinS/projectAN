@@ -13,8 +13,12 @@ from likeAN.models import LikeProduct
 from ..serializer import productSerializer
 from priceInfo.models import PriceInfo
 
+from silk.profiling.profiler import silk_profile
+
 class ListAmazonView(APIView, Paginator):
     permission_classes = [permissions.AllowAny]
+    
+    @silk_profile(name = "List Amazon Get")
     def get(self, request):
         if str(request.user) != "AnonymousUser":
             q = Q()
@@ -31,6 +35,7 @@ class ListAmazonView(APIView, Paginator):
         response = self.get_paginated_response(data=serializer.data)
         return response
     
+    @silk_profile(name = "List Amazon Post")
     def post(self, request):
         filterData = request.data["filter"]
         filter_q = Q()

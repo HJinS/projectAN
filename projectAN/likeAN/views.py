@@ -11,9 +11,13 @@ from AN.models import Product
 from priceInfo.models import PriceInfo
 from .models import LikeProduct
 from .serializer import LikeSerializer, AddLikeSerializer, LikefilterSerializer
+from silk.profiling.profiler import silk_profile
+
 
 class MainLikeView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+    
+    @silk_profile(name = "Main Like")
     def get(self, request):
         queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
             Prefetch('product_id', queryset=Product.objects.all().order_by('-updated_dt').prefetch_related(
@@ -24,6 +28,8 @@ class MainLikeView(APIView):
 
 class ListLikeView(APIView, Paginator):
     permission_classes = [permissions.IsAuthenticated]
+    
+    @silk_profile(name = "List Like Get")
     def get(self, request):
         queryset = LikeProduct.objects.filter(user_id=request.user).prefetch_related(
             Prefetch('product_id', queryset=Product.objects.all().order_by('-updated_dt').prefetch_related(
@@ -33,6 +39,7 @@ class ListLikeView(APIView, Paginator):
         response = self.get_paginated_response(data=serializer.data)
         return response
     
+    @silk_profile(name = "List Like Post")
     def post(self, request):
         filterData = request.data["filter"]
         filter_q = Q()
@@ -49,6 +56,8 @@ class ListLikeView(APIView, Paginator):
 
 class LikeAddView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+    
+    @silk_profile(name = "Like Add")
     def post(self, request):
         userId = request.user.id
         data = request.data.copy()
@@ -62,14 +71,13 @@ class LikeAddView(APIView):
     
 class LikeDeleteView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+    
+    @silk_profile(name = "Like Delete")
     def post(self, request):
         data = request.data
-        
         try:
             like = LikeProduct.objects.get(user_id=request.user, product_id=data['product_id'])
             like.delete()
             return Response({"successfully deleted"}, status=status.HTTP_202_ACCEPTED)
         except LikeProduct.DoesNotExist:
             return Response({"no objects"}, status=status.HTTP_400_BAD_REQUEST)
-        
-            

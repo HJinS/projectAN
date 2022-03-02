@@ -10,9 +10,12 @@ from priceInfo.models import PriceInfo
 from django.db.models import (Prefetch, Exists, OuterRef, Case, When, Q)
 from ..models import Product
 from ..serializer import  idSerializer, detailSerializer, productSerializer
+from silk.profiling.profiler import silk_profile
     
 class DetailProductView(APIView, Paginator):
     permission_classes = [permissions.AllowAny]
+    
+    @silk_profile(name = "Detail Product")
     def post(self, request):
         serializer = idSerializer(data=request.data)
         if not serializer.is_valid():

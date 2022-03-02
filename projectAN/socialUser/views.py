@@ -14,6 +14,7 @@ from json.decoder import JSONDecodeError
 from json import loads
 from django.shortcuts import redirect
 from rest_framework.views import APIView
+from silk.profiling.profiler import silk_profile
 
 state = getattr(settings, 'STATE')
 BASE_URL = 'http://localhost:8000/'
@@ -22,6 +23,7 @@ client_id = getattr(settings, "GOOGLE_OAUTH2_CLIENT_ID")
 client_secret = getattr(settings, "GOOGLE_OAUTH2_CLIENT_SECRET")
 
 class GoogleLoginView(APIView):
+    @silk_profile(name = "Google Login Redirect")
     def get(self, request):
         scope = "https://www.googleapis.com/auth/userinfo.email"
         response = redirect(f"https://accounts.google.com/o/oauth2/auth?client_id={client_id}&response_type=code&redirect_uri={GOOGLE_CALLBACK_URI}&scope={scope}")
@@ -58,9 +60,9 @@ class GoogleCallbackView(APIView):
         email = email_req_json.get('email')
         return email
     
+    @silk_profile(name = "Google Login Callback")
     def get(self, request):
         code = request.GET.get('code')
-
         try:
             access_token = self.__get_access_token(code)
         except JSONDecodeError:
