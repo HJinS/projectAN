@@ -11,36 +11,19 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os, json
-from django.core.exceptions import ImproperlyConfigured
+import os
 from datetime import timedelta
+from celery.schedules import crontab
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-def __get_secret(key):
-    secret_path = os.path.join(BASE_DIR, 'secrets.json')
-    with open(secret_path) as file:
-        secrets = json.loads(file.read())
-    try:
-        return secrets[key]
-    except KeyError:
-        error_message = "Set the {} environment variable".format(key)
-        raise ImproperlyConfigured(error_message)
-
-STATE =  __get_secret("STATE")
-SECRET_KEY = __get_secret("SECRET_KEY")
-GOOGLE_OAUTH2_CLIENT_ID = __get_secret("GOOGLE_OAUTH2_CLIENT_ID")
-GOOGLE_OAUTH2_CLIENT_SECRET = __get_secret("GOOGLE_OAUTH2_CLIENT_SECRET")
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 AUTH_USER_MODEL = 'socialUser.User' 
-ALLOWED_HOSTS = []
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env")
 
@@ -54,13 +37,12 @@ CELERY_ENABLE_UTC = False
 CELERYBEAT_SCHEDULE = {
     'crawlAndSaveProductInfoAmazon' : {
         "task" : "AN.tasks.CrawlAndSaveAmazon",
-        ##리눅스 배포시 crontab사용 할 것
-        'schedule' : timedelta(seconds=30),
+        'schedule' : crontab(minute=0, hour=0),
         'args' : ()
     },
     'crawlAndSaveProductInfoNewegg':{
         "task" : "AN.tasks.CrawlAndSaveNewegg",
-        'schedule' : timedelta(seconds=30),
+        'schedule' : crontab(minute=0, hour=0),
         'args' : ()
     }
 }
@@ -145,23 +127,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'projectANConfig.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-
-DATABASES = {
-    'default':{
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'projectAN',
-        'USER': __get_secret('DB_USER'),
-        'PASSWORD': __get_secret('DB_PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
 
 
 # Password validation

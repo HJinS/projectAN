@@ -10,8 +10,7 @@ from models import Product
 
 @app.task(bind=True)
 def CrawlAndSaveAmazon():
-    ##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
-    keywords = ["liquid cpu cooler", "air cpu cooler"]
+    keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
     driver_path = get_env_key("driver_path")
     crawler = AmazonCrawler(driver_path, keywords)
     test_q = crawler.save()
@@ -23,8 +22,7 @@ def CrawlAndSaveAmazon():
     
 @app.task(bind=True)
 def CrawlAndSaveNewegg():
-    ##keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
-    keywords = ["liquid cpu cooler", "air cpu cooler"]
+    keywords = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
     driver_path = get_env_key("driver_path")
     crawler = NeweggCrawler(driver_path, keywords)
     test_q = crawler.save()
