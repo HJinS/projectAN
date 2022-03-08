@@ -4,7 +4,14 @@ pipeline {
     agent any
 
     parameters {
-        
+        string(name:'DB_HOST', defaultValue: 'dbMysql', description: 'db host')
+        string(name:'Db_PASSWORD', defaultValue: 'db1234!', description: 'db password')
+        string(name:'DB_NAME', defaultValue: 'dbName', description: 'db name')
+        string(name:'DB_USER', defaultValue: 'user1234!', description: 'db user')
+        string(name:'db_port', defaultValue: '3360', description: 'db port')
+        string(name:'SECRET_KEY', defaultValue: 'secret_key', description: 'drf secret key')
+        string(name:'GOOGLE_OAUTH2_CLIENT_ID', defaultValue: 'client id', description: 'google social login client id')
+        string(name:'GOOGLE_OAUTH2_CLIENT_SECRET', defaultValue: 'client secret', description: 'google social login client secret')
     }
 
     stages {
