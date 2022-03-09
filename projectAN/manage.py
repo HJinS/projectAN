@@ -10,6 +10,8 @@ def main():
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.dev')
     elif os.environ.get('DJANGO_SETTINGS_MODULE') == 'projectANConfig.settings.prod':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.prod')
+    elif os.environ.get('DJANGO_SETTINGS_MODULE') == 'projectANConfig.settings.test':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.test')
         
     try:
         from django.core.management import execute_from_command_line
