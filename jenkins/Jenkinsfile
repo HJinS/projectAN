@@ -15,10 +15,10 @@ pipeline {
     stages { 
 
         stage('Check parameter prod') {
+            when {
+                branch 'master'
+            }
             steps {
-                when {
-                    branch 'master'
-                }
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
                         def db_name = sh(script: "aws ssm get-parameters --name DB_NAME | jq '.Parameters[0].Value'", returnStdout: true).trim()
@@ -37,10 +37,10 @@ pipeline {
         }
 
         stage('Check parameter test'){
+            when {
+                branch 'test'
+            }
             steps {
-                when {
-                    branch 'test'
-                }
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
                         def secret_key = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq '.Parameters[0].Value'", returnStdout: true).trim()
