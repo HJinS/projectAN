@@ -11,8 +11,7 @@ pipeline {
         string(name:'GOOGLE_OAUTH2_CLIENT_ID', defaultValue: 'client id', description: 'google social login client id')
         string(name:'GOOGLE_OAUTH2_CLIENT_SECRET', defaultValue: 'client secret', description: 'google social login client secret')
     }
-
-    stages { 
+    stages {
         stage('Start Deploy') {
             agent any
             when {
@@ -44,9 +43,7 @@ pipeline {
                 }
             }
         }
-    }
 
-    stages {
         stage('Start Test'){
             agent any
             when {
