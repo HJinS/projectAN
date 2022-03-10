@@ -13,6 +13,15 @@ pipeline {
     }
 
     stages { 
+        stage('Start Deploy') {
+            agent any
+            when {
+                branch 'master'
+            }
+            steps {
+                slackSend (channel: 'deploych', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            }
+        }
 
         stage('Check parameter prod') {
             when {
@@ -35,6 +44,18 @@ pipeline {
                 }
             }
         }
+    }
+
+    stages {
+        stage('Start Test'){
+            agent any
+            when {
+                branch 'test'
+            }
+            steps {
+                slackSend (channel: 'test', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            }
+        }
 
         stage('Check parameter test'){
             when {
@@ -51,6 +72,29 @@ pipeline {
                     }
                 }
             }
+        }
+    }
+
+    post {
+        when {
+            branch 'master'
+        }
+        success {
+            slackSend (channel: 'deploych', color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        }
+        failure {
+            slackSend (channel: 'deploych', color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        }
+    }
+    post {
+        when {
+            branch 'test'
+        }
+        success {
+            slackSend (channel: 'test', color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        }
+        failure {
+            slackSend (channel: 'test', color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
         }
     }
 }
