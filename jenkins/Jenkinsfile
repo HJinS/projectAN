@@ -13,7 +13,6 @@ pipeline {
     }
     stages {
         stage('Start Deploy') {
-            agent any
             when {
                 branch 'master'
             }
@@ -23,7 +22,6 @@ pipeline {
         }
 
         stage('Start Test'){
-            agent any
             when {
                 branch 'test'
             }
@@ -37,7 +35,7 @@ pipeline {
                 script {
                     try{
                         sh 'venv\\scripts\\activate'
-                    }catch{
+                    }catch(Exception e){
                         sh 'python3 -m venv venv'
                     }
                 }
