@@ -28,7 +28,7 @@ pipeline {
                 branch 'test'
             }
             steps {
-                slackSend (channel: 'test', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                slackSend (channel: 'testch', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
 
@@ -49,10 +49,10 @@ pipeline {
             }
             post {
                 success {
-                    slackSend (channel: 'test', color: '#00FF00', message: "Check parameter test job ended successfully")
+                    slackSend (channel: 'testch', color: '#00FF00', message: "Check parameter test job ended successfully '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
                 failure {
-                    slackSend (channel: 'test', color: '#FF0000', message: "Check parameter test job failed")
+                    slackSend (channel: 'testch', color: '#FF0000', message: "Check parameter test job failed '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
             }
         }
@@ -79,10 +79,10 @@ pipeline {
             }
             post {
                 success {
-                    slackSend (channel: 'test', color: '#00FF00', message: "Check parameter deploy job ended successfully")
+                    slackSend (channel: 'deploych', color: '#00FF00', message: "Check parameter deploy job ended successfully '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
                 failure {
-                    slackSend (channel: 'test', color: '#FF0000', message: "Check parameter deploy job failed")
+                    slackSend (channel: 'deploych', color: '#FF0000', message: "Check parameter deploy job failed '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
             }
         }
