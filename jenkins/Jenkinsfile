@@ -49,10 +49,10 @@ pipeline {
             }
             post {
                 success {
-                    slackSend (channel: 'testch', color: '#00FF00', message: "Check parameter test job ended successfully '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
+                    slackSend (channel: 'testch', color: '#00FF20', message: "Check parameter test job ended successfully '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
                 failure {
-                    slackSend (channel: 'testch', color: '#FF0000', message: "Check parameter test job failed '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
+                    slackSend (channel: 'testch', color: '#FF0040', message: "Check parameter test job failed '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
             }
         }
@@ -79,10 +79,10 @@ pipeline {
             }
             post {
                 success {
-                    slackSend (channel: 'deploych', color: '#00FF00', message: "Check parameter prdo job ended successfully '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
+                    slackSend (channel: 'deploych', color: '#00FF20', message: "Check parameter prdo job ended successfully '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
                 failure {
-                    slackSend (channel: 'deploych', color: '#FF0000', message: "Check parameter prdo job failed '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
+                    slackSend (channel: 'deploych', color: '#FF0040', message: "Check parameter prdo job failed '${env.JOB_NAME} [${env.BUILD_NUMBER"}]' (${env.BUILD_URL})")
                 }
             }
         }
