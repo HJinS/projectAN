@@ -13,6 +13,8 @@ ALLOWED_HOSTS = []
 
 WSGI_APPLICATION = 'projectANConfig.wsgi.prod.application'
 
+CORS_ORIGIN_WHITELIST = ['*']
+
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',

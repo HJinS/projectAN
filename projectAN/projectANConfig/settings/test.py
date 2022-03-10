@@ -12,6 +12,8 @@ DEBUG = True
 # add host ip
 ALLOWED_HOSTS = []
 
+CORS_ORIGIN_WHITELIST = ['*']
+
 WSGI_APPLICATION = 'projectANConfig.wsgi.test.application'
 
 DATABASES = {

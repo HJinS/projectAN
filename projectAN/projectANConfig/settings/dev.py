@@ -19,6 +19,11 @@ GOOGLE_OAUTH2_CLIENT_SECRET = __get_secret("GOOGLE_OAUTH2_CLIENT_SECRET")
 
 DEBUG = True
 
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
+    'http://localhost:3000',
+]
+
 ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'projectANConfig.wsgi.dev.application'
