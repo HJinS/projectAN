@@ -1,16 +1,6 @@
 pipeline {
     agent any
 
-    parameters {
-        string(name:'DB_HOST', defaultValue: 'dbMysql', description: 'db host')
-        string(name:'Db_PASSWORD', defaultValue: 'db1234!', description: 'db password')
-        string(name:'DB_NAME', defaultValue: 'dbName', description: 'db name')
-        string(name:'DB_USER', defaultValue: 'user1234!', description: 'db user')
-        string(name:'db_port', defaultValue: '3360', description: 'db port')
-        string(name:'SECRET_KEY', defaultValue: 'secret_key', description: 'drf secret key')
-        string(name:'GOOGLE_OAUTH2_CLIENT_ID', defaultValue: 'client id', description: 'google social login client id')
-        string(name:'GOOGLE_OAUTH2_CLIENT_SECRET', defaultValue: 'client secret', description: 'google social login client secret')
-    }
     stages {
         stage('Start Deploy') {
             when {
@@ -69,6 +59,13 @@ pipeline {
                     }
                 }
             }
+            environment {
+                SECRET_KEY = secret_key
+                STATE = state
+                DJANGO_SETTINGS_MODULE = django_settings_module
+                GOOGLE_OAUTH2_CLIENT_ID = google_oauth2_client_id
+                GOOGLE_OAUTH2_CLIENT_SECRET = google_oauth2_client_secret
+            }
             post {
                 success {
                     slackSend (channel: 'testch', color: '#00FF20', message: "Check parameter test job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
@@ -98,6 +95,18 @@ pipeline {
                         def google_oauth2_client_secret = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq '.Parameters[0].Value'", returnStdout: true).trim()
                     }
                 }
+            }
+            environment {
+                DB_NAME = db_name
+                DB_USER = db_user
+                DB_PASSWORD = db_password
+                DB_HOST = db_host
+                DB_PORT = db_port
+                SECRET_KEY = secret_key
+                STATE = state
+                DJANGO_SETTINGS_MODULE = django_settings_module
+                GOOGLE_OAUTH2_CLIENT_ID = google_oauth2_client_id
+                GOOGLE_OAUTH2_CLIENT_SECRET = google_oauth2_client_secret
             }
             post {
                 success {

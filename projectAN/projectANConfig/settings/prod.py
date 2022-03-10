@@ -1,6 +1,5 @@
 import os
 from ._base import *
-from django.core.exceptions import ImproperlyConfigured
     
 STATE =  os.getenv("STATE")
 SECRET_KEY = os.getenv("SECRET_KEY")
