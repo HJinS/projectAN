@@ -5,11 +5,12 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    if not os.environ.get('DJANGO_SETTINGS_MODULE'):
+    DJANGO_SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
+    if not DJANGO_SETTINGS_MODULE:
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.dev')
-    elif os.environ.get('DJANGO_SETTINGS_MODULE') == 'projectANConfig.settings.prod':
+    elif DJANGO_SETTINGS_MODULE == 'projectANConfig.settings.prod':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.prod')
-    elif os.environ.get('DJANGO_SETTINGS_MODULE') == 'projectANConfig.settings.test':
+    elif DJANGO_SETTINGS_MODULE == 'projectANConfig.settings.test':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.test')
         
     try:
