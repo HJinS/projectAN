@@ -22,28 +22,6 @@ pipeline {
             }
         }
 
-        stage('Check parameter prod') {
-            when {
-                branch 'master'
-            }
-            steps {
-                script {
-                    withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
-                        def db_name = sh(script: "aws ssm get-parameters --name DB_NAME | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def db_user = sh(script: "aws ssm get-parameters --name DB_USER | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def db_password = sh(script: "aws ssm get-parameters --name DB_PASSWORD | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def db_host = sh(script: "aws ssm get-parameters --name DB_HOST | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def db_port = sh(script: "aws ssm get-parameters --name DB_PORT | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def secret_key = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def state = sh(script: "aws ssm get-parameters --name STATE | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def django_settings_module = sh(script: "aws ssm get-parameters --name /prod/DJANGO_SETTINGS_MODULE | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def google_oauth2_client_id = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                        def google_oauth2_client_secret = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq '.Parameters[0].Value'", returnStdout: true).trim()
-                    }
-                }
-            }
-        }
-
         stage('Start Test'){
             agent any
             when {
@@ -69,29 +47,44 @@ pipeline {
                     }
                 }
             }
+            post {
+                success {
+                    slackSend (channel: 'test', color: '#00FF00', message: "Check parameter test job ended successfully")
+                }
+                failure {
+                    slackSend (channel: 'test', color: '#FF0000', message: "Check parameter test job failed")
+                }
+            }
         }
-    }
 
-    post {
-        when {
-            branch 'master'
-        }
-        success {
-            slackSend (channel: 'deploych', color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-        }
-        failure {
-            slackSend (channel: 'deploych', color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-        }
-    }
-    post {
-        when {
-            branch 'test'
-        }
-        success {
-            slackSend (channel: 'test', color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-        }
-        failure {
-            slackSend (channel: 'test', color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+        stage('Check parameter prod') {
+            when {
+                branch 'master'
+            }
+            steps {
+                script {
+                    withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
+                        def db_name = sh(script: "aws ssm get-parameters --name DB_NAME | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def db_user = sh(script: "aws ssm get-parameters --name DB_USER | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def db_password = sh(script: "aws ssm get-parameters --name DB_PASSWORD | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def db_host = sh(script: "aws ssm get-parameters --name DB_HOST | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def db_port = sh(script: "aws ssm get-parameters --name DB_PORT | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def secret_key = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def state = sh(script: "aws ssm get-parameters --name STATE | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def django_settings_module = sh(script: "aws ssm get-parameters --name /prod/DJANGO_SETTINGS_MODULE | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def google_oauth2_client_id = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        def google_oauth2_client_secret = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                    }
+                }
+            }
+            post {
+                success {
+                    slackSend (channel: 'test', color: '#00FF00', message: "Check parameter deploy job ended successfully")
+                }
+                failure {
+                    slackSend (channel: 'test', color: '#FF0000', message: "Check parameter deploy job failed")
+                }
+            }
         }
     }
 }
