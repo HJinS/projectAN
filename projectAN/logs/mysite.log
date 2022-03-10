@@ -5266,3 +5266,11 @@ Traceback (most recent call last):
   File "D:\study\projectAN\venv\lib\site-packages\rest_framework\serializers.py", line 1124, in get_field_names
     assert not (fields is None and exclude is None), (
 AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the LikefilterSerializer serializer.",)
+2022-03-10 17:51:31,880 [WARNING] django.request: Bad Request: /product/detail
+2022-03-10 17:51:31,970 [WARNING] django.request: Bad Request: /product/detail
+2022-03-10 17:53:08,728 [WARNING] django.request: Bad Request: /product/detail
+2022-03-10 17:53:08,783 [WARNING] django.request: Bad Request: /product/detail
+2022-03-10 17:59:33,736 [WARNING] django.request: Bad Request: /product/detail
+2022-03-10 17:59:33,828 [WARNING] django.request: Bad Request: /product/detail
+2022-03-10 18:04:20,508 [WARNING] django.request: Bad Request: /product/like/add
+2022-03-10 18:04:42,641 [WARNING] django.request: Bad Request: /product/like/delete

@@ -32,6 +32,29 @@ pipeline {
             }
         }
 
+        stage('virtual env'){
+            steps {
+                sh 'venv\\scripts\\activate'
+            }
+            post {
+                failure {
+                    sh 'python3 -m venv venv'
+                }
+            }
+        }
+
+        stage('install requirements'){
+            steps{
+                sh 'pip install -r requirements.txt'
+            }
+            post {
+                failure {
+                    slackSend (channel: 'deploych', color: '#FF0040', message: "install requirements failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                    slackSend (channel: 'testch', color: '#FF0040', message: "install requirements failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+            }
+        }
+
         stage('Check parameter test'){
             when {
                 branch 'test'
@@ -84,6 +107,28 @@ pipeline {
                 failure {
                     slackSend (channel: 'deploych', color: '#FF0040', message: "Check parameter prdo job failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 }
+            }
+        }
+
+        stage('Migration') {
+            steps {
+                sh 'python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
+                sh 'python3 projectAN/manage.py migrate'
+            }
+        }
+
+        stage('Test API') {
+            steps {
+                sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
+            }
+        }
+
+        stage('Run server') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sh 'python3 projectAN/manage.py runserver 0.0.0.0:8000'   
             }
         }
     }
