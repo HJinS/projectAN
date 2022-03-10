@@ -68,7 +68,7 @@ pipeline {
             }
             post {
                 success {
-                    echo ${env.DJANGO_SETTINGS_MODULE}
+                    echo "${env.DJANGO_SETTINGS_MODULE}"
                     slackSend (channel: 'testch', color: '#00FF20', message: "Check parameter test job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 }
                 failure {
@@ -111,7 +111,7 @@ pipeline {
             }
             post {
                 success {
-                    echo ${env.DJANGO_SETTINGS_MODULE}
+                    echo "${env.DJANGO_SETTINGS_MODULE}"
                     slackSend (channel: 'deploych', color: '#00FF20', message: "Check parameter prdo job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 }
                 failure {
