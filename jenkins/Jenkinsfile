@@ -34,11 +34,12 @@ pipeline {
 
         stage('virtual env'){
             steps {
-                sh 'venv\\scripts\\activate'
-            }
-            post {
-                failure {
-                    sh 'python3 -m venv venv'
+                script {
+                    try{
+                        sh 'venv\\scripts\\activate'
+                    }catch(){
+                        sh 'python3 -m venv venv'
+                    }
                 }
             }
         }
