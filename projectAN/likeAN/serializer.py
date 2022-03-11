@@ -1,4 +1,3 @@
-from ast import Return
 from rest_framework import serializers
 
 from AN.models import Product

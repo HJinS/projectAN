@@ -1,5 +1,3 @@
-import faker
-from rest_framework.test import APIClient, APITestCase
 import factory, pytz, uuid
 import factory.fuzzy
 
