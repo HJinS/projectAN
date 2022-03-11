@@ -85,7 +85,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     
     'silk',
-    'django-jenkins',
+    'django_jenkins',
 ]
 SITE_ID = 1
 
