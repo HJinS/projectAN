@@ -14,8 +14,8 @@ class ListViewTest(APITestCase):
         cls.client = APIClient()
         
     def test_list_amazon_with_login(self):
-        for i in range(1000):
-            product = ProductFactory.create()
+        for i in range(30):
+            product = ProductFactory.create(site=0)
             PriceFactory.create_batch(4, product_id = product)
         
         user = UserFactory.create()
@@ -26,8 +26,8 @@ class ListViewTest(APITestCase):
         self.assertEqual(len(data['results']), 30)
         
     def test_list_amazon_with_login_like(self):
-        for i in range(1000):
-            product = ProductFactory.create()
+        for i in range(30):
+            product = ProductFactory.create(site=0)
         PriceFactory.create_batch(4, product_id = product)
         user = UserFactory.create()
         
@@ -39,8 +39,8 @@ class ListViewTest(APITestCase):
         
     def test_list_newegg_with_login(self):
         user = UserFactory.create()
-        for i in range(1000):
-            product = ProductFactory.create()
+        for i in range(30):
+            product = ProductFactory.create(site=1)
             PriceFactory.create_batch(4, product_id = product)
         LikeFactory.create(user_id=user, product_id = product)
         self.client.force_authenticate(user=user)
@@ -52,10 +52,10 @@ class ListViewTest(APITestCase):
     
     def test_list_newegg_with_login_like(self):
         user = UserFactory.create()
-        for i in range(1000):
-            product = ProductFactory.create()
-            PriceFactory.create_batch(4, product_id = product)
-            LikeFactory.create(user_id=user, product_id = product)
+        for i in range(30):
+            product = ProductFactory.create(site=1)
+            PriceFactory.create_batch(4, product_id=product)
+            LikeFactory.create(user_id=user, product_id=product)
         
         self.client.force_authenticate(user=user)
         response = self.client.get('/product/list/newegg')
@@ -64,8 +64,8 @@ class ListViewTest(APITestCase):
         self.assertEqual(len(data['results']), 30)
         
     def test_list_amazon_without_login(self):
-        for i in range(1000):
-            product = ProductFactory.create()
+        for i in range(30):
+            product = ProductFactory.create(site=0)
             PriceFactory.create_batch(4, product_id = product)
 
         response = self.client.get('/product/list/amazon')
@@ -75,8 +75,8 @@ class ListViewTest(APITestCase):
 
         
     def test_list_newegg_without_login(self):
-        for i in range(1000):
-            product = ProductFactory.create()
+        for i in range(30):
+            product = ProductFactory.create(site=1)
             PriceFactory.create_batch(4, product_id = product)
         
         response = self.client.get('/product/list/newegg')

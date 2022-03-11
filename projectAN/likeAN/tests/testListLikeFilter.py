@@ -11,12 +11,12 @@ class LikeViewTest(APITestCase):
     def setUpClass(cls):
         super(LikeViewTest, cls).setUpClass()
         cls.client = APIClient()
-        cls.correctFilter = ["intel cpu", "amd cpu", "ddr5 ram", "nvme ssd", "liquid cpu cooler", "air cpu cooler"]
+        cls.correctFilter = ["intel cpu", "amd cpu", "radeon gpu", "nvidia gpu", "ddr4 ram", "ddr5 ram", "nvme ssd", "sata ssd", "liquid cpu cooler", "air cpu cooler"]
         cls.wrongFilter = ["int cpu", "nvid gpu", "ddr ram"]
         
     def test_list_like_with_like_and_correct_filter(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
             LikeFactory.create(user_id=user, product_id=product)
@@ -29,7 +29,7 @@ class LikeViewTest(APITestCase):
         
     def test_list_like_without_like_and_correct_filter(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
         
@@ -41,7 +41,7 @@ class LikeViewTest(APITestCase):
         
     def test_list_like_with_like_and_wrong_filter(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
             LikeFactory.create(user_id=user, product_id=product)
@@ -54,7 +54,7 @@ class LikeViewTest(APITestCase):
     
     def test_list_like_without_like_and_wrong_filter(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
         

@@ -14,7 +14,7 @@ class LikeViewTest(APITestCase):
         
     def test_main_like_with_like(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
             LikeFactory.create(user_id=user, product_id=product)
@@ -27,7 +27,7 @@ class LikeViewTest(APITestCase):
         
     def test_list_like_with_like(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
             LikeFactory.create(user_id=user, product_id=product)
@@ -40,7 +40,7 @@ class LikeViewTest(APITestCase):
     
     def test_main_like_without_like(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
         
@@ -52,7 +52,7 @@ class LikeViewTest(APITestCase):
         
     def test_list_like_without_like(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id = product)
         
@@ -64,7 +64,7 @@ class LikeViewTest(APITestCase):
         
     def test_add_like(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
             product_id = product.id
@@ -77,7 +77,7 @@ class LikeViewTest(APITestCase):
         
     def test_add_like_fail(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
         req_data = {}
@@ -87,7 +87,7 @@ class LikeViewTest(APITestCase):
         
     def test_delete_like(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
             product_id = product.id
@@ -101,7 +101,7 @@ class LikeViewTest(APITestCase):
         
     def test_delete_like_fail(self):
         user = UserFactory.create()
-        for i in range(1000):
+        for i in range(30):
             product = ProductFactory.create()
             PriceFactory.create_batch(4, product_id=product)
         req_data = {
