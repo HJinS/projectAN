@@ -129,14 +129,7 @@ pipeline {
 
         stage('Test API') {
             steps {
-                script{
-                    try{
-                        sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
-                    }catch(Exception e){
-                        sh 'pip install --upgrade coverage'
-                        sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
-                    }
-                }
+                sh 'python3 -m coverage run projectAN/manage.py test AN likeAN socialUser'
             }
         }
 
