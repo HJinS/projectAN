@@ -5,8 +5,6 @@ import sys
 
 def main():
     
-    for key, value in os.environ.items():
-        print('{}: {}'.format(key, value))
     """Run administrative tasks."""
     DJANGO_SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
     if not DJANGO_SETTINGS_MODULE:
@@ -15,8 +13,6 @@ def main():
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.prod')
     elif DJANGO_SETTINGS_MODULE == 'projectANConfig.settings.test':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.test')
-    else:
-        print("DJANGO_SETTINGS_MODULE = ", DJANGO_SETTINGS_MODULE)
         
     try:
         from django.core.management import execute_from_command_line
