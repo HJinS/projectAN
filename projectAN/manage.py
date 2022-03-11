@@ -13,6 +13,8 @@ def main():
     elif DJANGO_SETTINGS_MODULE == 'projectANConfig.settings.test':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.test')
         
+    print(DJANGO_SETTINGS_MODULE)
+        
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
