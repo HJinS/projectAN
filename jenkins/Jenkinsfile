@@ -58,11 +58,11 @@ pipeline {
             steps {
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
-                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /test/DJANGO_SETTINGS_MODULE | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -0 '.Parameters[0].Value'", returnStdout: true)
+                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /test/DJANGO_SETTINGS_MODULE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -j '.Parameters[0].Value'", returnStdout: true)
                     }
                 }
             }
@@ -96,16 +96,16 @@ pipeline {
             steps {
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
-                        env.DB_NAME = sh(script: "aws ssm get-parameters --name DB_NAME | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.DB_USER = sh(script: "aws ssm get-parameters --name DB_USER | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.DB_PASSWORD = sh(script: "aws ssm get-parameters --name DB_PASSWORD | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.DB_HOST = sh(script: "aws ssm get-parameters --name DB_HOST | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.DB_PORT = sh(script: "aws ssm get-parameters --name DB_PORT | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /prod/DJANGO_SETTINGS_MODULE | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -0 '.Parameters[0].Value'", returnStdout: true)
-                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -0 '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_NAME = sh(script: "aws ssm get-parameters --name DB_NAME | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_USER = sh(script: "aws ssm get-parameters --name DB_USER | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_PASSWORD = sh(script: "aws ssm get-parameters --name DB_PASSWORD | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_HOST = sh(script: "aws ssm get-parameters --name DB_HOST | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_PORT = sh(script: "aws ssm get-parameters --name DB_PORT | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /prod/DJANGO_SETTINGS_MODULE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -j '.Parameters[0].Value'", returnStdout: true)
                     }
                 }
             }
