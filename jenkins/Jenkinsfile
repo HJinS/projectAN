@@ -130,8 +130,14 @@ pipeline {
 
         stage('Test API') {
             steps {
-                sh 'python3 -m pip install coverage'
-                sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
+                sh 'python3 projectAN/manage.py jenkins --enable-coverage'
+                sh 'python3 projectAN/manage.py test AN likeAN socialUser'
+            }
+            post {
+                always {
+                    junit '**/nosetests.xml'
+                    step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+                }
             }
         }
 
