@@ -9,11 +9,11 @@ GOOGLE_OAUTH2_CLIENT_SECRET = os.getenv("GOOGLE_OAUTH2_CLIENT_SECRET")
 DEBUG = False
 
 # add host ip
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'projectANConfig.wsgi.prod.application'
 
-CORS_ORIGIN_WHITELIST = ['*']
+CORS_ORIGIN_WHITELIST = ['http://54.180.118.117:3000']
 
 DATABASES = {
     'default':{
