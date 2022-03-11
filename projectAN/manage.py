@@ -4,9 +4,6 @@ import os
 import sys
 
 def main():
-    
-    for key, value in os.environ.items():
-        print('{}: {}'.format(key, value))
     """Run administrative tasks."""
     DJANGO_SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
     if not DJANGO_SETTINGS_MODULE:
