@@ -1,4 +1,3 @@
-from tkinter import CASCADE
 from django.db import models
 from AN.models import Product
 from uuid import uuid4
