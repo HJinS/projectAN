@@ -5274,3 +5274,5 @@ AssertionError: ("Creating a ModelSerializer without either the 'fields' attribu
 2022-03-10 17:59:33,828 [WARNING] django.request: Bad Request: /product/detail
 2022-03-10 18:04:20,508 [WARNING] django.request: Bad Request: /product/like/add
 2022-03-10 18:04:42,641 [WARNING] django.request: Bad Request: /product/like/delete
+2022-03-11 20:54:40,358 [WARNING] django.request: Bad Request: /product/detail
+2022-03-11 20:54:40,456 [WARNING] django.request: Bad Request: /product/detail
