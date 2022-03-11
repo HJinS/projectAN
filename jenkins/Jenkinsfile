@@ -58,11 +58,11 @@ pipeline {
             steps {
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
-                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq .Parameters[0].Value", returnStdout: true).trim()
-                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq .Parameters[0].Value", returnStdout: true).trim()
-                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /test/DJANGO_SETTINGS_MODULE | jq .Parameters[0].Value", returnStdout: true).trim()
-                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq .Parameters[0].Value", returnStdout: true).trim()
-                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq .Parameters[0].Value", returnStdout: true).trim()
+                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /test/DJANGO_SETTINGS_MODULE | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq '.Parameters[0].Value'", returnStdout: true).trim()
+                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq '.Parameters[0].Value'", returnStdout: true).trim()
                     }
                 }
             }
