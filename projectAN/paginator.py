@@ -1,4 +1,3 @@
-from tkinter.tix import INTEGER
 from rest_framework.pagination import CursorPagination
 
 
