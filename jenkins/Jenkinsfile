@@ -133,7 +133,7 @@ pipeline {
                     try{
                         sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                     }catch(Exception e){
-                        sh 'pip install -upgrade coverage'
+                        sh 'pip install --upgrade coverage'
                         sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                     }
                 }
