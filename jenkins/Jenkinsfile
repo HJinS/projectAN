@@ -130,7 +130,6 @@ pipeline {
 
         stage('Test API') {
             steps {
-                sh 'python3 projectAN/manage.py jenkins --enable-coverage'
                 sh 'python3 projectAN/manage.py test AN likeAN socialUser'
             }
             post {
