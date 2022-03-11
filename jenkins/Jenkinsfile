@@ -1,19 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        DB_NAME = "db_name"
-        DB_USER = "db_user"
-        DB_PASSWORD = "db_password"
-        DB_HOST = "db_host"
-        DB_PORT = "db_port"
-        SECRET_KEY = "secret_key"
-        STATE = "state"
-        DJANGO_SETTINGS_MODULE = "django_settings_module"
-        GOOGLE_OAUTH2_CLIENT_ID = "google_oauth2_client_id"
-        GOOGLE_OAUTH2_CLIENT_SECRET = "google_oauth2_client_secret"
-    }
-
     stages {
         stage('Start Deploy') {
             when {
@@ -61,6 +48,13 @@ pipeline {
             when {
                 branch 'test'
             }
+            environment {
+                SECRET_KEY = "secret_key"
+                STATE = "state"
+                DJANGO_SETTINGS_MODULE = "django_settings_module"
+                GOOGLE_OAUTH2_CLIENT_ID = "google_oauth2_client_id"
+                GOOGLE_OAUTH2_CLIENT_SECRET = "google_oauth2_client_secret"
+            }
             steps {
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
@@ -82,9 +76,22 @@ pipeline {
                 }
             }
         }
+
         stage('Check parameter prod') {
             when {
                 branch 'master'
+            }
+            environment {
+                DB_NAME = "db_name"
+                DB_USER = "db_user"
+                DB_PASSWORD = "db_password"
+                DB_HOST = "db_host"
+                DB_PORT = "db_port"
+                SECRET_KEY = "secret_key"
+                STATE = "state"
+                DJANGO_SETTINGS_MODULE = "django_settings_module"
+                GOOGLE_OAUTH2_CLIENT_ID = "google_oauth2_client_id"
+                GOOGLE_OAUTH2_CLIENT_SECRET = "google_oauth2_client_secret"
             }
             steps {
                 script {
