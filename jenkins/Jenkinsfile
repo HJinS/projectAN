@@ -125,7 +125,8 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
-                    sh 'python3 -m coverage run projectAN/manage.py test AN likeAN socialUser'
+                    sh 'cd ./projectAN'
+                    sh 'python3 -m coverage run manage.py test AN likeAN socialUser'
                 }
             }
             post {
