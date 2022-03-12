@@ -141,7 +141,7 @@ pipeline {
                     sh '''
                         PARMS=--omit='*migrations*'
                     '''
-                    sh 'python-coverage run --source projectAN/manage.py jenkins AN likeAN socialUser'
+                    sh 'python-coverage run --source projectAN/manage.py test AN likeAN socialUser'
                     sh 'echo "------------------"'
                     sh 'ehco "Coverage results:"'
                     sh 'python-coverage report $PARMS'
