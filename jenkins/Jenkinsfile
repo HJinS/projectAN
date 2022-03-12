@@ -137,7 +137,7 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
-                    sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
+                    sh '/var/lib/jenkins/.local/lib/python3.8/site-packages/coverage run projectAN/manage.py test AN likeAN socialUser'
                 }
             }
             post {
