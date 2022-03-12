@@ -20,18 +20,6 @@ pipeline {
             }
         }
 
-        stage('virtual env'){
-            steps {
-                script {
-                    try{
-                        sh 'source venv/scripts/activate'
-                    }catch(Exception e){
-                        sh 'python3 -m venv venv'
-                    }
-                }
-            }
-        }
-
         stage('install requirements'){
             steps{
                 sh 'pip install --upgrade pip'
