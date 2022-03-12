@@ -135,6 +135,8 @@ pipeline {
                         sh 'rm htmlcov/*'
                         sh 'rm .Coverage'
                         sh 'rm coverage.xml'   
+                    } catch(Exception e){
+                        sh 'echo "no files to remove"'
                     }
                     sh '''
                         PARMS=--omit='*migrations*'
