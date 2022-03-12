@@ -130,7 +130,7 @@ pipeline {
 
         stage('Test API') {
             steps {
-                sh './projectAN/manage.py jenkins --enable-coverage'
+                sh 'nosetests --with-coverage --cover-xml --cover-package=pkg1,pkg2 --with-xunit test'
                 sh 'python3 projectAN/manage.py jenkins AN likeAN socialUser'
             }
             post {
