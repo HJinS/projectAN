@@ -25,6 +25,7 @@ pipeline {
                 script {
                     try{
                         sh 'venv\\scripts\\activate'
+                        sh 'pip uninstall django-jenkins'
                     }catch(Exception e){
                         sh 'python3 -m venv venv'
                     }
@@ -130,8 +131,19 @@ pipeline {
 
         stage('Test API') {
             steps {
-                sh 'nosetests --with-coverage --cover-xml --cover-package=pkg1,pkg2 --with-xunit test'
-                sh 'python3 projectAN/manage.py jenkins AN likeAN socialUser'
+                sh 'htmlcov/*'
+                sh 'rm .Coverage'
+                sh 'rm coverage.xml'
+                sh '''
+                    PARMS=--omit='*migrations*'
+                '''
+                sh 'python-coverage run --source = projectAN/manage.py jenkins AN likeAN socialUser'
+                sh 'echo "------------------"'
+                sh 'ehco "Coverage results:"'
+                sh 'python-coverage report $PARMS'
+                sh 'python-coverage html $PARMS'
+                sh 'python-coverage xml $PARMS'
+                sh 'echo "HTML report generated in htmlcov/index.html"'
             }
             post {
                 always {
