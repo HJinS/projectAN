@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     try{
-                        sh 'venv\\scripts\\activate'
+                        sh 'source venv/scripts/activate'
                     }catch(Exception e){
                         sh 'python3 -m venv venv'
                     }
@@ -137,7 +137,7 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
-                    sh '/var/lib/jenkins/.local/lib/python3.8/site-packages/coverage run projectAN/manage.py test AN likeAN socialUser'
+                    sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                 }
             }
             post {
