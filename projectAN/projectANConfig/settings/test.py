@@ -30,3 +30,12 @@ JENKINS_TASKS = (
     'django_jenkins.tasks.run_csslint',    
     'django_jenkins.tasks.run_sloccount'
 )
+
+INSTALLED_APPS += ['django_jenkins',]
+
+PROJECT_APPS = [
+    'AN',
+    'likeAN',
+    'socialUser',
+    'priceInfo',
+]
