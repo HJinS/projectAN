@@ -25,7 +25,6 @@ pipeline {
                 script {
                     try{
                         sh 'venv\\scripts\\activate'
-                        sh 'pip uninstall django-jenkins'
                     }catch(Exception e){
                         sh 'python3 -m venv venv'
                     }
@@ -131,7 +130,7 @@ pipeline {
 
         stage('Test API') {
             steps {
-                sh 'htmlcov/*'
+                sh 'rm htmlcov/*'
                 sh 'rm .Coverage'
                 sh 'rm coverage.xml'
                 sh '''
