@@ -140,7 +140,9 @@ pipeline {
             }
             steps {
                 sh 'python projectAN/manage.py collectstatic'
-                sh 'python3 projectAN/manage.py runserver 0.0.0.0:8000'   
+                sh 'sudo systemctl daemon-reload'
+                sh 'sudo systemctl restart nginx'
+                sh 'sudo systemctl restart gunicorn'
             }
         }
     }
