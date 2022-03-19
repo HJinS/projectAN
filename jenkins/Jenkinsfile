@@ -127,6 +127,11 @@ pipeline {
                     sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                 }
             }
+            post {
+                success {
+                    sh 'coverage report'
+                }
+            }
         }
 
         stage('Run server') {
