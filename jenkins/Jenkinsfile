@@ -139,6 +139,7 @@ pipeline {
                 branch 'master'
             }
             steps {
+                sh 'python projectAN/manage.py collectstatic'
                 sh 'python3 projectAN/manage.py runserver 0.0.0.0:8000'   
             }
         }
