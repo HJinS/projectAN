@@ -57,7 +57,6 @@ pipeline {
             }
             post {
                 success {
-                    echo "${env.DJANGO_SETTINGS_MODULE}"
                     slackSend (channel: 'testch', color: '#00FF20', message: "Check parameter test job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 }
                 failure {
@@ -125,13 +124,7 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
-                    sh 'python3 projectAN/manage.py test AN likeAN socialUser'
-                }
-            }
-            post {
-                always {
-                    junit '**/nosetests.xml'
-                    step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+                    sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                 }
             }
         }
