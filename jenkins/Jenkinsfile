@@ -102,8 +102,8 @@ pipeline {
             steps {
                 sh '''
                     . $WORKSPACE/venv/bin/activate;
-                    'python3 $WORKSPACE/projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
-                    'python3 $WORKSPACE/manage.py migrate'
+                    python3 $WORKSPACE/projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+                    python3 $WORKSPACE/manage.py migrate
                 '''
             }
         }
@@ -120,12 +120,15 @@ pipeline {
                 }
                 sh '''
                     . $WORKSPACE/venv/bin/activate;
-                    'coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser'
+                    coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser
                 '''
             }
             post {
                 success {
-                    sh 'coverage report'
+                    sh '''
+                        . $WORKSPACE/venv/bin/activate;
+                        coverage report'
+                    '''
                 }
             }
         }
@@ -137,7 +140,7 @@ pipeline {
             steps {
                 sh '''
                     . $WORKSPACE/venv/bin/activate;
-                    'python $WORKSPACE/projectAN/manage.py collectstatic'
+                    python $WORKSPACE/projectAN/manage.py collectstatic
                 '''
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
