@@ -30,14 +30,15 @@ pipeline {
 
         stage('venv') {
             steps {
-                try {
-                    sh 'venv\\scripts\\activate'
-                } catch(Exception e){
-                    sh 'python -m venv venv'
+                script{
+                    try {
+                        sh 'venv\\scripts\\activate'
+                    } catch(Exception e){
+                        sh 'python -m venv venv'
+                    }
                 }
             }
         }
-
         stage('install requirements'){
             steps{
                 sh 'pip install --upgrade pip'
