@@ -140,7 +140,7 @@ pipeline {
             steps {
                 sh '''
                     . $WORKSPACE/venv/bin/activate;
-                    python $WORKSPACE/projectAN/manage.py collectstatic;
+                    echo yes | python $WORKSPACE/projectAN/manage.py collectstatic;
                 '''
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
