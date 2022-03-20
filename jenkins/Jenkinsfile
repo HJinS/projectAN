@@ -20,22 +20,12 @@ pipeline {
             }
         }
 
-        stage('venv') {
-            steps {
-                script{
-                    try {
-                        sh 'venv/scripts/activate'
-                    } catch(Exception e){
-                        sh 'python3 -m venv venv'
-                    }
-                }
-            }
-        }
-
         stage('install requirements'){
             steps{
-                sh 'pip install --upgrade pip'
-                sh 'pip install -r requirements.txt'
+                withPythonEnv('Python3') {
+                    sh 'pip install --upgrade pip'
+                    sh 'pip install -r requirements.txt'
+                }
             }
             post {
                 failure {
@@ -103,8 +93,10 @@ pipeline {
 
         stage('Migration') {
             steps {
-                sh 'python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
-                sh 'python3 projectAN/manage.py migrate'
+                withPythonEnv('Python3'){
+                    sh 'python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
+                    sh 'python3 projectAN/manage.py migrate'
+                }
             }
         }
 
@@ -117,12 +109,16 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
+                }
+                withPythonEnv('Python3'){
                     sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                 }
             }
             post {
                 success {
-                    sh 'coverage report'
+                    withPythonEnv('Python3'){
+                        sh 'coverage report'
+                    }
                 }
             }
         }
@@ -132,7 +128,9 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh 'python projectAN/manage.py collectstatic'
+                withPythonEnv('Python3'){
+                    sh 'python projectAN/manage.py collectstatic'
+                }
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
                 sh 'sudo systemctl restart gunicorn'
