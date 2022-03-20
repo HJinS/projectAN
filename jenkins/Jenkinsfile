@@ -103,7 +103,7 @@ pipeline {
                 sh '''
                     . $WORKSPACE/venv/bin/activate;
                     python3 $WORKSPACE/projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
-                    python3 $WORKSPACE/manage.py migrate
+                    python3 $WORKSPACE/projectAN/manage.py migrate
                 '''
             }
         }
