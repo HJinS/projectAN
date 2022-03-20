@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        . $WORKSPACE/venv/bin/activate;
+                        . $WORKSPACE/venv/scripts/activate;
                         export PYTHONPATH=$WORKSPACE;
                         export PYTHONBIN=`which python`;
                     '''
