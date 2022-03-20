@@ -25,7 +25,7 @@ pipeline {
                 script {
                     sh '''
                         if [ ! -d "$WORKSPACE/venv" ]; then
-                            python -m venv venv;
+                            python3 -m venv venv;
                             if [ -f "requirements.txt" ]; then
                                 . $WORKSPACE/venv/bin/activate;
                                 pip3 install -r requirements.txt;
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                        . $WORKSPACE/venv/scripts/activate;
+                        . $WORKSPACE/venv/bin/activate;
                         export PYTHONPATH=$WORKSPACE;
                         export PYTHONBIN=`which python`;
                     '''
