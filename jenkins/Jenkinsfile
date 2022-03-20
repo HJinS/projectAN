@@ -20,17 +20,36 @@ pipeline {
             }
         }
 
-        stage('install requirements'){
+        stage('create venv and install requirements'){
             steps{
-                withPythonEnv('Python3') {
-                    sh 'pip install --upgrade pip'
-                    sh 'pip install -r requirements.txt'
+                script {
+                    sh '''
+                        if [ ! -d "$WORKSPACE/venv" ]; then
+                            python -m venv venv;
+                            if [ -f "requirements.txt" ]; then
+                                . $WORKSPACE/venv/bin/activate;
+                                pip3 install -r requirements.txt;
+                            fi
+                        fi
+                    '''
                 }
             }
             post {
                 failure {
                     slackSend (channel: 'deploych', color: '#FF0040', message: "install requirements failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                     slackSend (channel: 'testch', color: '#FF0040', message: "install requirements failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+            }
+        }
+
+        stage('activate venv and setting path') {
+            steps {
+                script {
+                    sh '''
+                        . $WORKSPACE/venv/bin/activate;
+                        export PYTHONPATH=$WORKSPACE;
+                        export PYTHONBIN=`which python`;
+                    '''
                 }
             }
         }
@@ -93,10 +112,8 @@ pipeline {
 
         stage('Migration') {
             steps {
-                withPythonEnv('Python3'){
-                    sh 'python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
-                    sh 'python3 projectAN/manage.py migrate'
-                }
+                sh 'python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
+                sh 'python3 projectAN/manage.py migrate'
             }
         }
 
@@ -110,15 +127,11 @@ pipeline {
                         sh 'echo "no files to remove"'
                     }
                 }
-                withPythonEnv('Python3'){
-                    sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
-                }
+                sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
             }
             post {
                 success {
-                    withPythonEnv('Python3'){
-                        sh 'coverage report'
-                    }
+                    sh 'coverage report'
                 }
             }
         }
@@ -128,9 +141,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                withPythonEnv('Python3'){
-                    sh 'python projectAN/manage.py collectstatic'
-                }
+                sh 'python projectAN/manage.py collectstatic'
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
                 sh 'sudo systemctl restart gunicorn'
