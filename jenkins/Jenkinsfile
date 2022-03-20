@@ -28,21 +28,19 @@ pipeline {
             }
         }
 
-        stage('venv') {
-            steps {
-                script{
-                    try {
-                        sh 'venv\\scripts\\activate'
-                    } catch(Exception e){
-                        sh 'python3 -m venv venv'
-                    }
-                }
-            }
-        }
-        stage('install requirements'){
+        stage('create venv and install requirements'){
             steps{
-                sh 'pip install --upgrade pip'
-                sh 'pip install -r requirements.txt'
+                script {
+                    sh '''
+                        if [ ! -d "$WORKSPACE/venv" ]; then
+                            python3 -m venv venv;
+                        fi
+                        if [ -f "requirements.txt" ]; then
+                            . $WORKSPACE/venv/bin/activate;
+                            pip3 install -r requirements.txt;
+                        fi
+                    '''
+                }
             }
             post {
                 failure {
@@ -81,13 +79,6 @@ pipeline {
             when {
                 branch 'master'
             }
-            environment {
-                DB_NAME = "db_name"
-                DB_USER = "db_user"
-                DB_PASSWORD = "db_password"
-                DB_HOST = "db_host"
-                DB_PORT = "db_port"
-            }
             steps {
                 script {
                     withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
@@ -117,8 +108,11 @@ pipeline {
 
         stage('Migration') {
             steps {
-                sh 'python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser'
-                sh 'python3 projectAN/manage.py migrate'
+                sh '''
+                    . $WORKSPACE/venv/bin/activate;
+                    python3 $WORKSPACE/projectAN/manage.py makemigrations AN likeAN priceInfo socialUser;
+                    python3 $WORKSPACE/projectAN/manage.py migrate;
+                '''
             }
         }
 
@@ -131,12 +125,18 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
-                    sh 'coverage run projectAN/manage.py test AN likeAN socialUser'
                 }
+                sh '''
+                    . $WORKSPACE/venv/bin/activate;
+                    coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser;
+                '''
             }
             post {
                 success {
-                    sh 'coverage report'
+                    sh '''
+                        . $WORKSPACE/venv/bin/activate;
+                        coverage report;
+                    '''
                 }
             }
         }
@@ -146,7 +146,10 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh 'python projectAN/manage.py collectstatic'
+                sh '''
+                    . $WORKSPACE/venv/bin/activate;
+                    echo yes | python $WORKSPACE/projectAN/manage.py collectstatic;
+                '''
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
                 sh 'sudo systemctl restart gunicorn'
