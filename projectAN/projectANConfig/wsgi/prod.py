@@ -1,5 +1,5 @@
 import os
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectAN.projectANConfig.settings.prod')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', '.projectANConfig.settings.prod')
 application = get_wsgi_application()
