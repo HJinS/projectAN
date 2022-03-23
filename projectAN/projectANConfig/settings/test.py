@@ -12,7 +12,7 @@ DEBUG = True
 # add host ip
 ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_WHITELIST = ['http://54.180.118.117:3000']
+CORS_ORIGIN_WHITELIST = ['http://3.39.71.147:3000']
 
 WSGI_APPLICATION = 'projectANConfig.wsgi.test.application'
 
