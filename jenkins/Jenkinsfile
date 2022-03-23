@@ -1,0 +1,150 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Start Deploy') {
+            when {
+                branch 'master'
+            }
+            steps {
+                slackSend (channel: 'deploych', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            }
+        }
+
+        stage('Start Test'){
+            when {
+                branch 'test'
+            }
+            steps {
+                slackSend (channel: 'testch', color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            }
+        }
+
+        stage('create venv and install requirements'){
+            steps{
+                script {
+                    sh '''
+                        if [ ! -d "$WORKSPACE/venv" ]; then
+                            python3 -m venv venv;
+                        fi
+                        if [ -f "requirements.txt" ]; then
+                            . $WORKSPACE/venv/bin/activate;
+                            pip3 install -r requirements.txt;
+                        fi
+                    '''
+                }
+            }
+            post {
+                failure {
+                    slackSend (channel: 'deploych', color: '#FF0040', message: "install requirements failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                    slackSend (channel: 'testch', color: '#FF0040', message: "install requirements failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+            }
+        }
+
+        stage('Check parameter test'){
+            when {
+                branch 'test'
+            }
+            steps {
+                script {
+                    withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
+                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /test/DJANGO_SETTINGS_MODULE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -j '.Parameters[0].Value'", returnStdout: true)
+                    }
+                }
+            }
+            post {
+                success {
+                    slackSend (channel: 'testch', color: '#00FF20', message: "Check parameter test job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+                failure {
+                    slackSend (channel: 'testch', color: '#FF0040', message: "Check parameter test job failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+            }
+        }
+
+        stage('Check parameter prod') {
+            when {
+                branch 'master'
+            }
+            steps {
+                script {
+                    withAWS(region: 'ap-northeast-2', credentials: 'JenkinsUser'){
+                        env.DB_NAME = sh(script: "aws ssm get-parameters --name DB_NAME | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_USER = sh(script: "aws ssm get-parameters --name DB_USER | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_PASSWORD = sh(script: "aws ssm get-parameters --name DB_PASSWORD | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_HOST = sh(script: "aws ssm get-parameters --name DB_HOST | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DB_PORT = sh(script: "aws ssm get-parameters --name DB_PORT | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.SECRET_KEY = sh(script: "aws ssm get-parameters --name SECRET_KEY | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.STATE = sh(script: "aws ssm get-parameters --name STATE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /prod/DJANGO_SETTINGS_MODULE | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -j '.Parameters[0].Value'", returnStdout: true)
+                    }
+                }
+            }
+            post {
+                success {
+                    slackSend (channel: 'deploych', color: '#00FF20', message: "Check parameter prdo job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+                failure {
+                    slackSend (channel: 'deploych', color: '#FF0040', message: "Check parameter prdo job failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+            }
+        }
+
+        stage('Migration') {
+            steps {
+                sh '''
+                    . $WORKSPACE/venv/bin/activate;
+                    python3 $WORKSPACE/projectAN/manage.py makemigrations AN likeAN priceInfo socialUser;
+                    python3 $WORKSPACE/projectAN/manage.py migrate;
+                '''
+            }
+        }
+
+        stage('Test API') {
+            steps {
+                script {
+                    try{
+                        sh 'rm htmlcov/*'
+                        sh 'rm .coverage'
+                    } catch(Exception e){
+                        sh 'echo "no files to remove"'
+                    }
+                }
+                sh '''
+                    . $WORKSPACE/venv/bin/activate;
+                    coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser;
+                '''
+            }
+            post {
+                success {
+                    sh '''
+                        . $WORKSPACE/venv/bin/activate;
+                        coverage report;
+                    '''
+                }
+            }
+        }
+
+        stage('Run server') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sh '''
+                    . $WORKSPACE/venv/bin/activate;
+                    echo yes | python $WORKSPACE/projectAN/manage.py collectstatic;
+                '''
+                sh 'sudo systemctl daemon-reload'
+                sh 'sudo systemctl restart nginx'
+                sh 'sudo systemctl restart gunicorn'
+            }
+        }
+    }
+}
