@@ -38,3 +38,5 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+BASE_URL = __get_secret("BASE_URL")

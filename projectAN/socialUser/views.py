@@ -17,7 +17,7 @@ from rest_framework.views import APIView
 from silk.profiling.profiler import silk_profile
 
 state = getattr(settings, 'STATE')
-BASE_URL = 'http://localhost:8000/'
+BASE_URL = getattr(settings, "BASE_URL")
 GOOGLE_CALLBACK_URI = BASE_URL + 'social/google/callback'
 client_id = getattr(settings, "GOOGLE_OAUTH2_CLIENT_ID")
 client_secret = getattr(settings, "GOOGLE_OAUTH2_CLIENT_SECRET")

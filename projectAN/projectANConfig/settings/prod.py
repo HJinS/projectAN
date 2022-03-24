@@ -36,3 +36,5 @@ JENKINS_TASKS = (
     'django_jenkins.tasks.run_csslint',    
     'django_jenkins.tasks.run_sloccount'
 )
+
+BASE_URL = os.getenv("BASE_URL")
