@@ -140,8 +140,12 @@ pipeline {
                 sh '''
                     . $WORKSPACE/venv/bin/activate;
                     echo yes | python $WORKSPACE/projectAN/manage.py collectstatic;
-                    python $WORKSPACE/projectAN/manage.py runserver;
                 '''
+                sh 'sudo systemctl daemon-reload'
+                sh 'sudo systemctl restart nginx'
+                sh 'sudo systemctl stop gunicorn'
+                sh 'sudo systemctl start gunicorn.socket'
+                sh 'sudo systemctl start gunicorn'
             }
         }
     }
