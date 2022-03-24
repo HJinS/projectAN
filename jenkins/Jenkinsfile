@@ -89,16 +89,6 @@ pipeline {
             }
             post {
                 success {
-                    sh 'export DB_NAME=$DB_NAME'
-                    sh 'export DB_USER=$DB_USER'
-                    sh 'export DB_PASSWORD=$DB_PASSWORD'
-                    sh 'export DB_HOST=$DB_HOST'
-                    sh 'export DB_PORT=$DB_PORT'
-                    sh 'export SECRET_KEY=$SECRET_KEY'
-                    sh 'export STATE=$STATE'
-                    sh 'export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE'
-                    sh 'export GOOGLE_OAUTH2_CLIENT_ID=$GOOGLE_OAUTH2_CLIENT_ID'
-                    sh 'export GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET'
                     slackSend (channel: 'deploych', color: '#00FF20', message: "Check parameter prdo job ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 }
                 failure {
@@ -151,6 +141,16 @@ pipeline {
                     . $WORKSPACE/venv/bin/activate;
                     echo yes | python $WORKSPACE/projectAN/manage.py collectstatic;
                 '''
+                sh 'export DB_NAME=$DB_NAME'
+                sh 'export DB_USER=$DB_USER'
+                sh 'export DB_PASSWORD=$DB_PASSWORD'
+                sh 'export DB_HOST=$DB_HOST'
+                sh 'export DB_PORT=$DB_PORT'
+                sh 'export SECRET_KEY=$SECRET_KEY'
+                sh 'export STATE=$STATE'
+                sh 'export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE'
+                sh 'export GOOGLE_OAUTH2_CLIENT_ID=$GOOGLE_OAUTH2_CLIENT_ID'
+                sh 'export GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET'
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
                 sh 'sudo systemctl stop gunicorn'
