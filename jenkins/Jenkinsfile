@@ -143,7 +143,7 @@ pipeline {
                 '''
                 sh 'sudo systemctl daemon-reload'
                 sh 'sudo systemctl restart nginx'
-                sh 'sudo systemctl restart gunicorn'
+                sh 'sudo systemctl start gunicorn.socket'
             }
         }
     }
