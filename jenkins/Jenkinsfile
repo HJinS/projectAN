@@ -156,6 +156,7 @@ pipeline {
                 sh 'sudo systemctl stop gunicorn'
                 sh 'sudo systemctl start gunicorn.socket'
                 sh 'sudo systemctl start gunicorn'
+                sh 'env'
             }
         }
     }
