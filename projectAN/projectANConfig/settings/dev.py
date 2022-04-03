@@ -31,7 +31,7 @@ WSGI_APPLICATION = 'projectANConfig.wsgi.dev.application'
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'an',
+        'NAME': 'projectan',
         'USER': __get_secret('DB_USER'),
         'PASSWORD': __get_secret('DB_PASSWORD'),
         'HOST': 'localhost',
