@@ -10,7 +10,7 @@ GOOGLE_OAUTH2_CLIENT_SECRET = os.getenv("GOOGLE_OAUTH2_CLIENT_SECRET")
 DEBUG = True
 
 # add host ip
-ALLOWED_HOSTS = ['http://3.39.71.147']
+ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_WHITELIST = ['http://3.39.71.147', 'http://localhost',]
 
