@@ -137,15 +137,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh '''
-                    . $WORKSPACE/venv/bin/activate;
-                    echo yes | python $WORKSPACE/projectAN/manage.py collectstatic;
-                '''
-                sh 'sudo systemctl daemon-reload'
-                sh 'sudo systemctl restart nginx'
-                sh 'sudo systemctl stop gunicorn'
-                sh 'sudo systemctl start gunicorn.socket'
-                sh 'sudo systemctl start gunicorn'
+                sh 'docker-compose up --build'
             }
         }
     }

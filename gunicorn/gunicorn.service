@@ -1,0 +1,16 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=jenkins
+Group=jenkins
+WorkingDirectory=/projectAN
+ExecStart=gunicorn \
+        --workers 3 \
+        --bind 0.0.0.0:8000 \
+        --preload \
+        projectANConfig.wsgi.prod:application
+    
+[Install]
+WantedBy=multi-user.target

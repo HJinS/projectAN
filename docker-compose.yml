@@ -1,0 +1,52 @@
+version: '1'
+services:
+  AN:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    image: AN
+    container_name: AN-container
+    volumes:
+      - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
+      - /var/lib/jenkins/workspace/ANPipeline_master/gunicorn:/etc/systemd/system/
+    working_dir: /projectAN/
+    command: >
+      bash -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+        && python3 projectAN/manage.py migrate
+        && python3 projectAN/manage.py collectstatic
+        && sudo systemctl enable gunicorn.services
+        && sudo systemctl start gunicorn"
+    
+    environment:
+      - DB_NAME
+      - DB_USER
+      - DB_PASSWORD
+      - DB_HOST
+      - DB_PORT
+      - SECRET_KEY
+      - STATE
+      - DJANGO_SETTINGS_MODULE
+      - GOOGLE_OAUTH2_CLIENT_ID
+      - GOOGLE_OAUTH2_CLIENT_SECRET
+
+    
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx
+    container_name: nginx-container
+    
+    ports:
+      - "80:80"
+    volumes:
+      - /var/lib/jenkins/workspace/ANPipeline_master/static_in_env:/static
+      - /var/lib/jenkins/workspace/ANPipeline_master/docker-nginx:/etc/nginx/conf.d
+    links:
+      - AN
+
+    depends_on:
+      - AN
