@@ -137,7 +137,11 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh 'docker-compose up --build'
+                sh 'DB_NAME=$DB_NAME DB_USER=$DB_USER DB_PASSWORD=$DB_PASSWORD \
+                    DB_HOST=$DB_HOST DB_PORT=$DB_PORT SECRET_KEY=$SECRET_KEY \ 
+                    STATE=$STATE DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE \ 
+                    GOOGLE_OAUTH2_CLIENT_ID=$GOOGLE_OAUTH2_CLIENT_ID \ 
+                    GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET docker-compose up --build'
             }
         }
     }
