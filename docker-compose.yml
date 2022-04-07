@@ -5,8 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     
-    image: AN
-    container_name: AN-container
+    image: an
+    container_name: an-container
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
       - /var/lib/jenkins/workspace/ANPipeline_master/gunicorn:/etc/systemd/system/
