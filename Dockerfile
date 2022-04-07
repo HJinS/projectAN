@@ -10,5 +10,5 @@ ENV PATH="/venv/bin:$PATH"
 
 
 COPY requirements.txt /projectAN/
-RUN pip intall --upgrade wheel && pip install -r requirements.txt
+RUN pip install --upgrade wheel && pip install -r requirements.txt
 COPY . /projectAN/
