@@ -14,8 +14,8 @@ services:
     command: >
       bash -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
-      && echo "yes"
       && python3 projectAN/manage.py collectstatic
+      && echo "yes"
       && sudo systemctl enable gunicorn.services
       && sudo systemctl start gunicorn"
     
