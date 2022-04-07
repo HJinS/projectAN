@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.9.12-buster
 ENV PYTHONUNBUFFERED 1
 RUN python -m pip install --upgrade pip
 
@@ -10,5 +10,5 @@ ENV PATH="/venv/bin:$PATH"
 
 
 COPY requirements.txt /projectAN/
-RUN pip install -r requirements.txt
+RUN pip intall --upgrade wheel && pip install -r requirements.txt
 COPY . /projectAN/
