@@ -13,10 +13,10 @@ services:
     working_dir: /projectAN/
     command: >
       bash -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
-        && python3 projectAN/manage.py migrate
-        && python3 projectAN/manage.py collectstatic
-        && sudo systemctl enable gunicorn.services
-        && sudo systemctl start gunicorn"
+      && python3 projectAN/manage.py migrate
+      && python3 projectAN/manage.py collectstatic
+      && sudo systemctl enable gunicorn.services
+      && sudo systemctl start gunicorn"
     
     environment:
       - DB_NAME
@@ -47,6 +47,5 @@ services:
       - /var/lib/jenkins/workspace/ANPipeline_master/docker-nginx:/etc/nginx/conf.d
     links:
       - AN
-
     depends_on:
       - AN
