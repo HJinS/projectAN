@@ -16,6 +16,8 @@ services:
       && python3 projectAN/manage.py migrate
       && echo "yes" | python3 projectAN/manage.py collectstatic
       && sudo systemctl enable gunicorn.services
+      && sudo systemctl stop gunicorn
+      && sudo systemctl start gunicorn.socket
       && sudo systemctl start gunicorn"
     
     environment:
@@ -29,19 +31,20 @@ services:
       - DJANGO_SETTINGS_MODULE
       - GOOGLE_OAUTH2_CLIENT_ID
       - GOOGLE_OAUTH2_CLIENT_SECRET
-
-    
     ports:
-      - "8000:8000"
+      - "5000:5000"
     expose:
-      - "8000"
+      - "5000"
+
 
   nginx:
     image: nginx
     container_name: nginx-container
     
     ports:
-      - "80:80"
+      - "8000:8000"
+    expose:
+      - "8000"
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master/static_in_env:/static
       - /var/lib/jenkins/workspace/ANPipeline_master/docker-nginx:/etc/nginx/conf.d
