@@ -1,13 +1,14 @@
 FROM python:latest
 ENV PYTHONUNBUFFERED 1
-RUN useradd --no-log-init myuser
-USER myuser
-RUN ls -alF
-RUN ls -alF /home
-RUN chmod -R 777 /home/myuser
-WORKDIR /home/myuser
+RUN python -m pip install --upgrade pip
+
 RUN mkdir /projectAN
 WORKDIR /projectAN
-COPY --chown=myuser:myuser requirements.txt /projectAN/
-RUN pip install --user -r requirements.txt
-COPY --chown=myuser:myuser . /projectAN/
+
+RUN python -m venv venv
+ENV PATH="/venv/bin:$PATH"
+
+
+COPY requirements.txt /projectAN/
+RUN pip install -r requirements.txt
+COPY . /projectAN/
