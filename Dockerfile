@@ -3,6 +3,7 @@ ENV PYTHONUNBUFFERED 1
 RUN useradd --no-log-init myuser
 USER myuser
 RUN ls -alF
+RUN ls -alF /home
 RUN chmod -R 777 /home/myuser
 WORKDIR /home/myuser
 RUN mkdir /projectAN
