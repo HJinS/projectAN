@@ -46,7 +46,7 @@ services:
       - /var/lib/jenkins/workspace/ANPipeline_master/static_in_env:/static
       - /var/lib/jenkins/workspace/ANPipeline_master/docker-nginx:/etc/nginx/conf.d
     links:
-      - an
+      - AN
 
     depends_on:
-      - an
+      - AN
