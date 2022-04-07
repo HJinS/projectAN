@@ -1,4 +1,4 @@
-FROM python: 3.9.11
+FROM python:latest
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /projectAN
 WORKDIR /projectAN
