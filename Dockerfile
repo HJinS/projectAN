@@ -1,6 +1,6 @@
 FROM python:latest
 ENV PYTHONUNBUFFERED 1
-RUN adduser -D myuser
+RUN useradd --no-log-init myuser
 USER myuser
 WORKDIR /home/myuser
 RUN mkdir /projectAN
