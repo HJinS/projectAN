@@ -141,7 +141,7 @@ pipeline {
                     DB_HOST=$DB_HOST DB_PORT=$DB_PORT SECRET_KEY=$SECRET_KEY \
                     STATE=$STATE DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE \
                     GOOGLE_OAUTH2_CLIENT_ID=$GOOGLE_OAUTH2_CLIENT_ID \
-                    GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET docker-compose up --build'
+                    GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET docker-compose up --build -d'
             }
         }
     }
