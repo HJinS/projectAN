@@ -3,7 +3,7 @@ services:
   AN:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./dockerfiles/Dockerfile
     
     image: an
     container_name: an-container
@@ -40,6 +40,9 @@ services:
   nginx:
     image: nginx
     container_name: nginx-container
+    build:
+      context: .
+      dockerfile: ./dockerfiles/DockerNginx
     
     ports:
       - "8000:8000"
@@ -47,7 +50,6 @@ services:
       - "8000"
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master/static_in_env:/static
-      - /var/lib/jenkins/workspace/ANPipeline_master/docker-nginx:/etc/nginx/conf.d
     links:
       - AN
     depends_on:
