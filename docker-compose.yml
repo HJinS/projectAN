@@ -3,7 +3,7 @@ services:
   AN:
     build:
       context: .
-      dockerfile: /dockerfiles/Dockerfile
+      dockerfile: ./dockerfiles/Dockerfile
     
     image: an
     container_name: an-container
@@ -40,7 +40,7 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: /dockerfiles/DockerNginx
+      dockerfile: ./dockerfiles/DockerNginx
     image: nginx
     container_name: nginx-container
     
