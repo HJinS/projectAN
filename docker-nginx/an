@@ -1,18 +1,11 @@
-upstream AN {
-    ip_hash;
-    server an-container:5000;
-}
-
 server {
     listen 8000;
     location / {
         include proxy_params;
-        proxy_pass http://AN/;
+        proxy_pass http://an-container:5000/;
     }
 
     location /static/ {
         alias /static/;
-    }
-    
-    server_name localhost;
+    }   
 }
