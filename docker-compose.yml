@@ -38,11 +38,11 @@ services:
 
 
   nginx:
-    image: nginx
-    container_name: nginx-container
     build:
       context: .
       dockerfile: ./dockerfiles/DockerNginx
+    image: nginx
+    container_name: nginx-container
     
     ports:
       - "8000:8000"
