@@ -9,7 +9,6 @@ services:
     container_name: an-container
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
-      - /var/lib/jenkins/workspace/ANPipeline_master/gunicorn:/etc/systemd/system/
     working_dir: /projectAN/
     command: >
       sh -c "apt-get update
@@ -19,7 +18,7 @@ services:
       && sudo systemctl stop gunicorn
       && sudo systemctl start gunicorn.socket
       && sudo systemctl start gunicorn"
-    
+    privileged: true
     environment:
       - DB_NAME
       - DB_USER
