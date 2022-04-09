@@ -14,8 +14,9 @@ services:
     working_dir: /projectAN/
     privileged: true
     command: >
-      sh -c "apg-get -y install sudo
-      python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+      sh -c "apt-get update
+      && apg-get -y install sudo
+      && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
       && sudo systemctl enable gunicorn"
 
