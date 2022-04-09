@@ -16,7 +16,7 @@ services:
       && apt-get -y install sudo
       && apt-get -y install systemd
       && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
-      && python3 projectAN/manage.py migrate
+      && python3 projectAN/manage.py migrate"
 
     environment:
       - DB_NAME
@@ -45,7 +45,7 @@ services:
     command: >
       sh -c "apt-get update
       && apt-get -y install sudo
-      && apt-get -y install systemd
+      && apt-get -y install systemd"
     ports:
       - "8000:8000"
     expose:
