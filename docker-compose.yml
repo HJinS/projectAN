@@ -12,7 +12,7 @@ services:
       - /var/lib/jenkins/workspace/ANPipeline_master/gunicorn:/etc/systemd/system/
     working_dir: /projectAN/
     command: >
-      bash -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+      "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
       && echo "yes" | python3 projectAN/manage.py collectstatic
       && sudo systemctl enable gunicorn.services
@@ -45,7 +45,7 @@ services:
     container_name: nginx-container
     
     command: >
-      bash -c "sudo systemctl restart nginx
+      "sudo systemctl restart nginx
       && sudo systemctl reload nginx"
 
     ports:
