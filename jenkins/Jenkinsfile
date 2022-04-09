@@ -118,7 +118,7 @@ pipeline {
                     }
                     sh '''
                         . $WORKSPACE/venv/bin/activate;
-                        coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser priceInfo | echo "yes";
+                        echo "yes" | coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser priceInfo;
                     '''
                 }
             }
