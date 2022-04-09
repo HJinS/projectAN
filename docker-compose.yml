@@ -12,10 +12,7 @@ services:
     working_dir: /projectAN/
     privileged: true
     command: >
-      sh -c "apt-get update
-      && apt-get -y install sudo
-      && apt-get -y install systemd
-      && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+      sh -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate"
 
     environment:
@@ -42,10 +39,6 @@ services:
     image: nginx
     container_name: nginx-container
     privileged: true
-    command: >
-      sh -c "apt-get update
-      && apt-get -y install sudo
-      && apt-get -y install systemd"
     ports:
       - "8000:8000"
     expose:
