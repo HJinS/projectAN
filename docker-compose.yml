@@ -16,7 +16,6 @@ services:
       && apt-get -y install sudo
       && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
-      && python3 projectAN/manage.py collectstatic | echo "yes"
       && sudo systemctl stop gunicorn
       && sudo systemctl start gunicorn.socket
       && sudo systemctl start gunicorn"
