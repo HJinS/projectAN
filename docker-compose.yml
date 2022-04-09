@@ -13,6 +13,7 @@ services:
     privileged: true
     command: >
       sh -c "apt-get update
+      && lsb_release -a
       && apt-get -y install sudo
       && apt-get -y install systemd
       && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
@@ -20,6 +21,7 @@ services:
       && sudo systemctl stop gunicorn
       && sudo systemctl start gunicorn.socket
       && sudo systemctl start gunicorn"
+
     environment:
       - DB_NAME
       - DB_USER
@@ -46,6 +48,7 @@ services:
     privileged: true
     command: >
       sh -c "apt-get update
+      && lsb_release -a
       && apt-get -y install sudo
       && apt-get -y install systemd
       && sudo systemctl restart nginx
