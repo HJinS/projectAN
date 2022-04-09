@@ -5,7 +5,7 @@ server {
         proxy_pass http://an-container:5000/;
     }
 
-    location /favicon.co {access_log off; log_not_found off;}
+    location /favicon.co/ {access_log off; log_not_found off;}
 
     location /static/ {
         alias /static/;

@@ -44,6 +44,10 @@ services:
     image: nginx
     container_name: nginx-container
     
+    command: >
+      bash -c "sudo systemctl restart nginx
+      && sudo systemctl reload nginx"
+
     ports:
       - "8000:8000"
     expose:
