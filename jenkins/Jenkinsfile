@@ -116,11 +116,11 @@ pipeline {
                     } catch(Exception e){
                         sh 'echo "no files to remove"'
                     }
+                    sh '''
+                        . $WORKSPACE/venv/bin/activate;
+                        coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser priceInfo | echo "yes";
+                    '''
                 }
-                sh '''
-                    . $WORKSPACE/venv/bin/activate;
-                    coverage run $WORKSPACE/projectAN/manage.py test AN likeAN socialUser | echo "yes";
-                '''
             }
             post {
                 success {
