@@ -12,9 +12,14 @@ services:
       - /var/lib/jenkins/workspace/ANPipeline_master/gunicorn:/etc/systemd/system/
     working_dir: /projectAN/
     command: >
-      sh -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+      sh -c "apt-get update
+      && apt-get -y install sudo
+      && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
-      && echo "yes" | python3 projectAN/manage.py collectstatic"
+      && echo "yes" | python3 projectAN/manage.py collectstatic
+      && sudo systemctl stop gunicorn
+      && sudo systemctl start gunicorn.socket
+      && sudo systemctl start gunicorn"
     
     environment:
       - DB_NAME
@@ -40,6 +45,11 @@ services:
     image: nginx
     container_name: nginx-container
 
+    command: >
+      sh -c "apt-get update
+      && apt-get -y install sudo
+      && sudo systemctl restart nginx
+      && sudo systemctl reload nginx"
     ports:
       - "8000:8000"
     expose:
