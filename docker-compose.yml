@@ -14,11 +14,7 @@ services:
     command: >
       sh -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
-      && echo "yes" | python3 projectAN/manage.py collectstatic
-      && sudo systemctl enable gunicorn.services
-      && sudo systemctl stop gunicorn
-      && sudo systemctl start gunicorn.socket
-      && sudo systemctl start gunicorn"
+      && echo "yes" | python3 projectAN/manage.py collectstatic"
     
     environment:
       - DB_NAME
@@ -43,10 +39,6 @@ services:
       dockerfile: ./dockerfiles/DockerNginx
     image: nginx
     container_name: nginx-container
-    
-    command: >
-      sh -c "sudo systemctl restart nginx
-      && sudo systemctl reload nginx"
 
     ports:
       - "8000:8000"
