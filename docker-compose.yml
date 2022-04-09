@@ -14,6 +14,7 @@ services:
     command: >
       sh -c "apt-get update
       && apt-get -y install sudo
+      && apt-get -y install systemctl
       && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
       && echo "yes" | python3 projectAN/manage.py collectstatic
