@@ -10,6 +10,7 @@ services:
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
     working_dir: /projectAN/
+    privileged: true
     command: >
       sh -c "apt-get update
       && apt-get -y install sudo
@@ -19,7 +20,6 @@ services:
       && sudo systemctl stop gunicorn
       && sudo systemctl start gunicorn.socket
       && sudo systemctl start gunicorn"
-    privileged: true
     environment:
       - DB_NAME
       - DB_USER
@@ -43,7 +43,7 @@ services:
       dockerfile: ./dockerfiles/DockerNginx
     image: nginx
     container_name: nginx-container
-
+    privileged: true
     command: >
       sh -c "apt-get update
       && apt-get -y install sudo
