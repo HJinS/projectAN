@@ -13,6 +13,7 @@ services:
     command: >
       sh -c "apt-get update
       && apt-get -y install sudo
+      && apt-get -y install systemd
       && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
       && sudo systemctl stop gunicorn
@@ -46,6 +47,7 @@ services:
     command: >
       sh -c "apt-get update
       && apt-get -y install sudo
+      && apt-get -y install systemd
       && sudo systemctl restart nginx
       && sudo systemctl reload nginx"
     ports:
