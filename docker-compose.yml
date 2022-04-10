@@ -38,7 +38,7 @@ services:
       context: .
       dockerfile: ./dockerfiles/DockerNginx
     image: nginx
-    container_name: nginx-container
+    container_name: nginx-proxy-container
     privileged: true
     ports:
       - "8000:8000"
