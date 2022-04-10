@@ -156,13 +156,14 @@ pipeline {
                     GOOGLE_OAUTH2_CLIENT_ID=$GOOGLE_OAUTH2_CLIENT_ID \
                     GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET docker-compose up --build -d'
             }
-            success {
-                slackSend (channel: 'deploych', color: '#00FF20', message: "Deploy Docker ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+            post{
+                success {
+                    slackSend (channel: 'deploych', color: '#00FF20', message: "Deploy Docker ended successfully - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
+                failure {
+                    slackSend (channel: 'deploych', color: '#FF0040', message: "Deploy Docker failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                }
             }
-            failure {
-                slackSend (channel: 'deploych', color: '#FF0040', message: "Deploy Docker failed - '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-            }
-            
         }
     }
 }
