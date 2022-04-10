@@ -33,7 +33,7 @@ services:
       - "5000"
 
 
-  nginx:
+  nginx-proxy:
     build:
       context: .
       dockerfile: ./dockerfiles/DockerNginx
