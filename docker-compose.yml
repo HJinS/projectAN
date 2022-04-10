@@ -10,7 +10,7 @@ services:
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-      - /tmp/$(mktemp -d):/run:ro
+      - /tmp/{$(mktemp -d)}:/run:ro
     working_dir: /projectAN/
     privileged: true
     command: >
