@@ -12,4 +12,3 @@ ENV PATH="/venv/bin:$PATH"
 COPY requirements.txt /projectAN/
 RUN pip install --upgrade wheel && pip install -r requirements.txt
 COPY . /projectAN/
-COPY ./gunicorn/gunicorn.service /etc/systemd/system/gunicorn.service
