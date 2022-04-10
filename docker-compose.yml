@@ -12,9 +12,7 @@ services:
     working_dir: /projectAN/
     privileged: true
     command: >
-      sh -c "apt-get update
-      && apg-get -y install sudo
-      && python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+      sh -c "&& python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
       && python3 projectAN/manage.py migrate
       && gunicorn --workers 3 --bind 0.0.0.0:5000 --preload projectANConfig.wsgi.prod:application"
 
