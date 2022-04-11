@@ -1,0 +1,52 @@
+version: '3.3'
+services:
+  AN:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile
+    
+    image: an
+    container_name: an-container
+    volumes:
+      - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
+    working_dir: /projectAN/
+    privileged: true
+    command: >
+      sh -c "python3 projectAN/manage.py makemigrations AN likeAN priceInfo socialUser
+      && python3 projectAN/manage.py migrate
+      && gunicorn --workers 3 --bind 0.0.0.0:5000 --preload --chdir ./projectAN projectANConfig.wsgi.prod:application"
+
+    environment:
+      - DB_NAME
+      - DB_USER
+      - DB_PASSWORD
+      - DB_HOST
+      - DB_PORT
+      - SECRET_KEY
+      - STATE
+      - DJANGO_SETTINGS_MODULE
+      - GOOGLE_OAUTH2_CLIENT_ID
+      - GOOGLE_OAUTH2_CLIENT_SECRET
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
+
+
+  nginx-proxy:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/DockerNginx
+    image: nginx-proxy
+    container_name: nginx-proxy-container
+    privileged: true
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    volumes:
+      - /var/lib/jenkins/workspace/ANPipeline_master/static_in_env:/static
+    links:
+      - AN
+    depends_on:
+      - AN

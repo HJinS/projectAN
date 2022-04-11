@@ -1,0 +1,18 @@
+upstream AN {
+    ip_hash;
+    server AN:5000;
+}
+
+server {
+    listen 8000;
+    location / {
+        include proxy_params;
+        proxy_pass http://AN;
+    }
+
+    location /favicon.co/ {access_log off; log_not_found off;}
+
+    location /static/ {
+        alias /static/;
+    }   
+}
