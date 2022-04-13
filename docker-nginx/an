@@ -6,7 +6,6 @@ upstream AN {
 server {
     listen 8000;
     location / {
-        add_header 'Access-Control-Allow-Origin' '*';
         include proxy_params;
         proxy_pass http://AN;
     }

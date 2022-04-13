@@ -17,7 +17,8 @@ CORS_ORIGIN_WHITELIST = [
     'http://3.39.71.147',
     'http://localhost',
     'http://3.39.71.147:5000',
-    'http://3.39.71.147:8000'
+    'http://3.39.71.147:8000',
+    'https://accounts.google.com/'
 ]
 CORS_ORIGIN_CREDENTIALS = True
 
