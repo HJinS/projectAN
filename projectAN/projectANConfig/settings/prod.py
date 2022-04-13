@@ -14,6 +14,7 @@ ALLOWED_HOSTS = ['*']
 WSGI_APPLICATION = 'projectANConfig.wsgi.prod.application'
 
 CORS_ORIGIN_WHITELIST = ['http://3.39.71.147', 'http://localhost',]
+CORS_ORIGIN_CREDENTIALS = True
 
 DATABASES = {
     'default':{
