@@ -31,7 +31,9 @@ services:
       - "5000:5000"
     expose:
       - "5000"
-
+    networks:
+      - default
+      - an_network
 
   nginx-proxy:
     build:
@@ -50,3 +52,6 @@ services:
       - AN
     depends_on:
       - AN
+networks:
+  an_network:
+    driver: bridge
