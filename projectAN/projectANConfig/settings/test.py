@@ -12,8 +12,13 @@ DEBUG = True
 # add host ip
 ALLOWED_HOSTS = ['*']
 
-CORS_ORIGIN_WHITELIST = ['http://3.39.71.147', 'http://localhost',]
-
+CORS_ORIGIN_WHITELIST = [
+    'http://3.39.71.147',
+    'http://localhost',
+    'http://3.39.71.147:5000',
+    'http://3.39.71.147:8000'
+]
+CORS_ORIGIN_CREDENTIALS = True
 WSGI_APPLICATION = 'projectANConfig.wsgi.test.application'
 
 DATABASES = {
