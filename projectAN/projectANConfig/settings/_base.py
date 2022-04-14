@@ -86,7 +86,6 @@ INSTALLED_APPS = [
     
     'silk',
 ]
-SITE_ID = 1
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -100,9 +99,9 @@ MIDDLEWARE = [
     'silk.middleware.SilkyMiddleware',
 ]
 
-DRF_API_LOGGER_DATABASE = True
+SITE_ID = 1
 
-CORS_ALLOW_CREDENTIALS = True
+DRF_API_LOGGER_DATABASE = True
 
 ROOT_URLCONF = 'projectANConfig.urls'
 
