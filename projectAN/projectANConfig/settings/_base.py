@@ -46,7 +46,7 @@ CELERYBEAT_SCHEDULE = {
         'args' : ()
     }
 }
-
+CORS_ALLOW_ALL_ORIGINS = True
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
@@ -60,7 +60,6 @@ REST_FRAMEWORK = {
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -85,6 +84,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     
     'silk',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
