@@ -81,6 +81,10 @@ services:
       resources:
         limits:
           cpus: "0.5"
+          memory: 80M
+        reservations:
+          cpus: "0.01"
+          memory: 50M
 
   nginx-proxy:
     build:
