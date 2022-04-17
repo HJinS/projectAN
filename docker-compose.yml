@@ -66,8 +66,8 @@ services:
     command: >
       sh -c "celery -A tasks worker --loglevel=info"
     depends_on:
-      AN
-      chrome
+      - AN
+      - chrome
     links:
       - chrome
   
