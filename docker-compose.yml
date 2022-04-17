@@ -67,6 +67,20 @@ services:
       sh -c "celery -A tasks worker --loglevel=info"
     depends_on:
       AN
+      chrome
+    links:
+      - chrome
+  
+  chrome:
+    image: selenium/standalone-chrome:4.0.0-rc-1-prerelease-20210618
+    expose:
+      - "4444"
+    ports:
+      - "7900:7900"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
 
   nginx-proxy:
     build:
