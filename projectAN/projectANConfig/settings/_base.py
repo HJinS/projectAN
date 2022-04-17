@@ -37,12 +37,12 @@ CELERY_ENABLE_UTC = False
 CELERYBEAT_SCHEDULE = {
     'crawlAndSaveProductInfoAmazon' : {
         "task" : "AN.tasks.CrawlAndSaveAmazon",
-        'schedule' : crontab(minute=0, hour=0),
+        'schedule' : crontab(minute=0, hour=0, day_of_month='2-30/3'),
         'args' : ()
     },
     'crawlAndSaveProductInfoNewegg':{
         "task" : "AN.tasks.CrawlAndSaveNewegg",
-        'schedule' : crontab(minute=0, hour=0),
+        'schedule' : crontab(minute=0, hour=0, day_of_month='2-30/3'),
         'args' : ()
     }
 }

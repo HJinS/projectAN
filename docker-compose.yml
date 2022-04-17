@@ -34,7 +34,6 @@ services:
     networks:
       - default
       - an_network
-      - rabbitmq
 
   rabbitmq:
     container_name: rabbitmq_container
