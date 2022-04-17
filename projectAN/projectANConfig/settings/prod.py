@@ -8,7 +8,6 @@ GOOGLE_OAUTH2_CLIENT_SECRET = os.getenv("GOOGLE_OAUTH2_CLIENT_SECRET")
 
 DEBUG = False
 
-# add host ip
 ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'projectANConfig.wsgi.prod.application'
