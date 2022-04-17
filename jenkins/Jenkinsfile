@@ -121,9 +121,13 @@ pipeline {
                 script {
                     try{
                         sh 'rm htmlcov/*'
-                        sh 'rm .coverage'
                     } catch(Exception e){
-                        sh 'echo "no files to remove"'
+                        sh 'echo "no directories named htmlcov"'
+                    }
+                    try{
+                        sh 'rm .coverage'
+                    }catch(Exception e){
+                        sh 'echo "no files named .coverage"'
                     }
                     sh '''
                         . $WORKSPACE/venv/bin/activate;
