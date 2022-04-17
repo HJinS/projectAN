@@ -52,7 +52,7 @@ services:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
     working_dir: /projectAN/
     command: >
-      sh -c "celery -A tasks worker --loglevel=info"
+      sh -c "celery -A projectAN.AN.tasks worker --loglevel=info"
     depends_on:
       - AN
       - chrome
