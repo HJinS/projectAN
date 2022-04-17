@@ -49,17 +49,6 @@ services:
   celery:
     container_name: celery_container
     image: an
-    environmnent:
-      - DB_NAME
-      - DB_USER
-      - DB_PASSWORD
-      - DB_HOST
-      - DB_PORT
-      - SECRET_KEY
-      - STATE
-      - DJANGO_SETTINGS_MODULE
-      - GOOGLE_OAUTH2_CLIENT_ID
-      - GOOGLE_OAUTH2_CLIENT_SECRET
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
     working_dir: /projectAN/
