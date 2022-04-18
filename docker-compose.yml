@@ -53,6 +53,17 @@ services:
     working_dir: /projectAN/
     command: >
       sh -c "celery -A projectAN.projectANConfig worker --loglevel=info"
+    environment:
+      - DB_NAME
+      - DB_USER
+      - DB_PASSWORD
+      - DB_HOST
+      - DB_PORT
+      - SECRET_KEY
+      - STATE
+      - DJANGO_SETTINGS_MODULE
+      - GOOGLE_OAUTH2_CLIENT_ID
+      - GOOGLE_OAUTH2_CLIENT_SECRET
     depends_on:
       - AN
       - chrome
