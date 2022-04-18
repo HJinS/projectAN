@@ -50,7 +50,7 @@ services:
     image: an
     volumes:
       - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
-    working_dir: /projectAN/
+    working_dir: /projectAN/projectAN/
     command: >
       sh -c "celery -A AN.tasks worker --loglevel=info"
     depends_on:
