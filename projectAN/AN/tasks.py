@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 from neweggCrawler import NeweggCrawler
 
-from projectANConfig.Celery import app
+from ..projectANConfig.Celery import app
 from ..priceInfo.models import PriceInfo
 from ...neweggCrawler import NeweggCrawler
 from ...amazonCrawler import AmazonCrawler
