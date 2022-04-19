@@ -48,8 +48,7 @@ services:
     image: an
     working_dir: /projectAN/
     command: >
-      sh -c "cd projectAN && ls -a
-      && celery -A projectANConfig worker --loglevel=info"
+      sh -c "cd projectAN && ls -a"
     environment:
       - DB_NAME
       - DB_USER
