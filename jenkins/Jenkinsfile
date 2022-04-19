@@ -84,6 +84,7 @@ pipeline {
                         env.DJANGO_SETTINGS_MODULE = sh(script: "aws ssm get-parameters --name /prod/DJANGO_SETTINGS_MODULE | jq -j '.Parameters[0].Value'", returnStdout: true)
                         env.GOOGLE_OAUTH2_CLIENT_ID = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_ID | jq -j '.Parameters[0].Value'", returnStdout: true)
                         env.GOOGLE_OAUTH2_CLIENT_SECRET = sh(script: "aws ssm get-parameters --name GOOGLE_OAUTH2_CLIENT_SECRET | jq -j '.Parameters[0].Value'", returnStdout: true)
+                        env.SERVER_HOST = sh(script: "aws ssm get-parameters --name SERVER_HOST | jq -j '.Parameters[0].Value'", returnStdout: true)
                     }
                 }
             }
@@ -158,7 +159,8 @@ pipeline {
                     DB_HOST=$DB_HOST DB_PORT=$DB_PORT SECRET_KEY=$SECRET_KEY \
                     STATE=$STATE DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE \
                     GOOGLE_OAUTH2_CLIENT_ID=$GOOGLE_OAUTH2_CLIENT_ID \
-                    GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET docker-compose up --build -d'
+                    GOOGLE_OAUTH2_CLIENT_SECRET=$GOOGLE_OAUTH2_CLIENT_SECRET \
+                    SERVER_HOST=$SERVER_HOST docker-compose up --build -d'
             }
             post{
                 success {
