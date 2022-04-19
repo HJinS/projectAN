@@ -46,9 +46,9 @@ services:
   celery:
     container_name: celery_container
     image: an
-    working_dir: /projectAN/
+    working_dir: /projectAN/projectAN/
     command: >
-      sh -c "cd projectAN && ls -a"
+      sh -c "celery -A projectANConfig worker --loglevel=info"
     environment:
       - DB_NAME
       - DB_USER
@@ -57,7 +57,6 @@ services:
       - DB_PORT
       - SECRET_KEY
       - STATE
-      - DJANGO_SETTINGS_MODULE
       - GOOGLE_OAUTH2_CLIENT_ID
       - GOOGLE_OAUTH2_CLIENT_SECRET
     depends_on:
