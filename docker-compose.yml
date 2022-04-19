@@ -25,6 +25,7 @@ services:
       - DJANGO_SETTINGS_MODULE
       - GOOGLE_OAUTH2_CLIENT_ID
       - GOOGLE_OAUTH2_CLIENT_SECRET
+      - SERVER_HOST = http://3.39.71.147
     ports:
       - "5000:5000"
     expose:
@@ -59,6 +60,7 @@ services:
       - STATE
       - GOOGLE_OAUTH2_CLIENT_ID
       - GOOGLE_OAUTH2_CLIENT_SECRET
+      - SERVER_HOST = http://3.39.71.147
     depends_on:
       - AN
       - chrome
