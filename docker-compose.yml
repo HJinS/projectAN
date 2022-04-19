@@ -7,8 +7,6 @@ services:
     
     image: an
     container_name: an-container
-    volumes:
-      - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
     working_dir: /projectAN/
     privileged: true
     command: >
@@ -48,8 +46,6 @@ services:
   celery:
     container_name: celery_container
     image: an
-    volumes:
-      - /var/lib/jenkins/workspace/ANPipeline_master:/projectAN/
     working_dir: /projectAN/projectAN/
     command: >
       sh -c "celery -A projectANConfig worker --loglevel=info"
