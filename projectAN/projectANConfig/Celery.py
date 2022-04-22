@@ -3,8 +3,7 @@ import os
 from celery import Celery
 from django.conf import settings
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings')
-HOST = os.environ.get('SERVER_HOST')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings.prod')
 app = Celery('projectAN', broker=f'amqp://guest:guest@rabbitmq//')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
