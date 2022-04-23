@@ -42,11 +42,9 @@ class GoogleCallbackView(APIView):
         }
         token_req = requests.post(
             f"https://oauth2.googleapis.com/token?client_id={client_id}&client_secret={client_secret}&code={code}&grant_type=authorization_code&redirect_uri={GOOGLE_CALLBACK_URI}&state={state}", data=data)
-        print(token_req.text)
         token_req_json = token_req.json()
         error = token_req_json.get("error")
         if error is not None:
-            print(error)
             raise JSONDecodeError(error)
         access_token = token_req_json.get('access_token')
         return access_token

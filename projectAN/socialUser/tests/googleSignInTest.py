@@ -44,8 +44,6 @@ class GoogleSignInTest(APITestCase):
                 }
         
         header = {'HTTP_Authorization': 'google_auth_token'}
-        response = self.client.get('/social/google/login', content_type='applications/json', **header)
-        self.assertEqual(response.status_code, 302)
         mocked_requests.get = MagicMock(spec_from_loader=models.Response, return_value=MockedGet())
         mocked_requests.get.return_value.status_code = 200
         mocked_requests.post = MagicMock(spec_from_loader=models.Response, return_value=MockedPost())
