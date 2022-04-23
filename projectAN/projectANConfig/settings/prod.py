@@ -19,7 +19,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://3.39.71.147:8000',
     'https://accounts.google.com'
 ]
-
+CORS_ALLOW_CREDENTIALS = True
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',
