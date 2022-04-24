@@ -4,7 +4,6 @@ from selenium.webdriver.support.expected_conditions import presence_of_all_eleme
 from crawler import Crawler
 from collections import deque
 from resultFilter import ResultFilter
-from loadEnvKey import get_env_key
 import time, random
 
 class NeweggCrawler(Crawler):

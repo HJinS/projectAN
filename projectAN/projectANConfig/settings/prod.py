@@ -8,13 +8,18 @@ GOOGLE_OAUTH2_CLIENT_SECRET = os.getenv("GOOGLE_OAUTH2_CLIENT_SECRET")
 
 DEBUG = False
 
-# add host ip
 ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'projectANConfig.wsgi.prod.application'
 
-CORS_ORIGIN_WHITELIST = ['http://3.39.71.147', 'http://localhost',]
-
+CORS_ALLOWED_ORIGINS = [
+    'http://3.39.71.147',
+    'http://localhost',
+    'http://3.39.71.147:5000',
+    'http://3.39.71.147:8000',
+    'https://accounts.google.com'
+]
+CORS_ALLOW_CREDENTIALS = True
 DATABASES = {
     'default':{
         'ENGINE': 'django.db.backends.mysql',

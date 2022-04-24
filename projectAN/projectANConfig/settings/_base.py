@@ -37,12 +37,12 @@ CELERY_ENABLE_UTC = False
 CELERYBEAT_SCHEDULE = {
     'crawlAndSaveProductInfoAmazon' : {
         "task" : "AN.tasks.CrawlAndSaveAmazon",
-        'schedule' : crontab(minute=0, hour=0),
+        'schedule' : crontab(minute=0, hour=0, day_of_month='2-30/3'),
         'args' : ()
     },
     'crawlAndSaveProductInfoNewegg':{
         "task" : "AN.tasks.CrawlAndSaveNewegg",
-        'schedule' : crontab(minute=0, hour=0),
+        'schedule' : crontab(minute=0, hour=0, day_of_month='2-30/3'),
         'args' : ()
     }
 }
@@ -69,7 +69,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
-    'corsheaders',
     
     'AN',
     'likeAN',
@@ -85,25 +84,24 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     
     'silk',
+    'corsheaders',
 ]
-SITE_ID = 1
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'silk.middleware.SilkyMiddleware',
 ]
 
-DRF_API_LOGGER_DATABASE = True
+SITE_ID = 1
 
-CORS_ALLOW_CREDENTIALS = True
+DRF_API_LOGGER_DATABASE = True
 
 ROOT_URLCONF = 'projectANConfig.urls'
 

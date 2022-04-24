@@ -5,7 +5,7 @@ from rest_framework import status
 
 from django.db.models import (Prefetch, Exists, OuterRef, Case, When, Q)
 
-from projectAN.paginator import Paginator
+from paginator import Paginator
 
 from AN.models import Product
 from priceInfo.models import PriceInfo

@@ -1,7 +1,6 @@
 from email.policy import default
 from django.conf import settings
 from rest_framework.response import Response
-from rest_framework.request import Request
 from .models import User
 import requests
 from allauth.socialaccount.models import SocialAccount
@@ -22,13 +21,6 @@ GOOGLE_CALLBACK_URI = BASE_URL + 'social/google/callback'
 client_id = getattr(settings, "GOOGLE_OAUTH2_CLIENT_ID")
 client_secret = getattr(settings, "GOOGLE_OAUTH2_CLIENT_SECRET")
 
-class GoogleLoginView(APIView):
-    @silk_profile(name = "Google Login Redirect")
-    def get(self, request):
-        scope = "https://www.googleapis.com/auth/userinfo.email"
-        response = redirect(f"https://accounts.google.com/o/oauth2/auth?client_id={client_id}&response_type=code&redirect_uri={GOOGLE_CALLBACK_URI}&scope={scope}")
-        return response
-
 class GoogleCallbackView(APIView):
     def __signIn_or_signUp(self, access_token, code):
         data = {'access_token': access_token, 'code': code }
@@ -41,8 +33,15 @@ class GoogleCallbackView(APIView):
         return accept_json, accept_status
 
     def __get_access_token(self, code):
+        data = {
+            'code': code,
+            'client_id': settings.GOOGLE_OAUTH2_CLIENT_ID,
+            'client_secret': settings.GOOGLE_OAUTH2_CLIENT_SECRET,
+            'redirect_uri': GOOGLE_CALLBACK_URI,
+            'grant_type': 'authorization_code'
+        }
         token_req = requests.post(
-            f"https://oauth2.googleapis.com/token?client_id={client_id}&client_secret={client_secret}&code={code}&grant_type=authorization_code&redirect_uri={GOOGLE_CALLBACK_URI}&state={state}")
+            f"https://oauth2.googleapis.com/token?client_id={client_id}&client_secret={client_secret}&code={code}&grant_type=authorization_code&redirect_uri={GOOGLE_CALLBACK_URI}&state={state}", data=data)
         token_req_json = token_req.json()
         error = token_req_json.get("error")
         if error is not None:
@@ -65,7 +64,7 @@ class GoogleCallbackView(APIView):
         code = request.GET.get('code')
         try:
             access_token = self.__get_access_token(code)
-        except JSONDecodeError:
+        except Exception as e:
             raise JSONDecodeError
             
         email = self.__get_email_address(access_token)
