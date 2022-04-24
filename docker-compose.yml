@@ -49,7 +49,7 @@ services:
     image: an
     working_dir: /projectAN/projectAN/
     command: >
-      sh -c "celery -A projectANConfig worker --loglevel=info"
+      sh -c "celery -A projectANConfig.celery_space.Celery worker --loglevel=info"
     environment:
       - DB_NAME
       - DB_USER
