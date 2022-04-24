@@ -1,7 +1,7 @@
 import json, os, uuid, pymysql
 from datetime import datetime
 from pathlib import Path
-from loadEnvKey import get_env_key
+from .loadEnvKey import get_env_key
 from amazonCrawler import AmazonCrawler
 from neweggCrawler import NeweggCrawler
 from resultFilter import ResultFilter

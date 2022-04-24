@@ -1,12 +1,12 @@
 from __future__ import absolute_import
 
 from .Celery import app
-from ...priceInfo.models import PriceInfo
-from neweggCrawler import NeweggCrawler
-from amazonCrawler import AmazonCrawler
-from resultFilter import ResultFilter
-from loadEnvKey import get_env_key
-from ...AN.models import Product
+from priceInfo.models import PriceInfo
+from .neweggCrawler import NeweggCrawler
+from .amazonCrawler import AmazonCrawler
+from .resultFilter import ResultFilter
+from .loadEnvKey import get_env_key
+from AN.models import Product
 import os
 
 @app.task(bind=True)

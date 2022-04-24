@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.expected_conditions import presence_of_all_elements_located, presence_of_element_located
-from crawler import Crawler
+from .crawler import Crawler
 from collections import deque
-from resultFilter import ResultFilter
+from .resultFilter import ResultFilter
 import time, random
 
 class NeweggCrawler(Crawler):

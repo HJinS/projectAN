@@ -11,7 +11,7 @@ elif DJANGO_SETTINGS_MODULE == 'projectANConfig.settings.prod':
 elif DJANGO_SETTINGS_MODULE == 'projectANConfig.settings.test':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'projectANConfig.settings.test')
 
-app = Celery('projectAN_Celery', broker='amqp://guest:guest@rabbitmq//')
+app = Celery('projectAN_Celery', broker='amqp://guest:guest@rabbitmq//', include=['projectANConfig.celery_space.tasks'])
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
