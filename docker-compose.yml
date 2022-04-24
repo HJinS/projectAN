@@ -60,6 +60,7 @@ services:
       - STATE
       - GOOGLE_OAUTH2_CLIENT_ID
       - GOOGLE_OAUTH2_CLIENT_SECRET
+      - DJANGO_SETTINGS_MODULE
       - SERVER_HOST
     depends_on:
       - AN
