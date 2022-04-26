@@ -19,7 +19,7 @@ def CrawlAndSaveAmazon():
     try:
         driver_path = get_env_key("driver_path")
     except:
-        driver_path = os.environ.get("driver_path")
+        driver_path = ""
     crawler = AmazonCrawler(driver_path, keywords)
     test_q = crawler.save()
     filter = ResultFilter(test_q)
@@ -34,7 +34,7 @@ def CrawlAndSaveNewegg():
     try:
         driver_path = get_env_key("driver_path")
     except:
-        driver_path = os.environ.get("driver_path")
+        driver_path = ""
     crawler = NeweggCrawler(driver_path, keywords)
     test_q = crawler.save()
     filter = ResultFilter(test_q)

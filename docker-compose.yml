@@ -62,6 +62,7 @@ services:
       - GOOGLE_OAUTH2_CLIENT_SECRET
       - DJANGO_SETTINGS_MODULE
       - SERVER_HOST
+      - driver_path
     depends_on:
       - AN
       - chrome
