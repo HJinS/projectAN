@@ -36,12 +36,12 @@ CELERY_TIMEZONE = 'Asia/Seoul'
 CELERY_ENABLE_UTC = False
 CELERYBEAT_SCHEDULE = {
     'crawlAndSaveProductInfoAmazon' : {
-        "task" : "AN.tasks.CrawlAndSaveAmazon",
+        "task" : "projectANConfig.celery_space.tasks.CrawlAndSaveAmazon",
         'schedule' : crontab(minute=0, hour=0, day_of_month='2-30/3'),
         'args' : ()
     },
     'crawlAndSaveProductInfoNewegg':{
-        "task" : "AN.tasks.CrawlAndSaveNewegg",
+        "task" : "projectANConfig.celery_space.tasks.CrawlAndSaveNewegg",
         'schedule' : crontab(minute=0, hour=0, day_of_month='2-30/3'),
         'args' : ()
     }
