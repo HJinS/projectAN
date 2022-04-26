@@ -46,16 +46,19 @@ def CrawlAndSaveNewegg():
         
 def __save_to_db(item: list, crawl_site: int):
     id, image, name, price, keyword = item
-    product = Product()
-    product.product_id = id
-    product.img_src = image
-    product.name = name
-    product.category = keyword
-    product.site = crawl_site
+    try:
+        product = Product().objects.get(id=id)
+    except:
+        product = Product()
+        product.id = id
+        product.img_src = image
+        product.name = name
+        product.category = keyword
+        product.site = crawl_site
     
     priceInfo = PriceInfo()
     priceInfo.price = price
     priceInfo.product_id = product
     
-    product.save()
     priceInfo.save()
+    product.save()
